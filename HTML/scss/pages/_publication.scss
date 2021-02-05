@@ -1,0 +1,103 @@
+
+.publication {
+    &-item {
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+        margin-bottom: 20px;
+        padding: 20px 30px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: nowrap;
+
+        @media (max-width: 767px) {
+            flex-wrap: wrap;   
+        }
+
+        @media (max-width: 575px) {
+            padding: 15px;
+            align-items: flex-start;
+        }
+
+        figure {
+            width: 60px;
+
+            @media (max-width: 767px) {
+                width: 40px;
+            }
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        nav {
+            display: flex;
+            flex-direction: row;
+
+            @media (max-width: 991px) {
+                flex-direction: column;   
+
+                a {
+                    margin: 4px 0;
+                }
+            }
+
+            @media (max-width: 767px) {
+                min-width: 100%;  
+                flex-direction: row;
+                margin: 20px 0 0; 
+            }
+
+            @media (max-width: 575px) {
+                flex-direction: column;  
+            }
+        }
+
+        aside {
+            position: relative;
+            margin: 0 60px;
+            padding: 0;
+            flex-grow: 1;
+            justify-content: center;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+
+            @media (max-width: 767px) {
+                margin: 0 30px; 
+                max-width: 78%;
+            }
+
+            @media (max-width: 575px) {
+                margin: 0 15px;
+                max-width: 72%;
+            }
+
+
+            h5 {
+                font-weight: 600;
+                font-size: 20px;
+                color: #464749;
+                margin: 0 0 10px;
+            }
+
+            p {
+                color: #B5B5B6;
+                font-size: 16px;
+                font-weight: 600;
+                margin: 0;
+
+                span {
+                    line-height: 1;
+                    display: inline-block;
+                    
+                    &:first-child {
+                        border-#{$end-direction}: 1px solid #DEDEDE;
+                        margin: invertValues(0, 20px, 0, 0);
+                        padding: invertValues(0, 20px, 0, 0);
+                    }
+                }
+            }
+        }
+    }
+}

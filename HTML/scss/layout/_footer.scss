@@ -1,0 +1,166 @@
+.footer {
+    padding: 50px 0 20px;
+    font-size: 14px; 
+    background: $secondary-color;   
+    color: $white-color; 
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        width: 60%;
+        height: 100%;
+        background: url(../images/bg/bg-content.svg) #{$start-direction} center no-repeat;
+        #{$end-direction}: 0;
+        background-size: 100%;
+        top: 0;
+        z-index: 0;
+        filter: brightness(50);
+        opacity: 0.8;
+    }
+    
+    &-logo {
+        display: inline-block;
+        margin: 0 0 45px;
+        -webkit-filter: brightness(50);
+        filter: brightness(50);
+        max-width: 300px;
+    }
+
+    &-nav {
+        a {
+            color: $white-color;
+            font-size: 18px;
+            line-height: 1.2;
+            font-weight: 700;
+            margin: invertValues(0, 15px, 0, 0);
+
+            &:hover {
+                text-decoration: none;
+                border-bottom: 1px solid #ffffff;
+            }
+        }
+
+        margin: 0 0 20px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
+
+.nav-socialmedia {
+    position: fixed;
+    top: 27%;
+    #{$end-direction}: 60px;
+    background: -moz-linear-gradient(top,  rgba(255,255,255,.5) 50%, rgba(125,185,232,0) 100%);
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,.5) 50%,rgba(125,185,232,0) 100%);
+    background: linear-gradient(to bottom,  rgba(255,255,255,.5) 50%,rgba(125,185,232,0) 100%); 
+    width: 80px;
+    padding: 0 0 10px;
+    border-radius: 50px;
+    -webkit-box-shadow: 0 -35px 60px rgba(0, 0, 0, 0.10);
+    box-shadow: 0 -35px 60px rgba(0, 0, 0, 0.10);
+
+    @media (max-width: 1600px) {
+        transform: scale(0.9);
+    }
+
+    @media (max-width: 1500px) {
+        position: relative;
+        top: auto;
+        #{$end-direction}: auto;
+        background: none;
+        box-shadow: none;
+        width: auto;
+        border-radius: 0;
+        transform: scale(1);
+    }
+
+    nav {
+        max-height: 219px;
+        overflow: hidden;
+        transition: all 200ms;
+        padding: 20px 0 0;
+
+        @media (max-width: 1500px) {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    &.show nav {
+        max-height: 400px;
+        transition: all 1000ms;
+    }
+
+    a {
+        margin: 0 auto 10px;
+        width: 40px;
+        height: 40px;
+        background-color: $white-color;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $primary-color;
+        font-size: 18px;
+        -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+
+        @media (max-width: 1500px) {
+            margin: 0 5px 10px;
+            color: $secondary-color;
+        }
+
+        i {
+            line-height: 10px;
+        }
+
+        &:hover {            
+            background-color: $primary-color;
+            color: $white-color;
+            text-decoration: none;
+        }
+    }
+
+    span {
+        display: block;
+        margin: 0 auto 10px;
+        width: 40px;
+        height: 40px;
+        background-color: rgba($color: $white-color, $alpha: .68);
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $primary-color;
+        font-size: 15px;
+        cursor: pointer;
+        -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.10);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.10);
+
+        display: none;
+
+        @media (max-width: 1500px) {
+            display: none;
+        }        
+
+        &:hover {            
+            background-color: #058FB2;
+            color: $white-color;
+            text-decoration: none;
+        }
+    }
+
+    &.show span {
+        background-color: #058FB2;
+        color: $white-color;
+
+        i {
+            transition: all 500ms;
+            transform: rotate(180deg);
+        }
+    }
+}

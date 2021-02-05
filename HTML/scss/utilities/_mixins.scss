@@ -1,0 +1,13 @@
+@mixin block-display {
+    display: inline-block;
+    content: "";
+}
+
+@function invertValues($top, $right, $bottom, $left) {
+    @if $dir == right {
+        @return $top $left $bottom $right;
+    }
+    @else {
+        @return $top $right $bottom $left;
+    }
+}

@@ -1,0 +1,38 @@
+// config files
+@import 'base/direction-ltr.scss';
+//@import 'base/direction-rtl.scss';
+
+// utilities
+@import 'utilities/variables';
+@import 'utilities/mixins';
+
+// base
+@import 'base/reset';
+//@import 'base/font';
+@import 'base/buttons';
+@import 'base/common';
+
+// components
+//@import 'components/animation';
+
+// layout
+@import 'layout/header';
+//@import 'layout/menu';
+//@import 'layout/footer';
+
+// pages
+//@import 'pages/banner';
+//@import 'pages/news';
+//@import 'pages/project';
+//@import 'pages/press';
+//@import 'pages/statistics';
+//@import 'pages/events';
+//@import 'pages/about';
+//@import 'pages/board';
+//@import 'pages/gallery';
+//@import 'pages/recognitions';
+//@import 'pages/contact';
+//@import 'pages/faq';
+//@import 'pages/media';
+//@import 'pages/publication';
+//@import 'pages/strategic';

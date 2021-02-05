@@ -1,0 +1,108 @@
+.faq {
+    &-filter {
+        label {
+            font-weight: 700;
+            color: $primary-color;
+            font-size: 24px;
+        }
+
+        select {
+            border-radius: 0;
+            background: #ffffff;
+            border: 1px solid #C3C3C3; 
+            padding: 10px 15px;
+            height: 52px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+            font-weight: 700;
+            font-size: 20px;
+            min-width: 240px;
+
+            &:focus {
+                border-color: #C3C3C3;
+                background-color: #ffffff;
+                box-shadow: none;
+                color: #464749;
+            }
+        }
+    }
+
+    &-accordion {
+        .card {
+            position: relative;
+            background-color: #F5F5F5;
+            border: 1px solid #DADADA;
+            border-radius: 1px;
+            margin: 0 0 10px;
+        }
+
+        .card-body {
+            padding: 20px 30px;
+            p {
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+
+        .card-header {
+            padding: 0;
+            margin: 0;
+            background-color: #ffffff;
+            border: 0;
+
+            .card-link {
+                background: linear-gradient(135deg, #7A0A2A 0%, #DA2A5C 100%);
+                font-weight: 700;
+                font-size: 20px;
+                color: $white-color;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    #{$start-direction}: 20px;
+                    top: 19px;
+                    width: 28px;
+                    height: 28px;
+                    background: url(../images/icons/icon_faq.svg) 0 0 no-repeat;
+                    filter: brightness(60);
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 16px;
+                    height: 18px;
+                    background: url(../images/icons/icon_arrow.svg) center center no-repeat;
+                    #{$end-direction}: 30px;
+                    top: 23px;
+                    transition: all 200ms;
+                    background-size: contain;
+                    filter: brightness(60);
+                    transform: rotate(-180deg);
+                }
+
+                &.collapsed {
+                    background: #ffffff;
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #7A0A2A;
+
+                    &::before {
+                        filter: none;
+                    }
+
+                    &::after {
+                        filter: none;
+                        transform: rotate(0deg);
+                    }
+                }
+            }
+
+            a {
+                display: block;
+                padding: invertValues(17px, 50px, 17px, 65px);
+                position: relative;                
+            }
+        }
+    }
+}

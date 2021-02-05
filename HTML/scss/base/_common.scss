@@ -1,0 +1,32 @@
+.container {
+    max-width: 1200px;
+    border: 1px solid red;
+}
+
+.arabic-text {
+    text-align: #{$end-direction};
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #CCC8C3;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #91847B;
+    border-radius: 2px;
+}
+
+div, span, img {
+    &:focus{
+        outline: none;
+    }
+}
+ 
+.text-primary {
+    color: $primary-color !important;
+}

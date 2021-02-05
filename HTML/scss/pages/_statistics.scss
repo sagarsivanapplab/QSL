@@ -1,0 +1,191 @@
+.statistics {
+    &-holder {
+        padding: 60px 0;   
+        position: relative;
+        background: #4B6A7E;
+
+        @media (max-width: 1600px) {
+            padding: 30px 0;
+        }
+        
+        &::before {
+            content: "";
+            position: absolute;
+            display: inline-block;
+            width: 83%;
+            height: 100%;
+            background: url(../images/bg/bg-content.svg) left top no-repeat;
+            #{$end-direction}: 0;
+            background-size: 110%;
+            top: 0;
+            z-index: 0;
+            filter: brightness(50);
+
+            @if $dir == right {
+                transform: scaleX(-1);
+            }
+        }
+
+        h2 {
+            color: $white-color;
+            font-weight: 700;
+            font-size: 40px;
+            margin: 0 0 60px;
+     
+            small {display: block;
+                font-size: 0.75em;
+                font-weight: 600;
+                color: $white-color;
+                margin: 10px 0 0;
+            }
+        }
+    }  
+    
+    &-chart {
+        position: relative;
+
+        &_lefttext {
+            position: absolute;
+            left: 10px;
+            bottom: 18%;
+            transform: rotate(-90deg);
+            transform-origin: 0 0;
+            background: #ffffff;
+            padding: 0 10px;
+            font-size: 22px !important;
+            font-weight: 600;
+            color: #4B6A7E;
+            height: 38px;
+            line-height: 38px !important;
+
+            @media (max-width: 767px) {
+                bottom: 190px;
+                left: -10px;
+                font-size: 14px !important;
+                padding: 0 5px;
+                height: 23px;
+                line-height: 20px !important;
+            }    
+
+            &::after {
+                left: 100%;
+                top: 50%;
+                border: solid transparent;
+                content: "";
+                height: 0;
+                width: 0;
+                position: absolute;
+                border-style: solid;
+                border-width: 20px 0 20px 10px;
+                border-color: transparent transparent transparent #ffffff;
+                margin-top: -20px;
+
+                @media (max-width: 767px) {
+                    border-width: 10px 0 10px 8px;
+                    margin-top: -10px;
+                } 
+            }
+        }
+    }     
+}
+
+#chart {
+    margin: 0 0 0 60px;
+    direction: ltr;
+
+    @media (max-width: 767px) {
+        margin: invertValues(0, 0, 0, 10px);   
+    }
+}
+
+.apexcharts-legend {
+    padding: invertValues(0, 10px, 5px, 30px) !important;
+    height: 42px !important;
+    overflow: visible;
+
+    @media (max-width: 767px) {
+        padding: invertValues(0, 10px, 5px, 0px) !important;  
+        height: auto !important;
+        max-height: none !important;
+        flex-direction: column;
+    }
+
+    .apexcharts-legend-series {
+        width: 25%;
+        margin: 0 !important;
+        padding: 0 20px !important;
+        position: relative;
+        background: linear-gradient(to right,  #eeeeee 0%,#ffffff 100%);
+        box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.27);
+        @if $dir == right {
+            direction: rtl;
+        }
+
+        @media (max-width: 767px) {
+            width: auto;
+            margin: 0 0 5px !important;
+            padding-top: 5px !important;
+            padding-bottom: 2px !important;
+        }
+
+        &::after {
+            #{$start-direction}: 100%;
+            top: 50%;
+            border: solid transparent;
+            content: "";
+            height: 0;
+            width: 0;
+            position: absolute;
+            border-style: solid;
+            border-width: 19px 0 18px 10px;
+            border-color: transparent transparent transparent #ffffff;
+            margin-top: -20px;
+
+            @if $dir == right {
+                transform: scaleX(-1);
+            }
+        }
+
+        &:nth-child(1){
+            z-index: 10;
+        }
+
+        &:nth-child(2){
+            z-index: 9;
+        }
+
+        &:nth-child(3){
+            z-index: 8;
+        }
+
+        &:nth-child(4){
+            z-index: 7;
+        }
+
+        .apexcharts-legend-marker {
+            border-radius: 20px !important;
+            width: 16px !important;
+            height: 16px !important;
+            top: 5px !important;
+            border: 3px solid #ffffff !important;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.23);
+        }
+
+        .apexcharts-legend-text {
+            top: 0;
+            #{$start-direction}: 0;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            color: #464749 !important;
+            font-family: 'cairo' !important;
+            font-weight: 600 !important;
+            font-size: 20px !important;
+            text-indent: 50px;
+        }
+    }
+}
+
+.apexcharts-toolbar {
+    display: none !important;
+}

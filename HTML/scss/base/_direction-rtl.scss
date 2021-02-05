@@ -1,0 +1,11 @@
+/*** RTL websites ***/
+$direction           :rtl;
+$opposite-direction   :ltr;
+
+$start-direction     :right;
+$end-direction       :left;
+
+$transform-direction :-1;
+
+// This overrides our default value of $dir
+$dir: right;

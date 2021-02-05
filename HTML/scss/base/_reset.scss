@@ -1,0 +1,22 @@
+html {
+    scroll-behavior: smooth; 
+}
+
+body{
+    font-family: $font-stack-1;
+    font-weight: 400;
+    direction: $direction;
+    text-align: $start-direction;
+    font-size: 16px;
+    background: $white-color;
+    color: $black-color;
+}
+
+ol, ul, li, figure {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
