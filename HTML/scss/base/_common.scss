@@ -1,6 +1,12 @@
+.page-content {
+    background: yellow;
+    margin: 200px 0 0;
+}
+
 .container {
-    max-width: 1200px;
+    max-width: 1770px;
     border: 1px solid red;
+    min-width: 200px;
 }
 
 .arabic-text {
