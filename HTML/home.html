@@ -7,6 +7,7 @@
     <link rel="icon" href="favicon.ico" type="image/icon">     
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">   
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -28,13 +29,49 @@
 
       <div class="container">
         <div class="row">
-          <div class="col header__logo__holder">
+          <div class="col header__logo__holder px-0">
             <a href="javascript:void(0);" class="header__logo">
               <img src="images/logo/logo_color.svg" class="img-fluid" alt="Qatar Stars League">
               <span>                
-                <img src="images/logo/logo_ball.svg" class="img-fluid" alt="Qatar Stars League">
+                <img src="images/logo/logo_ball_bg.svg" class="img-fluid" alt="Qatar Stars League">
               </span>
             </a>     
+          </div>
+
+          <div class="col-12 col-sm-auto header__right px-0">
+            <nav class="header__nav">
+              <ul role="menu">
+                <li class="dropdown active"><a href="javascript:void(0);">QSL</a></li>
+                <li class="dropdown"><a href="javascript:void(0);">Qatar Cup</a></li>                            
+                <li class="dropdown"><a href="javascript:void(0);">Ooredoo Cup</a></li>
+                <li class="dropdown"><a href="javascript:void(0);">News</a></li>
+                <li class="dropdown"><a href="javascript:void(0);">Media</a></li>
+                <li><a href="javascript:void(0);">#QSL</a></li>
+              </ul>
+            </nav>
+
+            <div class="header__social" data-toggle="tooltipa" data-placement="right">               
+              <a href="javascript:void(0);" target="_blank" title="RSS Feed" data-placement="bottom"><i class="fas fa-rss"></i></a>
+              <a href="javascript:void(0);" target="_blank" title="Snapchat" data-placement="bottom"><i class="fab fa-snapchat-ghost"></i></a>
+              <a href="javascript:void(0);" target="_blank" title="Facebook" data-placement="bottom"><i class="fab fa-facebook-f"></i></a>
+              <a href="javascript:void(0);" target="_blank" title="Instagram" data-placement="bottom"><i class="fab fa-instagram"></i></a>
+            </div>
+
+            <div class="btn-group btn__language">
+              <span  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <figure><img src="images/placeholder/english.png"></figure> EN
+              </span>
+              <ul class="btn__language__drop-down dropdown-menu" tabindex="0" x-placement="bottom-start">
+                <li><span>Language</span></li>                                 
+                <li><a href="#"><figure><img src="images/placeholder/arabic.png"></figure> ع</a></li>
+                <li><a href="#"><figure><img src="images/placeholder/english.png"></figure> En</a></li>
+              </ul>
+            </div>
+
+            <a class="btn__ticket" href="javascript:void(0);">Buy your ticket</a>
+
+            <span class="btn__search search-js" role="button" aria-label="search button" tabindex="0">Search</span>
+
           </div>
         </div>
       </div>    

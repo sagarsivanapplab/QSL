@@ -17,6 +17,12 @@ ol, ul, li, figure {
     padding: 0;
 }
 
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
 li {
     list-style: none;
 }
