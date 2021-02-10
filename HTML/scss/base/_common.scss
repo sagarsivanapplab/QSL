@@ -1,6 +1,5 @@
 .page-content {
-    background: yellow;
-    margin: 200px 0 0;
+    margin: 135px 0 0;
 }
 
 .container {
@@ -35,4 +34,75 @@ div, span, img {
  
 .text-primary {
     color: $primary-color !important;
+}
+
+h2, .h2 {
+    font-size: 60px;
+    font-family: $font-stack-2;
+    line-height: 1.2;
+}
+
+.h3 {
+    font-size: 35px;
+    font-family: $font-stack-2;
+    line-height: 1.2;
+}
+
+.h4 {
+    font-size: 30px;
+    font-family: $font-stack-2;
+    line-height: 1.2;
+}
+
+.color-secondary {
+    color: $secondary-color;
+}
+
+.color-primary {
+    color: $primary-color;
+}
+
+.bg {
+    background: yellow;
+}
+
+.scrollup {
+    width: 72px;
+    height: 53px;
+    position: fixed;
+    bottom: 50px;
+    #{$end-direction}: 100px;
+    display: none;
+    text-indent: -9999px;
+    background: url('../images/icons/totop_arrow_white.svg') no-repeat;
+    background-position: center 15px;
+    background-color: $secondary-color;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);
+    transition: all 0.2s ease-in-out;
+    z-index: 10;
+
+    &::before {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        width: 13px;
+        height: 10px;
+        #{$start-direction}: 0;
+        bottom: 100%;
+        border-style: solid;
+        border-width: 0 36px 18px 36px;
+        border-color: transparent transparent $secondary-color;
+        transition: all 0.2s ease-in-out;
+    }
+
+    &:hover {
+        background-color: $primary-color;
+        &::before {
+            border-color: transparent transparent $primary-color;
+        }
+    }
+
+    @media (max-width: 767px) {
+        display: none !important;            
+    }
 }

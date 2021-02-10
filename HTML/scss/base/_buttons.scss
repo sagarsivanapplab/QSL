@@ -19,6 +19,8 @@
         font-size: 23px;
         font-weight: 500;
         font-family: $font-stack-2;
+        padding: 13px 25px 10px;
+        margin: 0 10px;
 
         &::before {
             content: "";
@@ -28,7 +30,11 @@
             height: 20px;
             vertical-align: middle;
             background: url(../images/icons/ticket_white.svg) 0 0 no-repeat;
-            margin: invertValues(0, 5px, 0, 0); 
+            margin: invertValues(0, 15px, 0, 0); 
+        }
+
+        &:hover {
+            color: #ffffff;
         }
     }
 

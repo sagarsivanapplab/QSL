@@ -12,6 +12,10 @@ body{
     color: $black-color;
 }
 
+img {
+    max-width: 100%;
+}
+
 ol, ul, li, figure {
     margin: 0;
     padding: 0;

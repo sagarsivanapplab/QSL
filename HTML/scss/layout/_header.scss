@@ -37,11 +37,19 @@
                 height: 100%;
                 left: 0;
                 top: 0;
-                animation: spin 10s infinite linear;
                 border-radius: 100%;
+                animation: spin360 20s infinite linear;
                 background: url(../images/logo/logo_ball_pattern.svg) center center no-repeat; 
             }
         }
+
+        /*&:hover {
+            span {    
+                &::after {
+                    animation: spin360 10s infinite linear;
+                }
+            }
+        }*/
     } 
     
     &__right {
@@ -71,12 +79,123 @@
     }
 }
 
-@keyframes spin { 
+.search {
+    &-holder{
+        position: absolute;
+        top: 100%;
+        #{$start-direction}: 0;
+        width: 100%;
+        background: #ffffff;
+        height: 0;
+        box-shadow: inset 0px 40px 60px 0px #EFEFEF, 0 3px 3px rgba(0,0,0,.05);
+        transition: all 200ms;
+        overflow: hidden;
+
+        .search-open & {
+            height: 95px;
+
+            @media (max-width: 575px) {   
+                height: 52px;   
+            }
+        }
+
+        label {
+            display: block;
+            margin: 0 108px;
+            position: relative;
+            margin-top: 30px;
+            &::after {
+                content: "";
+                position: absolute;
+                #{$start-direction}: -50px;
+                top: 3px;
+                width: 33px;
+                height: 33px;
+                background: url(../images/icons/btn_search_color.svg) 0 0 no-repeat;
+                background-size: cover;
+            }
+
+            @media (max-width: 575px) {     
+                margin: invertValues(5px, 40px, 5px, 10px); 
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
+
+        .close {
+            position: absolute;
+            #{$end-direction}: 40px;
+            top: 40px;
+            width: 22px;
+            height: 22px;
+            background: url(../images/icons/btn_close.svg) 0 0 no-repeat;
+            overflow: hidden;
+            text-indent: -9999px;
+            opacity: 1;
+
+            @media (max-width: 575px) {   
+                #{$end-direction}: 10px;
+                top: 14px;
+            }
+
+            &:hover {
+                opacity: 1;
+                -webkit-filter: brightness(0);
+                filter: brightness(0);
+                animation: spin90 200ms 1 linear;
+            }
+        }
+    }
+
+    &-input {
+        width: 100%;
+        display: block;
+        -webkit-appearance: none;
+        border: 0;
+        background: none;
+        color: #000000;
+        padding: 0;
+        border: 0 none;
+        font-size: 27px;
+        font-weight: 400;
+        white-space: nowrap;
+        outline: 0;
+
+        &::-webkit-input-placeholder {
+            color: #000000;
+        }
+        
+        &:-ms-input-placeholder {
+            color: #000000;
+        }
+        
+        &::placeholder {
+            color: #000000;
+        }
+    }    
+}
+
+@keyframes spin360 { 
     from { 
         transform: rotate(0deg); 
     } to { 
         transform: rotate(360deg); 
     }
 }
+@keyframes spin-360 { 
+    from { 
+        transform: rotate(0deg); 
+    } to { 
+        transform: rotate(-360deg); 
+    }
+}
 
- 
+@keyframes spin90 { 
+    from { 
+        transform: rotate(0deg); 
+    } to { 
+        transform: rotate(90deg); 
+    }
+}
