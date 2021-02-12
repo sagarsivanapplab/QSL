@@ -21,6 +21,7 @@
         font-family: $font-stack-2;
         padding: 13px 25px 10px;
         margin: 0 10px;
+        transition: all 200ms;
 
         &::before {
             content: "";
@@ -34,6 +35,8 @@
         }
 
         &:hover {
+            background: linear-gradient(140deg, rgba(155,4,72,1) 30%, rgba(240,136,0,1) 90%);
+        border: 0;
             color: #ffffff;
         }
     }
@@ -123,40 +126,19 @@
         }
     }
 
-    &-top {
+    &__gallery {
         position: absolute;
-        #{$end-direction}: 15px;
-        font-size: 18px;
-        top: 40px;
-        color: $primary-color;
+        #{$end-direction}: 0;
+        font-size: 30px;
+        font-family: $font-stack-2;
+        top: -87px;
+        color: $white-color;
         line-height: 1.2;
-        font-weight: 700;
-        border-bottom: 2px solid #4B6A7E;
         padding: 0 0 10px;
         z-index: 2;
 
-        @media screen and (max-width: 767px){
-            position: relative;
-            #{$end-direction}: auto;
-            #{$start-direction}: auto;
-            top: auto;
-            display: inline-block;
-            margin: 10px 0 20px;
-        }  
-
-        i {
-            font-size: 12px;
-            margin: invertValues(0, 0, 0, 5px);
-
-            @if $dir == right {
-                transform: scaleX(-1);
-            }
-        }
-
         &:hover {
-            text-decoration: none;
-            border-bottom: 2px solid transparent;
-            color: #4B6A7E;
+            color: $secondary-color ;
         }
     }
 
@@ -235,7 +217,7 @@
 .btn {
     border-radius: 0px;
     padding: .7rem 1.5rem;
-    font-weight: 600;
+    font-weight: normal;
 
     &.btn-outline-light {
         color: $primary-color;

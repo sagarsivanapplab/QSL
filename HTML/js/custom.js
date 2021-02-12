@@ -90,16 +90,22 @@
     }]
   });
 
-  /* tjGalleryImage = function(){
+  tjGalleryImage = function(){
     $('.pictures').tjGallery();
   }
 
-  if ($(".photo-gallery")[0]){
+  if ($(".home__gallery")[0]){
     $(window).on('load', function(){
       tjGalleryImage();
     })
   }
 
+  $('.home__gallery__tabmenu a').on('click', function (e) {
+    setTimeout(()=>{window.dispatchEvent(new Event('resize'));},200);
+  })
+
+
+  /*
 
   if ($(".imglist")[0]){
     $('[data-fancybox="imagespop"]').fancybox({

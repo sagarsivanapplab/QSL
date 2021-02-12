@@ -18,8 +18,8 @@
 		init : function(options) {
 			var $settings = $.extend({
 				selector		:'a',
-				row_min_height	: 190,
-				margin			: 5
+				row_min_height	: 420,
+				margin			: 0
 			}, options);
 
 			
@@ -179,8 +179,7 @@
 			return methods.init.apply( this, arguments );
 		} else {
 			$.error( 'Method ' +  method + ' does not exist for jQuery.tjGallery' );
-		} 
-		
+		} 		
 	};
 
 })(jQuery);

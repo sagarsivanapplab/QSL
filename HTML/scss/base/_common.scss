@@ -3,7 +3,7 @@
 }
 
 .container {
-    max-width: 1770px;
+    max-width: 1600px;
     border: 0px solid red;
     width: auto;
 }
@@ -60,6 +60,10 @@ h2, .h2 {
 
 .color-primary {
     color: $primary-color;
+}
+
+.color-white {
+    color: $white-color;
 }
 
 .bg {

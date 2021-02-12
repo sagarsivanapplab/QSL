@@ -52,6 +52,7 @@ li {
   font-family: "Bebas Neue";
   padding: 13px 25px 10px;
   margin: 0 10px;
+  transition: all 200ms;
 }
 .btn__ticket::before {
   content: "";
@@ -64,6 +65,8 @@ li {
   margin: 0 0 0 15px;
 }
 .btn__ticket:hover {
+  background: linear-gradient(140deg, #9b0448 30%, #f08800 90%);
+  border: 0;
   color: #ffffff;
 }
 .btn__language {
@@ -139,37 +142,19 @@ li {
   text-decoration: none;
   color: #000000;
 }
-.btn-top {
+.btn__gallery {
   position: absolute;
-  left: 15px;
-  font-size: 18px;
-  top: 40px;
-  color: #9B0448;
+  left: 0;
+  font-size: 30px;
+  font-family: "Bebas Neue";
+  top: -87px;
+  color: #FFFFFF;
   line-height: 1.2;
-  font-weight: 700;
-  border-bottom: 2px solid #4B6A7E;
   padding: 0 0 10px;
   z-index: 2;
 }
-@media screen and (max-width: 767px) {
-  .btn-top {
-    position: relative;
-    left: auto;
-    right: auto;
-    top: auto;
-    display: inline-block;
-    margin: 10px 0 20px;
-  }
-}
-.btn-top i {
-  font-size: 12px;
-  margin: 0 5px 0 0;
-  transform: scaleX(-1);
-}
-.btn-top:hover {
-  text-decoration: none;
-  border-bottom: 2px solid transparent;
-  color: #4B6A7E;
+.btn__gallery:hover {
+  color: #F08800;
 }
 .btn-back {
   font-size: 18px;
@@ -233,7 +218,7 @@ li {
 .btn {
   border-radius: 0px;
   padding: 0.7rem 1.5rem;
-  font-weight: 600;
+  font-weight: normal;
 }
 .btn.btn-outline-light {
   color: #9B0448;
@@ -322,7 +307,7 @@ li {
 }
 
 .container {
-  max-width: 1770px;
+  max-width: 1600px;
   border: 0px solid red;
   width: auto;
 }
@@ -377,6 +362,10 @@ h2, .h2 {
 
 .color-primary {
   color: #9B0448;
+}
+
+.color-white {
+  color: #FFFFFF;
 }
 
 .bg {
