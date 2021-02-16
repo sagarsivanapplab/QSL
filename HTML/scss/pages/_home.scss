@@ -16,7 +16,7 @@
                 border: 1px solid $primary-color;
 
                 img {
-                    animation: rotateYLogo .8s 1 cubic-bezier(.22,.74,.7,.05); 
+                    animation: rotateYLogo 1s 1 cubic-bezier(.03,.21,.67,.97); 
                     transition: transform 1.5s; 
                 }
             }
@@ -113,9 +113,18 @@
             overflow: hidden;
             z-index: 1;
 
-            &--large {
-                height: calc(100% - 5px);
-            }
+            &:after {
+                background: $white-color;
+                content: "";
+                height: 170%;
+                left: -130%;
+                opacity: .2;
+                position: absolute;
+                top: -150px;
+                transform: rotate(35deg);
+                width: 100px;
+                z-index: 1;
+            } 
 
             &:hover {
                 figure {
@@ -132,6 +141,22 @@
                 .home__news__item__type {
                     background: $secondary-color;
                 }
+
+                &:after {
+                    left: 150%;
+                    transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+                }
+            }            
+
+            &--large {
+                height: calc(100% - 5px);
+
+                &:hover {     
+                    &:after {
+                        transition: all 1500ms cubic-bezier(0.19, 1, 0.22, 1);
+                    }
+                }
+    
             }
 
             figure {

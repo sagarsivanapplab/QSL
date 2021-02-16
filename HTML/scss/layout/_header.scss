@@ -9,13 +9,13 @@
     -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.16);
     box-shadow: 0 3px 6px rgba(0,0,0,.16);
 
-    .container {
+    > .container {
         max-width: 100%; 
         margin: 0 20px;
         transition: all 500ms;   
     }
 
-    &.toTop .container {
+    &.toTop > .container {
         max-width: 1600px;
         margin: 0 auto;
         transition: all 800ms;
@@ -42,9 +42,10 @@
             width: 108px;
             opacity: 1;
             .toTop & {
-                margin: 0 0 0 -108px;
+                margin: 0 0 0 -76px;
+                width: 90px;
                 opacity: 0;
-                transition: all 800ms;
+                transition: width 800ms;
             }
         }
 
@@ -190,7 +191,7 @@
         color: #000000;
         padding: 0;
         border: 0 none;
-        font-size: 27px;
+        font-size: 22px;
         font-weight: 400;
         white-space: nowrap;
         outline: 0;
