@@ -10,25 +10,56 @@
     box-shadow: 0 3px 6px rgba(0,0,0,.16);
 
     .container {
-        max-width: none; 
+        max-width: 100%; 
         margin: 0 20px;
+        transition: all 500ms;   
+    }
+
+    &.toTop .container {
+        max-width: 1600px;
+        margin: 0 auto;
+        transition: all 800ms;
     }
 
     &__logo {
         &__holder { 
             padding-top: 15px;
             padding-bottom: 15px;
+            transition: all 500ms;
+
+            .toTop & {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                transition: all 500ms;
+            }
         }
         
         border: 0px solid red;
         display: inline-block;
         align-items: center;
 
+        &> img {
+            width: 108px;
+            opacity: 1;
+            .toTop & {
+                margin: 0 0 0 -108px;
+                opacity: 0;
+                transition: all 800ms;
+            }
+        }
+
         span {
             margin: invertValues(0, 0, 0, 15px);
             position: relative;
             width: 98px;
             display: inline-block;
+            transition: all 500ms;
+
+            .toTop & {
+                width: 56px;
+                margin: 0;
+                transition: all 1000ms;
+            }
 
             &::after {
                 content: "";
@@ -40,6 +71,7 @@
                 border-radius: 100%;
                 animation: spin360 20s infinite linear;
                 background: url(../images/logo/logo_ball_pattern.svg) center center no-repeat; 
+                background-size: cover;
             }
         }
 
