@@ -794,6 +794,9 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            position: relative;
+            margin: 0 0 -8px;
+            z-index: 0;
             .nav-fill{
                 border-bottom: none;
                 .nav-item.nav-link{
@@ -902,20 +905,30 @@
             box-shadow: 0 3px 13px rgb(0 0 0 / 11%);
             border-radius: 10px;
             padding-bottom: 30px;
+            overflow: hidden;
+            position: relative;
             &__btn{
                 text-align: center;
                 margin: 0 auto;
+                background: #ffffff;
+                position: absolute;
+                width: 100%;
+                bottom: 0;
+                padding: 20px 0 40px;
+                box-shadow: 0 -35px 20px 10px rgb(255 255 255 / 90%);
                 .btn{
                     text-transform: uppercase;
                     border-radius: 5px;
                 }
             }
         }
-        .result__wrapper{
+        .match__wrapper{
             background: #fff;
             box-shadow: 0 3px 13px rgb(0 0 0 / 11%);
             padding:20px 8px;
             border-radius: 10px;
+            overflow: hidden;
+            position: relative;
             &__box{
                 border: 1px solid #E6E6E6;
                 border-radius: 2px;
@@ -938,6 +951,7 @@
                 }
                 small{
                     font-size: 17px;
+                    display: block;
                 }
             }
             &__middle{
@@ -958,13 +972,15 @@
                     justify-content: center;
                 }
             }
-            &__race{
+            &__team{
                 padding: 0 10px;
                 figure{
                     width: 86px;
                     height: 86px;
                     border-radius: 50%;
-                    display: block;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     background: #E6E6E6;
                     padding: 10px;
                     overflow: hidden;
@@ -974,10 +990,12 @@
                 }
             }
             .btn__ticket{
-                background: linear-gradient(140deg, #9B0448 50%, #222222 100%);
-                margin:0;
-                &:hover{
-                    background: linear-gradient(140deg, #9b0448 30%, #222222 90%);
+                &--primary-colr{
+                    background: linear-gradient(140deg, #9B0448 50%, #222222 100%);
+                    margin:0;
+                    &:hover{
+                        background: linear-gradient(140deg, #9b0448 30%, #222222 90%);
+                    }
                 }
             }
         }
