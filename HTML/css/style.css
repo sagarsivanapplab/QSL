@@ -421,12 +421,12 @@ h2, .h2 {
   top: 0;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 }
-.header .container {
+.header > .container {
   max-width: 100%;
   margin: 0 20px;
   transition: all 500ms;
 }
-.header.toTop .container {
+.header.toTop > .container {
   max-width: 1600px;
   margin: 0 auto;
   transition: all 800ms;
@@ -458,9 +458,10 @@ h2, .h2 {
   opacity: 1;
 }
 .toTop .header__logo > img {
-  margin: 0 0 0 -108px;
+  margin: 0 0 0 -76px;
+  width: 90px;
   opacity: 0;
-  transition: all 800ms;
+  transition: width 800ms;
 }
 .header__logo span {
   margin: 0 0 0 15px;
@@ -584,7 +585,7 @@ h2, .h2 {
   color: #000000;
   padding: 0;
   border: 0 none;
-  font-size: 27px;
+  font-size: 22px;
   font-weight: 400;
   white-space: nowrap;
   outline: 0;
@@ -639,11 +640,11 @@ h2, .h2 {
   position: relative;
   text-transform: uppercase;
   border-bottom: 5px solid transparent;
-  transition: all 200ms;
+  transition: padding 400ms;
 }
 .toTop .header__nav > ul > li > a {
   padding: 22px 20px 20px 20px;
-  transition: all 1000ms;
+  transition: padding 1000ms;
 }
 .header__nav > ul > li > a:hover {
   background: #F8F8F8;
@@ -1032,7 +1033,7 @@ h2, .h2 {
   border: 1px solid #9B0448;
 }
 .home__clublist:hover figure img {
-  animation: rotateYLogo 0.8s 1 cubic-bezier(0.22, 0.74, 0.7, 0.05);
+  animation: rotateYLogo 1s 1 cubic-bezier(0.03, 0.21, 0.67, 0.97);
   transition: transform 1.5s;
 }
 .home__clublist:hover span {
@@ -1113,8 +1114,17 @@ h2, .h2 {
   overflow: hidden;
   z-index: 1;
 }
-.home__news__item--large {
-  height: calc(100% - 5px);
+.home__news__item:after {
+  background: #FFFFFF;
+  content: "";
+  height: 170%;
+  left: -130%;
+  opacity: 0.2;
+  position: absolute;
+  top: -150px;
+  transform: rotate(35deg);
+  width: 100px;
+  z-index: 1;
 }
 .home__news__item:hover figure::before {
   opacity: 1;
@@ -1125,6 +1135,16 @@ h2, .h2 {
 }
 .home__news__item:hover .home__news__item__type {
   background: #F08800;
+}
+.home__news__item:hover:after {
+  left: 150%;
+  transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.home__news__item--large {
+  height: calc(100% - 5px);
+}
+.home__news__item--large:hover:after {
+  transition: all 1500ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 .home__news__item figure {
   position: relative;
