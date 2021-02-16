@@ -1732,6 +1732,9 @@ h2, .h2 {
 .home__rank .table th, .home__rank .table td {
   border: none;
   vertical-align: middle;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 12px 20px;
 }
 .home__rank .table thead {
   background: #DADFE5;
@@ -1748,8 +1751,14 @@ h2, .h2 {
   border-radius: 6px;
   color: #9B0448;
   font-size: 16px;
-  padding: 9px 12px;
+  padding: 0;
   background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 42px;
+  height: 42px;
 }
 .home__rank .table tbody tr:nth-child(odd) td {
   background-color: rgba(0, 0, 0, 0.04);
@@ -1794,6 +1803,8 @@ h2, .h2 {
 .home__rank__table__btn .btn {
   text-transform: uppercase;
   border-radius: 5px;
+  font-size: 18px;
+  font-weight: 500;
 }
 .home__rank .match__wrapper {
   background: #fff;
@@ -1862,10 +1873,12 @@ h2, .h2 {
 }
 .home__rank .match__wrapper__team p {
   margin: 0;
+  font-weight: 500;
 }
 .home__rank .match__wrapper .btn__ticket--primary-colr {
   background: linear-gradient(140deg, #9B0448 50%, #222222 100%);
   margin: 0;
+  padding: 5px 15px;
 }
 .home__rank .match__wrapper .btn__ticket--primary-colr:hover {
   background: linear-gradient(140deg, #9b0448 30%, #222222 90%);

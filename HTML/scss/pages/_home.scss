@@ -846,6 +846,9 @@
             th, td{
                 border: none;
                 vertical-align: middle;
+                font-weight: 500;
+                font-size: 17px;
+                padding: 12px 20px;
             }
             thead{
                 background: #DADFE5;
@@ -866,8 +869,14 @@
                                 border-radius: 6px;
                                 color: #9B0448;
                                 font-size: 16px;
-                                padding: 9px 12px;
+                                padding: 0;
                                 background: #fff;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                text-align: center;
+                                width: 42px;
+                                height: 42px;
                             }
                         }
                     }
@@ -919,6 +928,8 @@
                 .btn{
                     text-transform: uppercase;
                     border-radius: 5px;
+                    font-size: 18px;
+                    font-weight: 500;
                 }
             }
         }
@@ -987,12 +998,14 @@
                 }
                 p{
                     margin: 0;
+                    font-weight: 500;
                 }
             }
             .btn__ticket{
                 &--primary-colr{
                     background: linear-gradient(140deg, #9B0448 50%, #222222 100%);
                     margin:0;
+                    padding: 5px 15px;
                     &:hover{
                         background: linear-gradient(140deg, #9b0448 30%, #222222 90%);
                     }
