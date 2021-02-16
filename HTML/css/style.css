@@ -1545,6 +1545,185 @@ h2, .h2 {
 .home__sponsor ul li img {
   display: block;
 }
+.home__rank {
+  background-color: #fff;
+  padding: 40px 50px 70px;
+}
+.home__rank nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.home__rank nav .nav-fill {
+  border-bottom: none;
+}
+.home__rank nav .nav-fill .nav-item.nav-link {
+  flex: 0 0 auto;
+  font-family: "Bebas Neue";
+  background-color: #C4C7CA;
+  color: #000;
+  border: none;
+  font-size: 27px;
+  text-transform: uppercase;
+  position: relative;
+  padding: 10px 27px 10px 16px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.home__rank nav .nav-fill .nav-item.nav-link::after {
+  content: " ";
+  position: absolute;
+  right: -9px;
+  width: 50px;
+  background-color: #C4C7CA;
+  z-index: 1;
+  top: 0;
+  height: 100%;
+  width: 28px;
+  transform: skewX(18deg);
+  border-top-right-radius: 8px;
+}
+.home__rank nav .nav-fill .nav-item.nav-link.active {
+  background-color: #F08800;
+  color: #fff;
+}
+.home__rank nav .nav-fill .nav-item.nav-link.active::after {
+  background-color: #F08800;
+  color: #fff;
+}
+.home__rank__view-all a {
+  font-size: 22px;
+  font-family: "Bebas Neue";
+  color: #222222;
+}
+.home__rank .table th, .home__rank .table td {
+  border: none;
+  vertical-align: middle;
+}
+.home__rank .table thead {
+  background: #DADFE5;
+}
+.home__rank .table thead th {
+  font-family: "Barlow";
+  font-size: 16px;
+  color: #9B0448;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.home__rank .table tbody tr td:first-child span {
+  border: 1px solid #ECECEC;
+  border-radius: 6px;
+  color: #9B0448;
+  font-size: 16px;
+  padding: 9px 12px;
+  background: #fff;
+}
+.home__rank .table tbody tr:nth-child(odd) td {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+.home__rank .table__club {
+  display: flex;
+  align-items: center;
+}
+.home__rank .table__club figure {
+  border: 1px solid #ECECEC;
+  border-radius: 6px;
+  padding: 2px;
+  background: #fff;
+  width: 40px;
+  margin-right: 10px;
+}
+.home__rank .table__club figure img {
+  width: 40px;
+  padding: 3px;
+}
+.home__rank .table__club span {
+  font-size: 17px;
+  color: #9B0448;
+}
+.home__rank__table {
+  box-shadow: 0 3px 13px rgba(0, 0, 0, 0.11);
+  border-radius: 10px;
+  padding-bottom: 30px;
+}
+.home__rank__table__btn {
+  text-align: center;
+  margin: 0 auto;
+}
+.home__rank__table__btn .btn {
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+.home__rank .result__wrapper {
+  background: #fff;
+  box-shadow: 0 3px 13px rgba(0, 0, 0, 0.11);
+  padding: 20px 8px;
+  border-radius: 10px;
+}
+.home__rank .result__wrapper__box {
+  border: 1px solid #E6E6E6;
+  border-radius: 2px;
+  border-top: 3px solid #F08800;
+  padding: 25px 0;
+  text-align: center;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.home__rank .result__wrapper__box h3 {
+  color: #222222;
+  font-size: 19px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+}
+.home__rank .result__wrapper__box h3 span {
+  border-left: 2px solid #F08800;
+  margin-left: 10px;
+  padding-left: 10px;
+}
+.home__rank .result__wrapper__box small {
+  font-size: 17px;
+}
+.home__rank .result__wrapper__middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 18px 0px 25px;
+}
+.home__rank .result__wrapper__middle span {
+  background: #000;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 14px;
+  margin-top: -30px;
+  display: flex;
+  width: 30px;
+  align-items: center;
+  height: 30px;
+  justify-content: center;
+}
+.home__rank .result__wrapper__race {
+  padding: 0 10px;
+}
+.home__rank .result__wrapper__race figure {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  display: block;
+  background: #E6E6E6;
+  padding: 10px;
+  overflow: hidden;
+}
+.home__rank .result__wrapper__race p {
+  margin: 0;
+}
+.home__rank .result__wrapper .btn__ticket {
+  background: linear-gradient(140deg, #9B0448 50%, #222222 100%);
+  margin: 0;
+}
+.home__rank .result__wrapper .btn__ticket:hover {
+  background: linear-gradient(140deg, #9b0448 30%, #222222 90%);
+}
 
 @keyframes rotateY {
   0%, 40%, 100% {
