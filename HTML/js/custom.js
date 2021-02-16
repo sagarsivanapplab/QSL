@@ -40,6 +40,12 @@
       } else {
           $('.scrollup').hide();
       }
+
+      if ($(this).scrollTop() > 100) {
+        $('.header').addClass('toTop');
+      } else {
+        $('.header').removeClass('toTop');
+      }
     });
     
   });
