@@ -134,7 +134,7 @@
 
         label {
             display: block;
-            margin: 0 108px;
+            margin: invertValues(0, 0, 0, 108px);
             position: relative;
             margin-top: 30px;
             &::after {
@@ -154,30 +154,6 @@
                 &::after {
                     display: none;
                 }
-            }
-        }
-
-        .close {
-            position: absolute;
-            #{$end-direction}: 40px;
-            top: 40px;
-            width: 22px;
-            height: 22px;
-            background: url(../images/icons/btn_close.svg) 0 0 no-repeat;
-            overflow: hidden;
-            text-indent: -9999px;
-            opacity: 1;
-
-            @media (max-width: 575px) {   
-                #{$end-direction}: 10px;
-                top: 14px;
-            }
-
-            &:hover {
-                opacity: 1;
-                -webkit-filter: brightness(0);
-                filter: brightness(0);
-                animation: spin90 200ms 1 linear;
             }
         }
     }

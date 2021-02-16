@@ -41,6 +41,10 @@ li {
   overflow: hidden;
   margin: 0 20px;
 }
+.search-open .btn__search {
+  background: url(../images/icons/btn_search_close.svg) 0 0 no-repeat;
+  animation: spin90 200ms 1 linear;
+}
 .btn__ticket {
   background: linear-gradient(140deg, #9b0448 50%, #f08800 100%);
   border: 0;
@@ -532,7 +536,7 @@ h2, .h2 {
 }
 .search-holder label {
   display: block;
-  margin: 0 108px;
+  margin: 0 0 0 108px;
   position: relative;
   margin-top: 30px;
 }
@@ -553,28 +557,6 @@ h2, .h2 {
   .search-holder label::after {
     display: none;
   }
-}
-.search-holder .close {
-  position: absolute;
-  right: 40px;
-  top: 40px;
-  width: 22px;
-  height: 22px;
-  background: url(../images/icons/btn_close.svg) 0 0 no-repeat;
-  overflow: hidden;
-  text-indent: -9999px;
-  opacity: 1;
-}
-@media (max-width: 575px) {
-  .search-holder .close {
-    right: 10px;
-    top: 14px;
-  }
-}
-.search-holder .close:hover {
-  opacity: 1;
-  filter: brightness(0);
-  animation: spin90 200ms 1 linear;
 }
 .search-input {
   width: 100%;
@@ -1284,6 +1266,18 @@ h2, .h2 {
   text-indent: -9999px;
   transition: all 0.8s ease;
 }
+.home__highlights__legend figure::before {
+  background: #FFFFFF;
+  content: "";
+  height: 170%;
+  left: -130%;
+  opacity: 0.2;
+  position: absolute;
+  top: -150px;
+  transform: rotate(35deg);
+  width: 100px;
+  z-index: 1;
+}
 .home__highlights__legend figure figcaption {
   position: absolute;
   z-index: 2;
@@ -1328,6 +1322,10 @@ h2, .h2 {
 .home__highlights__legend:hover figure img {
   filter: grayscale(0%);
   transform: rotate(-2deg) scale(1.02);
+}
+.home__highlights__legend:hover figure::before {
+  left: 150%;
+  transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 .home__highlights__best {
   min-height: 100%;
@@ -1573,6 +1571,18 @@ h2, .h2 {
 .home__gallery__item figure {
   position: relative;
 }
+.home__gallery__item figure::before {
+  background: #FFFFFF;
+  content: "";
+  height: 170%;
+  left: -130%;
+  opacity: 0.2;
+  position: absolute;
+  top: -150px;
+  transform: rotate(35deg);
+  width: 100px;
+  z-index: 1;
+}
 .home__gallery__item figure img {
   filter: grayscale(40%);
   transition: all 0.8s ease;
@@ -1606,6 +1616,10 @@ h2, .h2 {
 }
 .home__gallery__item:hover figure::after {
   opacity: 0.5;
+}
+.home__gallery__item:hover figure::before {
+  left: 150%;
+  transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 .home__gallery__content {
   background: #FFFFFF;

@@ -103,7 +103,6 @@
                 z-index: 1;
                 opacity: 0.7;
             }
-
         }
 
         &__item {
@@ -155,8 +154,7 @@
                     &:after {
                         transition: all 1500ms cubic-bezier(0.19, 1, 0.22, 1);
                     }
-                }
-    
+                }    
             }
 
             figure {
@@ -307,6 +305,8 @@
                 overflow: hidden;
                 position: relative;
 
+
+
                 &::after {
                     content: "";
                     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0) 13%, rgba(0, 0, 0, 1) 98%);
@@ -319,6 +319,19 @@
                     text-indent: -9999px;
                     transition: all 0.8s ease;
                 }
+
+                &::before {
+                    background: $white-color;
+                    content: "";
+                    height: 170%;
+                    left: -130%;
+                    opacity: .2;
+                    position: absolute;
+                    top: -150px;
+                    transform: rotate(35deg);
+                    width: 100px;
+                    z-index: 1;
+                } 
 
                 & figcaption {
                     position: absolute;
@@ -374,6 +387,11 @@
                     img {
                         filter: grayscale(0%);
                         transform:rotate(-2deg) scale(1.02);
+                    }
+
+                    &::before {
+                        left: 150%;
+                        transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
                     }
                 }
             }
@@ -438,7 +456,7 @@
                     border-radius: 12px;
                     margin: 0 0 32px;
                     #{$end-direction}: -10px;
-                    position: relative;
+                    position: relative;     
 
                     & > img {
                         position: relative;
@@ -500,7 +518,7 @@
                     text-transform: uppercase;
                     margin: 5px 0 0;
                 }
-            }
+            } 
         }
 
 
@@ -663,6 +681,19 @@
             figure {
                 position: relative;
 
+                &::before {
+                    background: $white-color;
+                    content: "";
+                    height: 170%;
+                    left: -130%;
+                    opacity: .2;
+                    position: absolute;
+                    top: -150px;
+                    transform: rotate(35deg);
+                    width: 100px;
+                    z-index: 1;
+                } 
+
                 img {
                     filter: grayscale(40%);
                     transition: all 0.8s ease;
@@ -702,6 +733,11 @@
                     }
                     &::after {
                         opacity: 0.5;
+                    }
+
+                    &::before {
+                        left: 150%;
+                        transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
                     }
                 }
             }

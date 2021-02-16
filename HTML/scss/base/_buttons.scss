@@ -7,7 +7,12 @@
         height: 33px;
         cursor: pointer;
         overflow: hidden;
-        margin: 0 20px;
+        margin: 0 20px; 
+
+        .search-open & {
+            background: url(../images/icons/btn_search_close.svg) 0 0 no-repeat;
+            animation: spin90 200ms 1 linear;
+        }
     }
 
     &__ticket {

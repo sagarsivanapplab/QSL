@@ -41,6 +41,10 @@ li {
   overflow: hidden;
   margin: 0 20px;
 }
+.search-open .btn__search {
+  background: url(../images/icons/btn_search_close.svg) 0 0 no-repeat;
+  animation: spin90 200ms 1 linear;
+}
 .btn__ticket {
   background: linear-gradient(140deg, #9b0448 50%, #f08800 100%);
   border: 0;
@@ -534,7 +538,7 @@ h2, .h2 {
 }
 .search-holder label {
   display: block;
-  margin: 0 108px;
+  margin: 0 108px 0 0;
   position: relative;
   margin-top: 30px;
 }
@@ -555,28 +559,6 @@ h2, .h2 {
   .search-holder label::after {
     display: none;
   }
-}
-.search-holder .close {
-  position: absolute;
-  left: 40px;
-  top: 40px;
-  width: 22px;
-  height: 22px;
-  background: url(../images/icons/btn_close.svg) 0 0 no-repeat;
-  overflow: hidden;
-  text-indent: -9999px;
-  opacity: 1;
-}
-@media (max-width: 575px) {
-  .search-holder .close {
-    left: 10px;
-    top: 14px;
-  }
-}
-.search-holder .close:hover {
-  opacity: 1;
-  filter: brightness(0);
-  animation: spin90 200ms 1 linear;
 }
 .search-input {
   width: 100%;
