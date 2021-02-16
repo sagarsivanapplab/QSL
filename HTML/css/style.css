@@ -1703,6 +1703,9 @@ h2, .h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  margin: 0 0 -8px;
+  z-index: 0;
 }
 .home__rank nav .nav-fill {
   border-bottom: none;
@@ -1795,22 +1798,32 @@ h2, .h2 {
   box-shadow: 0 3px 13px rgba(0, 0, 0, 0.11);
   border-radius: 10px;
   padding-bottom: 30px;
+  overflow: hidden;
+  position: relative;
 }
 .home__rank__table__btn {
   text-align: center;
   margin: 0 auto;
+  background: #ffffff;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 20px 0 40px;
+  box-shadow: 0 -35px 20px 10px rgba(255, 255, 255, 0.9);
 }
 .home__rank__table__btn .btn {
   text-transform: uppercase;
   border-radius: 5px;
 }
-.home__rank .result__wrapper {
+.home__rank .match__wrapper {
   background: #fff;
   box-shadow: 0 3px 13px rgba(0, 0, 0, 0.11);
   padding: 20px 8px;
   border-radius: 10px;
+  overflow: hidden;
+  position: relative;
 }
-.home__rank .result__wrapper__box {
+.home__rank .match__wrapper__box {
   border: 1px solid #E6E6E6;
   border-radius: 2px;
   border-top: 3px solid #F08800;
@@ -1819,28 +1832,29 @@ h2, .h2 {
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 }
-.home__rank .result__wrapper__box h3 {
+.home__rank .match__wrapper__box h3 {
   color: #222222;
   font-size: 19px;
   font-weight: bold;
   text-transform: uppercase;
   margin: 0;
 }
-.home__rank .result__wrapper__box h3 span {
+.home__rank .match__wrapper__box h3 span {
   border-left: 2px solid #F08800;
   margin-left: 10px;
   padding-left: 10px;
 }
-.home__rank .result__wrapper__box small {
+.home__rank .match__wrapper__box small {
   font-size: 17px;
+  display: block;
 }
-.home__rank .result__wrapper__middle {
+.home__rank .match__wrapper__middle {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 18px 0px 25px;
 }
-.home__rank .result__wrapper__middle span {
+.home__rank .match__wrapper__middle span {
   background: #000;
   color: #fff;
   border-radius: 50%;
@@ -1852,26 +1866,28 @@ h2, .h2 {
   height: 30px;
   justify-content: center;
 }
-.home__rank .result__wrapper__race {
+.home__rank .match__wrapper__team {
   padding: 0 10px;
 }
-.home__rank .result__wrapper__race figure {
+.home__rank .match__wrapper__team figure {
   width: 86px;
   height: 86px;
   border-radius: 50%;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #E6E6E6;
   padding: 10px;
   overflow: hidden;
 }
-.home__rank .result__wrapper__race p {
+.home__rank .match__wrapper__team p {
   margin: 0;
 }
-.home__rank .result__wrapper .btn__ticket {
+.home__rank .match__wrapper .btn__ticket--primary-colr {
   background: linear-gradient(140deg, #9B0448 50%, #222222 100%);
   margin: 0;
 }
-.home__rank .result__wrapper .btn__ticket:hover {
+.home__rank .match__wrapper .btn__ticket--primary-colr:hover {
   background: linear-gradient(140deg, #9b0448 30%, #222222 90%);
 }
 

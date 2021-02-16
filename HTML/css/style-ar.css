@@ -53,6 +53,7 @@ li {
   padding: 13px 25px 10px;
   margin: 0 10px;
   transition: all 200ms;
+  display: inline-block;
 }
 .btn__ticket::before {
   content: "";
@@ -423,8 +424,14 @@ h2, .h2 {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 }
 .header .container {
-  max-width: none;
+  max-width: 100%;
   margin: 0 20px;
+  transition: all 500ms;
+}
+.header.toTop .container {
+  max-width: 1600px;
+  margin: 0 auto;
+  transition: all 800ms;
 }
 .header__logo {
   border: 0px solid red;
@@ -441,12 +448,33 @@ h2, .h2 {
 .header__logo__holder {
   padding-top: 15px;
   padding-bottom: 15px;
+  transition: all 500ms;
+}
+.toTop .header__logo__holder {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 500ms;
+}
+.header__logo > img {
+  width: 108px;
+  opacity: 1;
+}
+.toTop .header__logo > img {
+  margin: 0 0 0 -108px;
+  opacity: 0;
+  transition: all 800ms;
 }
 .header__logo span {
   margin: 0 15px 0 0;
   position: relative;
   width: 98px;
   display: inline-block;
+  transition: all 500ms;
+}
+.toTop .header__logo span {
+  width: 56px;
+  margin: 0;
+  transition: all 1000ms;
 }
 .header__logo span::after {
   content: "";
@@ -458,6 +486,7 @@ h2, .h2 {
   border-radius: 100%;
   animation: spin360 20s infinite linear;
   background: url(../images/logo/logo_ball_pattern.svg) center center no-repeat;
+  background-size: cover;
 }
 .header__right {
   display: flex;
@@ -612,6 +641,11 @@ h2, .h2 {
   position: relative;
   text-transform: uppercase;
   border-bottom: 5px solid transparent;
+  transition: all 200ms;
+}
+.toTop .header__nav > ul > li > a {
+  padding: 22px 20px 20px 20px;
+  transition: all 1000ms;
 }
 .header__nav > ul > li > a:hover {
   background: #F8F8F8;
@@ -650,7 +684,7 @@ h2, .h2 {
   margin: 0 -14.5px 0 0;
 }
 .header__nav > ul > li.dropdown > a {
-  padding: 52px 20px 50px 40px;
+  padding-left: 40px;
 }
 .header__nav > ul > li.dropdown > a::after {
   content: "";
