@@ -113,3 +113,105 @@ h2, .h2 {
         display: none !important;            
     }
 }
+
+
+.slick-dots {
+    text-align: center;
+    padding: 10px 0 10px;
+    
+    li {
+        display: inline-block;
+        margin: 0 4px;
+
+        button {
+            border: 0;
+            background: rgba($color: $white-color, $alpha: 1);
+            display: block;
+            height: 12px;
+            width: 12px;
+            outline: 0;  
+            color: transparent; 
+            cursor: pointer;
+            border-radius: 20px;
+            opacity: 1;
+            transition: opacity .4s ease;     
+            position: relative;       
+
+            &:hover {
+                background:rgba($color: $white-color, $alpha: 0.5) ; 
+            }
+        }
+
+        &.slick-active button {
+            background: $secondary-color;
+            opacity: 1;
+        }
+    }
+}
+
+.slick-arrow {
+    position: absolute;
+    display: block;
+    top: 30%;
+    padding: 30px 30px;
+    opacity: .5;
+    z-index: 5;
+    border: 0;
+    text-indent: -9999px; 
+    transition: transform .4s ease, opacity .4s ease, background-color .4s ease, padding .4s ease;
+
+    &:focus {
+        border: 0;
+        outline: 0px auto -webkit-focus-ring-color;
+    }
+}
+
+.slick-prev {
+    width: 73px;
+    height: 73px;
+    #{$start-direction}: 10px;
+    top: 43%;
+    background: $primary-color;
+    background-size: 15px;
+    opacity: 1;
+    &:hover {        
+        background-color: #4B6A7E;
+    }    
+
+    .slick-class-02 & {
+        width: 115px;
+        height: 118px;
+        background: transparent url(../images/bg/left_arrow.png) no-repeat center center;
+        #{$start-direction}: -70px;
+        filter: grayscale(90%);
+
+        &:hover {
+            filter: grayscale(0%);
+        }
+    }
+}
+
+.slick-next {
+    width: 73px;
+    height: 73px;
+    #{$end-direction}: 10px;
+    top: 43%;
+    background: $primary-color;
+    background-size: 15px;
+    opacity: 1;
+    &:hover {        
+        background-color: #4B6A7E;
+    }     
+
+    .slick-class-02 & {
+        width: 115px;
+        height: 118px;
+        background: transparent url(../images/bg/right_arrow.png) no-repeat center center;
+        #{$end-direction}: -70px;
+        filter: grayscale(90%);
+
+        &:hover {
+            filter: grayscale(0%);
+        }
+    }
+}

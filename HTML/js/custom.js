@@ -78,11 +78,25 @@
     });
   });*/
 
-  $(".slick-class-1").slick({
+  $(".slick-class-01").slick({
+    slidesToShow: 1,
+    infinite: false,
+    arrows: false,
+    dots: true
+  });
+
+  $(".slick-class-02").slick({
     slidesToShow: 1,
     infinite: false,
     arrows: true,
-    dots: false
+    dots: true
+  });
+
+  $(".slick-class-03").slick({
+    slidesToShow: 1,
+    infinite: false,
+    arrows: false,
+    dots: true
   });
 
   $(".slick-class-2").slick({ 
