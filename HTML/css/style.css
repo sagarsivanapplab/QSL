@@ -894,6 +894,11 @@ h2, .h2 {
 .footer__newsletter__form {
   margin: 12px 0 0;
 }
+@media (max-width: 768px) {
+  .footer__newsletter__form .form-group {
+    margin-bottom: 10px !important;
+  }
+}
 .footer__newsletter__form input {
   height: 60px;
   border: 2px solid #CFCFCF;
@@ -902,6 +907,16 @@ h2, .h2 {
   font-size: 19px;
   font-weight: 500;
   width: 350px;
+}
+@media (max-width: 768px) {
+  .footer__newsletter__form input {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 923px) {
+  .footer__newsletter__form input {
+    width: 290px;
+  }
 }
 .footer__newsletter__form input::placeholder {
   color: #000000;
@@ -920,6 +935,16 @@ h2, .h2 {
   color: #ffffff;
   transition: all 200ms;
 }
+@media (max-width: 768px) {
+  .footer__newsletter__form .btn-subscribe {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 923px) {
+  .footer__newsletter__form .btn-subscribe {
+    width: 120px;
+  }
+}
 .footer__newsletter__form .btn-subscribe:hover {
   background: #F08800;
 }
@@ -928,6 +953,11 @@ h2, .h2 {
   padding: 60px 0;
   color: #FFFFFF;
   position: relative;
+}
+@media (max-width: 768px) {
+  .footer__menu__holder {
+    padding: 30px 0;
+  }
 }
 .footer__menu__holder::after {
   content: "";
