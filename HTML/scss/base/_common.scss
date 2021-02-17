@@ -118,7 +118,7 @@ h2, .h2 {
 .slick-dots {
     text-align: center;
     padding: 10px 0 10px;
-    
+
     li {
         display: inline-block;
         margin: 0 4px;
@@ -184,9 +184,11 @@ h2, .h2 {
         background: transparent url(../images/bg/left_arrow.png) no-repeat center center;
         #{$start-direction}: -70px;
         filter: grayscale(90%);
+        opacity: .95;
 
         &:hover {
             filter: grayscale(0%);
+            opacity: 1;
         }
     }
 }
@@ -209,9 +211,11 @@ h2, .h2 {
         background: transparent url(../images/bg/right_arrow.png) no-repeat center center;
         #{$end-direction}: -70px;
         filter: grayscale(90%);
+        opacity: .95;
 
         &:hover {
             filter: grayscale(0%);
+            opacity: 1;
         }
     }
 }
