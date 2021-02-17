@@ -67,7 +67,7 @@
   });
 
 
-  $(document).ready(function(){
+  /*$(document).ready(function(){
     $('.custom1').owlCarousel({
       animateOut: 'slideOutRight',
       animateIn: 'flipInY',
@@ -76,12 +76,7 @@
       stagePadding:2,
       smartSpeed:450
     });
-  });
-
-
-
-
-  
+  });*/
 
   $(".slick-class-1").slick({
     slidesToShow: 1,

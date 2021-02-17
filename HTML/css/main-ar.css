@@ -321,8 +321,12 @@ li {
 
 .container {
   max-width: 1600px;
-  border: 0px solid red;
   width: auto;
+}
+@media (max-width: 1640px) {
+  .container {
+    margin: 0 20px;
+  }
 }
 
 .arabic-text {
@@ -425,36 +429,6 @@ h2, .h2 {
   }
 }
 
-/* Feel free to change duration  */
-.animated {
-  animation-duration: 1000 ms;
-  animation-fill-mode: both;
-}
-
-/* .owl-animated-out - only for current item */
-/* This is very important class. Use z-index if you want move Out item above In item */
-.owl-animated-out {
-  z-index: 1;
-}
-
-/* .owl-animated-in - only for upcoming item
-/* This is very important class. Use z-index if you want move In item above Out item */
-.owl-animated-in {
-  z-index: 0;
-}
-
-/* .fadeOut is style taken from Animation.css and this is how it looks in owl.carousel.css:  */
-.fadeOut {
-  animation-name: fadeOut;
-}
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 .header {
   position: fixed;
   z-index: 10;
