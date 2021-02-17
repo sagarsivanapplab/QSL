@@ -1,0 +1,95 @@
+.match {
+    &__wrapper {
+        background: $white-color;
+        box-shadow: 0 3px 13px rgb(0 0 0 / 11%);
+        padding:20px 8px;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__box {
+        border: 1px solid #E6E6E6;
+        border-radius: 2px;
+        border-top: 3px solid $secondary-color;
+        padding: 25px 0;
+        text-align: center;
+        border-top-#{$start-direction}-radius: 3px;
+        border-top-#{$end-direction}-radius: 3px;
+
+        h3 {
+            color: #222222;
+            font-size: 19px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 0;
+
+            span{
+                border-#{$start-direction}: 2px solid $secondary-color;
+                margin-#{$start-direction}: 10px;
+                padding-#{$start-direction}: 10px;
+            }
+        }
+
+        small {
+            font-size: 17px;
+            display: block;
+        }
+
+        &__middle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 18px 0px 25px;
+    
+            span{
+                background: $black-color;
+                color: $white-color;
+                border-radius: 50%;
+                font-size: 14px;
+                margin-top: -30px;
+                display: flex;
+                width: 30px;
+                align-items: center;
+                height: 30px;
+                justify-content: center;
+            }
+        }
+    
+        &__team {
+            padding: 0 10px;
+    
+            figure {
+                width: 86px;
+                height: 86px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #E6E6E6;
+                padding: 10px;
+                overflow: hidden;
+
+                img { 
+                    max-width: 95%; 
+                }
+            }
+    
+            p {
+                margin: 0;
+                font-weight: 500;
+            }
+        }
+
+        &:hover &__team {    
+            figure {
+                img {
+                    animation: rotateYLogo 1s 1 cubic-bezier(.03,.21,.67,.97);
+                }
+            }
+        }
+    }
+
+
+}

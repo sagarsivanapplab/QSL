@@ -13,7 +13,7 @@
 @import 'base/common';
 
 // components
-//@import 'components/animation';
+@import 'components/animation';
 
 // layout
 @import 'layout/header';
@@ -23,6 +23,7 @@
 // pages
 @import 'pages/banner';
 @import 'pages/home';
+@import 'pages/match';
 //@import 'pages/news';
 //@import 'pages/project';
 //@import 'pages/press';

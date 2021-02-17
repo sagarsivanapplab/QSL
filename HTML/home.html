@@ -16,6 +16,12 @@
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/evo-calendar.css"/>
+
+    <link rel="stylesheet" href="css/slider.animate.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
+
     <link rel="stylesheet" href="css/style.css">
 
     <title>QSL | Qatar Stars League</title>
@@ -310,6 +316,386 @@
         </div>    
       </div>
 
+      <!--Ranking starts here -->
+      <div class="home__rank">
+        <div class="row mx-0">
+           <div class="col col-md-4 px-3">
+              <nav>
+                 <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link active" id="nav-rank-tab" data-toggle="tab" href="#nav-rank" role="tab" aria-controls="nav-rank" aria-selected="true">Ranking</a>
+                 </div>
+                 <div class="home__rank__view-all">
+                    <a href="javascript:void(0);">View All Standings</a>
+                 </div>
+              </nav>
+              <div class="tab-pane fade show active" id="nav-rank" role="tabpanel" aria-labelledby="nav-rank-tab">
+                 <div class="home__rank__table">
+                    <table class="table" cellspacing="0" cellpadding="0">
+                       <thead>
+                          <tr>
+                             <th>Pos.</th>
+                             <th>Club</th>
+                             <th>Matches</th>
+                             <th>Points</th>
+                          </tr>
+                       </thead>
+                       <tbody>
+                          <tr>
+                             <td><span>01</span></td>
+                             <td>
+                                <div class="table__club">
+                                   <figure>
+                                      <img src="images/placeholder/club_4.png">
+                                   </figure>
+                                   <span> Al Sadd</span>
+                                </div>
+                              </td>
+                             <td>14</td>
+                             <td>38</td>
+                          </tr>
+                          <tr>
+                             <td><span>02</span></td>
+                             <td>
+                                <div class="table__club">
+                                   <figure>
+                                      <img src="images/placeholder/club_2.png">
+                                   </figure>
+                                   <span> Al Duhail</span>
+                                </div>
+                             </td>
+                             <td>14</td>
+                             <td>27</td>
+                          </tr>
+                          <tr>
+                             <td><span>03</span></td>
+                             <td>
+                                <div class="table__club">
+                                   <figure>
+                                      <img src="images/placeholder/club_6.png">
+                                   </figure>
+                                   <span> Qatar SC</span>
+                                </div>
+                             </td>
+                             <td>14</td>
+                             <td>23</td>
+                          </tr>
+                          <tr>
+                             <td><span>04</span></td>
+                             <td>
+                                <div class="table__club">
+                                   <figure>
+                                      <img src="images/placeholder/club_8.png">
+                                   </figure>
+                                   <span>Al Gharafa</span>
+                                </div>
+                             </td>
+                             <td>13</td>
+                             <td>23</td>
+                          </tr>
+                          <tr>
+                             <td><span>05</span></td>
+                             <td>
+                                <div class="table__club">
+                                   <figure>
+                                      <img src="images/placeholder/club_3.png">
+                                   </figure>
+                                   <span> Al Rayyan</span>
+                                </div>
+                             </td>
+                             <td>14</td>
+                             <td>22</td>
+                          </tr>
+                          <tr>
+                             <td><span>06</span></td>
+                             <td>
+                                <div class="table__club">
+                                   <figure>
+                                      <img src="images/placeholder/club_9.png">
+                                   </figure>
+                                   <span> Al Ahli</span>
+                                </div>
+                             </td>
+                             <td>13</td>
+                             <td>22</td>
+                          </tr>
+                          <tr>
+                             <td><span>07</span></td>
+                             <td>
+                                <div class="table__club">
+                                   <figure>
+                                      <img src="images/placeholder/club_1.png">
+                                   </figure>
+                                   <span> Al Arabi</span>
+                                </div>
+                             </td>
+                             <td>13</td>
+                             <td>18</td>
+                          </tr>
+                          <tr>
+                             <td><span>08</span></td>
+                             <td>
+                                <div class="table__club">
+                                   <figure>
+                                      <img src="images/placeholder/club_1.png">
+                                   </figure>
+                                   <span> Al Arabi</span>
+                                </div>
+                             </td>
+                             <td>13</td>
+                             <td>18</td>
+                          </tr>
+                          <tr>
+                             <td><span>09</span></td>
+                             <td>
+                                <div class="table__club">
+                                   <figure>
+                                      <img src="images/placeholder/club_1.png">
+                                   </figure>
+                                   <span> Al Arabi</span>
+                                </div>
+                             </td>
+                             <td>13</td>
+                             <td>18</td>
+                          </tr>
+                       </tbody>
+                    </table>
+                    <div class="home__rank__table__btn">
+                       <button class="btn btn-primary">Show all ranking</button>
+                    </div>
+                 </div>
+               </div>
+           </div>
+           <div class="col col-md-8 px-3">
+              <div class="home__rank__result">
+                 <nav>
+                    <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                       <a class="nav-item nav-link active" id="nav-upcoming-tab" data-toggle="tab" href="#nav-upcoming" role="tab" aria-controls="nav-upcoming" aria-selected="true">Upcoming Week</a>
+                       <a class="nav-item nav-link" id="nav-result-tab" data-toggle="tab" href="#nav-result" role="tab" aria-controls="nav-result" aria-selected="true">Results</a>
+                    </div>
+                    <div class="home__rank__view-all">
+                       <a href="javascript:void(0);">See All  <img src="images/icons/see-all-arrow.svg"></a>
+                    </div>
+                 </nav>
+                 <div class="tab-pane fade show active" id="nav-upcoming" role="tabpanel" aria-labelledby="nav-upcoming-tab">
+                    <div class="match__wrapper">
+                      <div class="row mx-0">
+
+                        <div class="col col-md-4 mb-3 px-2">
+                          <div class="match__box">
+                            <h3>25 Jan, 2021 <span>20:00</span>
+                                <small>Qatar SC Stadium</small>
+                            </h3>
+
+                            <div class="match__box__middle">
+                                <div class="match__box__team">
+                                  <figure>
+                                    <img src="images/placeholder/club_7.png">
+                                  </figure>
+                                  <p>Umm Salal</p>
+                                </div>
+
+                                <span>VS</span>
+                                
+                                <div class="match__box__team">
+                                  <figure>
+                                    <img src="images/placeholder/club_5.png">
+                                  </figure>
+                                  <p>Al Wakrah</p>
+                                </div>
+                            </div>
+
+                            <a class="btn__ticket btn__ticket--primary-color" href="javascript:void(0);">Buy ticket</a>
+                          </div>
+                        </div>
+                       
+                        <div class="col col-md-4 mb-3 px-2">
+                          <div class="match__box">
+                            <h3>25 Jan, 2021 <span>20:00</span>
+                                <small>Qatar SC Stadium</small>
+                            </h3>
+
+                            <div class="match__box__middle">
+                                <div class="match__box__team">
+                                  <figure>
+                                      <img src="images/placeholder/club_8.png">
+                                  </figure>
+                                <p>Umm Salal</p>
+                                </div>
+
+                                <span>VS</span>
+
+                                <div class="match__box__team">
+                                  <figure>
+                                      <img src="images/placeholder/club_1.png">
+                                  </figure>
+                                  <p>Al Wakrah</p>
+                                </div>
+                            </div>
+
+                            <a class="btn__ticket btn__ticket--primary-color" href="javascript:void(0);">Buy ticket</a>
+                          </div>
+                        </div>
+
+                        <div class="col col-md-4 mb-3 px-2">
+                          <div class="match__box">
+                            <h3>25 Jan, 2021 <span>20:00</span>
+                                <small>Qatar SC Stadium</small>
+                            </h3>
+
+                            <div class="match__box__middle">
+                                <div class="match__box__team">
+                                  <figure>
+                                      <img src="images/placeholder/club_5.png">
+                                  </figure>
+                                  <p>Umm Salal</p>
+                                </div>
+
+                                <span>VS</span>
+
+                                <div class="match__box__team">
+                                  <figure>
+                                      <img src="images/placeholder/club_8.png">
+                                  </figure>
+                                  <p>Al Wakrah</p>
+                                </div>
+                            </div>
+
+                            <a class="btn__ticket btn__ticket--primary-color" href="javascript:void(0);">Buy ticket</a>
+                          </div>
+                        </div>
+
+                        <div class="col col-md-4 px-2">
+                          <div class="match__box">
+                            <h3>25 Jan, 2021 <span>20:00</span>
+                                <small>Qatar SC Stadium</small>
+                            </h3>
+
+                            <div class="match__box__middle">
+                                <div class="match__box__team">
+                                  <figure>
+                                      <img src="images/placeholder/club_1.png">
+                                  </figure>
+                                  <p>Umm Salal</p>
+                                </div>
+
+                                <span>VS</span>
+
+                                <div class="match__box__team">
+                                  <figure>
+                                      <img src="images/placeholder/club_7.png">
+                                  </figure>
+                                  <p>Al Wakrah</p>
+                                </div>
+                            </div>
+
+                            <a class="btn__ticket btn__ticket--primary-color" href="javascript:void(0);">Buy ticket</a>
+                          </div>
+                        </div>
+
+                        <div class="col col-md-4 px-2">
+                          <div class="match__box">
+                            <h3>25 Jan, 2021 <span>20:00</span>
+                                <small>Qatar SC Stadium</small>
+                            </h3>
+
+                            <div class="match__box__middle">
+                                <div class="match__box__team">
+                                  <figure>
+                                      <img src="images/placeholder/club_5.png">
+                                  </figure>
+                                  <p>Umm Salal</p>
+                                </div>
+
+                                <span>VS</span>
+
+                                <div class="match__box__team">
+                                  <figure>
+                                      <img src="images/placeholder/club_1.png">
+                                  </figure>
+                                  <p>Al Wakrah</p>
+                                </div>
+                            </div>
+
+                            <a class="btn__ticket btn__ticket--primary-color" href="javascript:void(0);">Buy ticket</a>
+                          </div>
+                        </div>
+
+                        <div class="col col-md-4 px-2">
+                          <div class="match__box">
+                            <h3>25 Jan, 2021 <span>20:00</span>
+                                <small>Qatar SC Stadium</small>
+                            </h3>
+
+                            <div class="match__box__middle">
+                                <div class="match__box__team">
+                                  <figure>
+                                      <img src="images/placeholder/club_7.png">
+                                  </figure>
+                                  <p>Umm Salal</p>
+                                </div>
+
+                                <span>VS</span>
+
+                                <div class="match__box__team">
+                                  <figure>
+                                      <img src="images/placeholder/club_8.png">
+                                  </figure>
+                                  <p>Al Wakrah</p>
+                                </div>
+                            </div>
+
+                            <a class="btn__ticket btn__ticket--primary-color" href="javascript:void(0);">Buy ticket</a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+       </div>
+      </div>
+
+      <div class="custom1 owl-carousel owl-theme">
+        <div class="item">
+          <h4>1</h4>
+        </div>
+        <div class="item">
+          <h4>2</h4>
+        </div>
+        <div class="item">
+          <h4>3</h4>
+        </div>
+        <div class="item">
+          <h4>4</h4>
+        </div>
+        <div class="item">
+          <h4>5</h4>
+        </div>
+        <div class="item">
+          <h4>6</h4>
+        </div>
+        <div class="item">
+          <h4>7</h4>
+        </div>
+        <div class="item">
+          <h4>8</h4>
+        </div>
+        <div class="item">
+          <h4>9</h4>
+        </div>
+        <div class="item">
+          <h4>10</h4>
+        </div>
+        <div class="item">
+          <h4>11</h4>
+        </div>
+        <div class="item">
+          <h4>12</h4>
+        </div>
+      </div>
+
+      <!--Highlights starts here -->
       <div class="home__highlights__content">
         <h2 class="color-white mb-4">Highlights</h2>
         <div class="row mx-0">
@@ -332,31 +718,85 @@
 
           <div class="col col-md-4 px-2">
 
-            <div class="home__highlights__best">
-              <span class="home__highlights__best__rank">01</span>
-              <h3 class="color-primary">Best of the month</h3>         
-              <h4>November / December</h4>   
+            
 
-              <div class="home__highlights__best__content">
-                <h5>05<small>Goals</small></h5>   
-                <figure>
-                  <img src="images/placeholder/best_image.jpg" alt="Qatar Stars League">   
+            <div class="custom1 owl-carousel owl-theme">
 
-                  <span>
-                    <img src="images/placeholder/club_2.png" alt="Qatar Stars League">   
-                  </span>
-                </figure>
-                
-                <h5>08<small>Matches</small></h5>  
+              <div>
+                <div class="home__highlights__best">
+                  <span class="home__highlights__best__rank">01</span>
+                  <h3 class="color-primary">Best of the month</h3>         
+                  <h4>November / December</h4>
+                  <div class="home__highlights__best__content">
+                    <h5>05<small>Goals</small></h5>   
+                    <figure>
+                      <img src="images/placeholder/best_image.jpg" alt="Qatar Stars League">   
+    
+                      <span>
+                        <img src="images/placeholder/club_2.png" alt="Qatar Stars League">   
+                      </span>
+                    </figure>                
+                    <h5>08<small>Matches</small></h5>  
+                  </div>
+                  <h4>Player of the Month</h4>
+                  <h6>
+                    Akram Afif
+                    <span>striker for Al Sadd</span>
+                  </h6>                      
+                </div>    
               </div>
 
-              <h4>Player of the Month</h4>
+              <div>
+                <div class="home__highlights__best">
+                  <span class="home__highlights__best__rank">01</span>
+                  <h3 class="color-primary">Best of the month</h3>         
+                  <h4>November / December</h4>
+                  <div class="home__highlights__best__content">
+                    <h5>05<small>Goals</small></h5>   
+                    <figure>
+                      <img src="images/placeholder/best_image.jpg" alt="Qatar Stars League">   
+    
+                      <span>
+                        <img src="images/placeholder/club_2.png" alt="Qatar Stars League">   
+                      </span>
+                    </figure>                
+                    <h5>09<small>Matches</small></h5>  
+                  </div>
+                  <h4>Player of the Month</h4>
+                  <h6>
+                    Akram Afif
+                    <span>striker for Al Sadd</span>
+                  </h6>                      
+                </div>    
+              </div>
 
-              <h6>
-                Akram Afif
-                <span>striker for Al Sadd</span>
-              </h6>                      
+              <div>
+                <div class="home__highlights__best">
+                  <span class="home__highlights__best__rank">01</span>
+                  <h3 class="color-primary">Best of the month</h3>         
+                  <h4>November / December</h4>
+                  <div class="home__highlights__best__content">
+                    <h5>05<small>Goals</small></h5>   
+                    <figure>
+                      <img src="images/placeholder/best_image.jpg" alt="Qatar Stars League">   
+    
+                      <span>
+                        <img src="images/placeholder/club_2.png" alt="Qatar Stars League">   
+                      </span>
+                    </figure>                
+                    <h5>10<small>Matches</small></h5>  
+                  </div>
+                  <h4>Player of the Month</h4>
+                  <h6>
+                    Akram Afif
+                    <span>striker for Al Sadd</span>
+                  </h6>                      
+                </div>    
+              </div>
+
             </div>
+
+            
 
           </div>
 
@@ -396,10 +836,12 @@
         </div>
       </div>
       
+      <!--Advertisement starts here -->
       <div class="container px-0 mb-5 mt-5 home__advertisement text-center">          
         <img src="images/placeholder/advertisement.jpg" class="img-fluid" alt="Qatar Stars League">
       </div>
 
+      <!--Gallery starts here -->
       <div class="home__gallery"> 
         <div class="container">  
           <div class="row align-items-center home__gallery__heading">
@@ -534,9 +976,8 @@
         </div>
         
       </div>
-
       
-      
+      <!--Sponsor starts here -->
       <div class="home__sponsor">
         <div class="container px-0">
           <h4 class="h4 mb-4 color-primary">Title Sponsor</h4>
@@ -546,6 +987,7 @@
         </div>
       </div>
 
+      <!--Sponsor starts here -->
       <div class="home__sponsor">
         <div class="container px-0">
           <h4 class="h4 mb-4 color-primary">Official Sponsors</h4>
@@ -558,6 +1000,7 @@
         </div>
       </div>
 
+      <!--Sponsor starts here -->
       <div class="home__sponsor home__sponsor--bg">
         <div class="container px-0">
           <h4 class="h4 mb-4 color-primary">Business Partners</h4>
@@ -572,6 +1015,7 @@
         </div>
       </div>
 
+      <!--Sponsor starts here -->
       <div class="home__sponsor home__sponsor--noborder">
         <div class="container px-0">
           <h4 class="h4 mb-4 color-primary">Football Family</h4>
@@ -710,6 +1154,8 @@
     <script src="js/slick.js" type="text/javascript"></script>
     <script src="js/jquery.fancybox.min.js" type="text/javascript"></script>
     <script src="js/jquery-tjgallery.js" type="text/javascript"></script>
+
+    <script src="js/owl.carousel.min.js"></script>
 
     <!-- Calendar JavaScript -->
     <script src="js/evo-calendar.js" type="text/javascript"></script>

@@ -74,6 +74,14 @@ li {
   border: 0;
   color: #ffffff;
 }
+.btn__ticket--primary-color {
+  background: linear-gradient(140deg, #9B0448 50%, #222222 100%);
+  margin: 0;
+  padding: 5px 15px;
+}
+.btn__ticket--primary-color:hover {
+  background: linear-gradient(140deg, #9b0448 30%, #222222 90%);
+}
 .btn__language {
   margin: 0 20px 0 10px;
   text-transform: uppercase;
@@ -413,6 +421,221 @@ h2, .h2 {
   .scrollup {
     display: none !important;
   }
+}
+
+/* Feel free to change duration  */
+.animated {
+  animation-duration: 1000 ms;
+  animation-fill-mode: both;
+}
+
+/* .owl-animated-out - only for current item */
+/* This is very important class. Use z-index if you want move Out item above In item */
+.owl-animated-out {
+  z-index: 1;
+}
+
+/* .owl-animated-in - only for upcoming item
+/* This is very important class. Use z-index if you want move In item above Out item */
+.owl-animated-in {
+  z-index: 0;
+}
+
+/* .fadeOut is style taken from Animation.css and this is how it looks in owl.carousel.css:  */
+.fadeOut {
+  animation-name: fadeOut;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.animatable {
+  visibility: hidden;
+  animation-play-state: paused;
+}
+
+.animated {
+  visibility: visible;
+  animation-fill-mode: both;
+  animation-duration: 1s;
+  animation-play-state: running;
+}
+
+.image-cover {
+  position: relative;
+}
+
+.image-cover:after {
+  position: absolute;
+  display: block;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes bounceInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-2000px);
+  }
+  60% {
+    transform: translateX(20px);
+  }
+  80% {
+    transform: translateX(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes bounceInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(2000px);
+  }
+  60% {
+    transform: translateX(-20px);
+  }
+  80% {
+    transform: translateX(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes moveUp {
+  0% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeBgColor {
+  0% {
+    background: none;
+  }
+  70% {
+    background: none;
+  }
+  100% {
+    background: #464646;
+  }
+}
+@keyframes image-cover {
+  0% {
+    height: 40%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+.animated.animationDelay {
+  animation-delay: 0.4s;
+}
+
+.animated.animationDelayMed {
+  animation-delay: 1.2s;
+}
+
+.animated.animationDelayLong {
+  animation-delay: 1.6s;
+}
+
+.animated.fadeBgColor {
+  animation-name: fadeBgColor;
+}
+
+.animated.bounceIn {
+  animation-name: bounceIn;
+}
+
+.animated.bounceInRight {
+  animation-name: bounceInRight;
+}
+
+.animated.bounceInLeft {
+  animation-name: bounceInLeft;
+}
+
+.animated.fadeIn {
+  animation-name: fadeIn;
+}
+
+.animated.fadeInDown {
+  animation-name: fadeInDown;
+}
+
+.animated.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+.animated.moveUp {
+  animation-name: moveUp;
+}
+
+.animated.image-cover:after {
+  animation-name: image-cover;
+  animation-duration: 1s;
 }
 
 .header {
@@ -1486,7 +1709,7 @@ h2, .h2 {
 .home__highlights__awards__content figure span img {
   max-width: 70%;
   display: block;
-  animation: rotateYLogo 5.2s infinite ease-in-out;
+  animation: rotateYLogo2 5.2s infinite ease-in-out;
 }
 .home__highlights__awards__content aside p {
   font-size: 24px;
@@ -1705,13 +1928,49 @@ h2, .h2 {
   align-items: center;
   margin: 7px;
   background: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+.home__sponsor ul li::before {
+  background: #F08800;
+  content: "";
+  height: 220%;
+  left: -150%;
+  opacity: 0.2;
+  position: absolute;
+  top: -73px;
+  transform: rotate(35deg);
+  width: 100px;
+  z-index: 1;
+}
+.home__sponsor ul li:hover::before {
+  left: 150%;
+  transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 .home__sponsor ul li img {
   display: block;
 }
 .home__rank {
-  background-color: #fff;
-  padding: 40px 50px 70px;
+  background-color: #FFFFFF;
+  padding: 70px 50px 70px;
+  position: relative;
+  overflow: hidden;
+}
+.home__rank::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background: url(../images/placeholder/newsbg_pattern.svg) center center no-repeat;
+  width: 1300px;
+  height: 1300px;
+  right: -350px;
+  background-size: contain;
+  top: -700px;
+  z-index: 0;
+  opacity: 0.07;
+  transform-origin: center center;
+  animation: spin360 100s infinite linear;
+  filter: brightness(4);
 }
 .home__rank nav {
   display: flex;
@@ -1741,7 +2000,6 @@ h2, .h2 {
   content: " ";
   position: absolute;
   right: -9px;
-  width: 50px;
   background-color: #C4C7CA;
   z-index: 1;
   top: 0;
@@ -1786,11 +2044,10 @@ h2, .h2 {
   color: #9B0448;
   font-size: 16px;
   padding: 0;
-  background: #fff;
+  background: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
   width: 42px;
   height: 42px;
 }
@@ -1820,9 +2077,11 @@ h2, .h2 {
 .home__rank__table {
   box-shadow: 0 3px 13px rgba(0, 0, 0, 0.11);
   border-radius: 10px;
-  padding-bottom: 30px;
   overflow: hidden;
   position: relative;
+}
+.home__rank__table table {
+  margin: 0;
 }
 .home__rank__table__btn {
   text-align: center;
@@ -1832,90 +2091,13 @@ h2, .h2 {
   width: 100%;
   bottom: 0;
   padding: 20px 0 40px;
-  box-shadow: 0 -35px 20px 10px rgba(255, 255, 255, 0.9);
+  box-shadow: 0 -35px 40px 10px white;
 }
 .home__rank__table__btn .btn {
   text-transform: uppercase;
   border-radius: 5px;
   font-size: 18px;
   font-weight: 500;
-}
-.home__rank .match__wrapper {
-  background: #fff;
-  box-shadow: 0 3px 13px rgba(0, 0, 0, 0.11);
-  padding: 20px 8px;
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-}
-.home__rank .match__wrapper__box {
-  border: 1px solid #E6E6E6;
-  border-radius: 2px;
-  border-top: 3px solid #F08800;
-  padding: 25px 0;
-  text-align: center;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-}
-.home__rank .match__wrapper__box h3 {
-  color: #222222;
-  font-size: 19px;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin: 0;
-}
-.home__rank .match__wrapper__box h3 span {
-  border-left: 2px solid #F08800;
-  margin-left: 10px;
-  padding-left: 10px;
-}
-.home__rank .match__wrapper__box small {
-  font-size: 17px;
-  display: block;
-}
-.home__rank .match__wrapper__middle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 18px 0px 25px;
-}
-.home__rank .match__wrapper__middle span {
-  background: #000;
-  color: #fff;
-  border-radius: 50%;
-  font-size: 14px;
-  margin-top: -30px;
-  display: flex;
-  width: 30px;
-  align-items: center;
-  height: 30px;
-  justify-content: center;
-}
-.home__rank .match__wrapper__team {
-  padding: 0 10px;
-}
-.home__rank .match__wrapper__team figure {
-  width: 86px;
-  height: 86px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #E6E6E6;
-  padding: 10px;
-  overflow: hidden;
-}
-.home__rank .match__wrapper__team p {
-  margin: 0;
-  font-weight: 500;
-}
-.home__rank .match__wrapper .btn__ticket--primary-colr {
-  background: linear-gradient(140deg, #9B0448 50%, #222222 100%);
-  margin: 0;
-  padding: 5px 15px;
-}
-.home__rank .match__wrapper .btn__ticket--primary-colr:hover {
-  background: linear-gradient(140deg, #9b0448 30%, #222222 90%);
 }
 
 @keyframes rankAnimation {
@@ -1969,4 +2151,80 @@ h2, .h2 {
     transform: translateZ(0) rotateY(360deg) scale(1);
     animation-timing-function: ease-in;
   }
+}
+.match__wrapper {
+  background: #FFFFFF;
+  box-shadow: 0 3px 13px rgba(0, 0, 0, 0.11);
+  padding: 20px 8px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+.match__box {
+  border: 1px solid #E6E6E6;
+  border-radius: 2px;
+  border-top: 3px solid #F08800;
+  padding: 25px 0;
+  text-align: center;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.match__box h3 {
+  color: #222222;
+  font-size: 19px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+}
+.match__box h3 span {
+  border-left: 2px solid #F08800;
+  margin-left: 10px;
+  padding-left: 10px;
+}
+.match__box small {
+  font-size: 17px;
+  display: block;
+}
+.match__box__middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 18px 0px 25px;
+}
+.match__box__middle span {
+  background: #000000;
+  color: #FFFFFF;
+  border-radius: 50%;
+  font-size: 14px;
+  margin-top: -30px;
+  display: flex;
+  width: 30px;
+  align-items: center;
+  height: 30px;
+  justify-content: center;
+}
+.match__box__team {
+  padding: 0 10px;
+}
+.match__box__team figure {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #E6E6E6;
+  padding: 10px;
+  overflow: hidden;
+}
+.match__box__team figure img {
+  max-width: 95%;
+}
+.match__box__team p {
+  margin: 0;
+  font-weight: 500;
+}
+.match__box:hover .match__box__team figure img {
+  animation: rotateYLogo 1s 1 cubic-bezier(0.03, 0.21, 0.67, 0.97);
 }
