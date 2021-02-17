@@ -2,8 +2,16 @@
     &__holder {
         position: relative; 
 
+        .slick-dots {
+            position: absolute;
+            width: 100%;
+            bottom: 20px;
+        }
+
         & > figure {
             overflow: hidden;
+            position: relative; 
+            display: block;
 
             &::before {
                 content: "";

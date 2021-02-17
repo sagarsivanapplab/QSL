@@ -429,6 +429,98 @@ h2, .h2 {
   }
 }
 
+.slick-dots {
+  text-align: center;
+  padding: 10px 0 10px;
+}
+.slick-dots li {
+  display: inline-block;
+  margin: 0 4px;
+}
+.slick-dots li button {
+  border: 0;
+  background: white;
+  display: block;
+  height: 12px;
+  width: 12px;
+  outline: 0;
+  color: transparent;
+  cursor: pointer;
+  border-radius: 20px;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+  position: relative;
+}
+.slick-dots li button:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+.slick-dots li.slick-active button {
+  background: #F08800;
+  opacity: 1;
+}
+
+.slick-arrow {
+  position: absolute;
+  display: block;
+  top: 30%;
+  padding: 30px 30px;
+  opacity: 0.5;
+  z-index: 5;
+  border: 0;
+  text-indent: -9999px;
+  transition: transform 0.4s ease, opacity 0.4s ease, background-color 0.4s ease, padding 0.4s ease;
+}
+.slick-arrow:focus {
+  border: 0;
+  outline: 0px auto -webkit-focus-ring-color;
+}
+
+.slick-prev {
+  width: 73px;
+  height: 73px;
+  right: 10px;
+  top: 43%;
+  background: #9B0448;
+  background-size: 15px;
+  opacity: 1;
+}
+.slick-prev:hover {
+  background-color: #4B6A7E;
+}
+.slick-class-02 .slick-prev {
+  width: 115px;
+  height: 118px;
+  background: transparent url(../images/bg/left_arrow.png) no-repeat center center;
+  right: -70px;
+  filter: grayscale(90%);
+}
+.slick-class-02 .slick-prev:hover {
+  filter: grayscale(0%);
+}
+
+.slick-next {
+  width: 73px;
+  height: 73px;
+  left: 10px;
+  top: 43%;
+  background: #9B0448;
+  background-size: 15px;
+  opacity: 1;
+}
+.slick-next:hover {
+  background-color: #4B6A7E;
+}
+.slick-class-02 .slick-next {
+  width: 115px;
+  height: 118px;
+  background: transparent url(../images/bg/right_arrow.png) no-repeat center center;
+  left: -70px;
+  filter: grayscale(90%);
+}
+.slick-class-02 .slick-next:hover {
+  filter: grayscale(0%);
+}
+
 .header {
   position: fixed;
   z-index: 10;
@@ -815,8 +907,15 @@ h2, .h2 {
 .banner__holder {
   position: relative;
 }
+.banner__holder .slick-dots {
+  position: absolute;
+  width: 100%;
+  bottom: 20px;
+}
 .banner__holder > figure {
   overflow: hidden;
+  position: relative;
+  display: block;
 }
 .banner__holder > figure::before {
   content: "";
