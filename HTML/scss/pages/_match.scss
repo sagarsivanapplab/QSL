@@ -7,6 +7,15 @@
         overflow: hidden;
         position: relative;
         z-index: 1;
+
+        .col.col-lg-4{
+            @media (max-width: 991px) {
+                flex: 0 0 50%;
+            }
+            @media (max-width: 575px) {
+                flex: 0 0 100%;
+            }
+        }
     }
 
     &__box {
@@ -25,6 +34,14 @@
             text-transform: uppercase;
             margin: 0;
 
+            @media (min-width: 992px) and (max-width: 992px) {
+                font-size: 16px;
+            }
+
+            @media (max-width: 991px) {
+                font-size: 17px;
+            }
+
             span{
                 border-#{$start-direction}: 2px solid $secondary-color;
                 margin-#{$start-direction}: 10px;
@@ -35,6 +52,14 @@
         small {
             font-size: 17px;
             display: block;
+
+            @media (min-width: 992px) and (max-width: 1300px) {
+                font-size: 15px;
+            }
+
+            @media (max-width: 991px) {
+                font-size: 15px;
+            }
         }
 
         &__middle {
@@ -72,14 +97,33 @@
                 padding: 10px;
                 overflow: hidden;
 
+                @media (min-width: 992px) and (max-width: 1300px) {
+                    width: 50px;
+                    height: 50px;
+                }
+
+                @media (max-width: 991px) {
+                    width: 80px;
+                    height: 80px;
+                }
+
                 img { 
                     max-width: 95%; 
+
+                    @media (max-width: 991px) {
+                        max-width: 85%;
+                    }
                 }
             }
     
             p {
                 margin: 0;
                 font-weight: 500;
+                font-size: 16px;
+
+                @media (min-width: 992px) and (max-width: 1300px) {
+                    font-size: 14px;
+                }
             }
         }
 

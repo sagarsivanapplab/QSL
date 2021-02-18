@@ -2270,12 +2270,24 @@ h2, .h2 {
   overflow: hidden;
   width: 100%;
 }
+@media (max-width: 991px) {
+  .home__rank .col.col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
 @media (max-width: 767px) {
   .home__rank .col.col-md-4 {
     z-index: 1;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
+  .home__rank .col.col-md-8 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+@media (max-width: 991px) {
   .home__rank {
     padding: 20px 10px 20px;
   }
@@ -2358,7 +2370,7 @@ h2, .h2 {
 }
 @media (max-width: 575px) {
   .home__rank__view-all a {
-    font-size: 19px;
+    font-size: 17px;
   }
 }
 @media (max-width: 575px) {
@@ -2375,8 +2387,8 @@ h2, .h2 {
 }
 @media (max-width: 470px) {
   .home__rank .table th, .home__rank .table td {
-    padding: 12px 5px;
-    font-size: 15px;
+    padding: 9px 5px;
+    font-size: 14px;
   }
 }
 .home__rank .table thead {
@@ -2388,6 +2400,12 @@ h2, .h2 {
   color: #9B0448;
   font-weight: bold;
   text-transform: uppercase;
+}
+@media (max-width: 470px) {
+  .home__rank .table thead th {
+    padding: 9px 4px;
+    font-size: 11px;
+  }
 }
 .home__rank .table tbody tr td:first-child span {
   border: 1px solid #ECECEC;
@@ -2402,6 +2420,13 @@ h2, .h2 {
   width: 42px;
   height: 42px;
 }
+@media (max-width: 470px) {
+  .home__rank .table tbody tr td:first-child span {
+    width: 33px;
+    height: 33px;
+    font-size: 13px;
+  }
+}
 .home__rank .table tbody tr:nth-child(odd) td {
   background-color: rgba(0, 0, 0, 0.04);
 }
@@ -2415,7 +2440,16 @@ h2, .h2 {
   padding: 2px;
   background: #fff;
   width: 40px;
+  height: 40px;
+  text-align: center;
   margin-right: 10px;
+}
+@media (max-width: 470px) {
+  .home__rank .table__club figure {
+    width: 33px;
+    height: 33px;
+    margin-right: 4px;
+  }
 }
 .home__rank .table__club figure img {
   width: 40px;
@@ -2425,13 +2459,18 @@ h2, .h2 {
   font-size: 17px;
   color: #9B0448;
 }
+@media (max-width: 470px) {
+  .home__rank .table__club span {
+    font-size: 14px;
+  }
+}
 .home__rank__table {
   box-shadow: 0 3px 13px rgba(0, 0, 0, 0.11);
   border-radius: 10px;
   overflow: hidden;
   position: relative;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .home__rank__table {
     margin-bottom: 20px;
   }
@@ -2454,6 +2493,11 @@ h2, .h2 {
   border-radius: 5px;
   font-size: 18px;
   font-weight: 500;
+}
+@media (max-width: 470px) {
+  .home__rank__table__btn .btn {
+    font-size: 14px;
+  }
 }
 
 @keyframes rankAnimation {
@@ -2517,6 +2561,16 @@ h2, .h2 {
   position: relative;
   z-index: 1;
 }
+@media (max-width: 991px) {
+  .match__wrapper .col.col-lg-4 {
+    flex: 0 0 50%;
+  }
+}
+@media (max-width: 575px) {
+  .match__wrapper .col.col-lg-4 {
+    flex: 0 0 100%;
+  }
+}
 .match__box {
   border: 1px solid #E6E6E6;
   border-radius: 2px;
@@ -2533,6 +2587,16 @@ h2, .h2 {
   text-transform: uppercase;
   margin: 0;
 }
+@media (min-width: 992px) and (max-width: 992px) {
+  .match__box h3 {
+    font-size: 16px;
+  }
+}
+@media (max-width: 991px) {
+  .match__box h3 {
+    font-size: 17px;
+  }
+}
 .match__box h3 span {
   border-left: 2px solid #F08800;
   margin-left: 10px;
@@ -2541,6 +2605,16 @@ h2, .h2 {
 .match__box small {
   font-size: 17px;
   display: block;
+}
+@media (min-width: 992px) and (max-width: 1300px) {
+  .match__box small {
+    font-size: 15px;
+  }
+}
+@media (max-width: 991px) {
+  .match__box small {
+    font-size: 15px;
+  }
 }
 .match__box__middle {
   display: flex;
@@ -2575,12 +2649,35 @@ h2, .h2 {
   padding: 10px;
   overflow: hidden;
 }
+@media (min-width: 992px) and (max-width: 1300px) {
+  .match__box__team figure {
+    width: 50px;
+    height: 50px;
+  }
+}
+@media (max-width: 991px) {
+  .match__box__team figure {
+    width: 80px;
+    height: 80px;
+  }
+}
 .match__box__team figure img {
   max-width: 95%;
+}
+@media (max-width: 991px) {
+  .match__box__team figure img {
+    max-width: 85%;
+  }
 }
 .match__box__team p {
   margin: 0;
   font-weight: 500;
+  font-size: 16px;
+}
+@media (min-width: 992px) and (max-width: 1300px) {
+  .match__box__team p {
+    font-size: 14px;
+  }
 }
 .match__box:hover .match__box__team figure img {
   animation: rotateYLogo 1s 1 cubic-bezier(0.03, 0.21, 0.67, 0.97);
