@@ -2,6 +2,12 @@
     &__nav {
         border: 0px solid red;
 
+        @media (max-width: 1199px) {
+            .menu-open & {
+                 
+            }
+        }
+
         > ul {
             display: flex;
             flex-direction: row;
@@ -9,15 +15,23 @@
             align-items: center;
             font-weight: 700; 
 
+            @media (max-width: 1199px) {
+                flex-direction: column;
+            }
+
             > li {
                 position: relative;
+
+                @media (max-width: 1199px) {
+                    width: 100%;
+                }
 
                 > a {
                     display: inline-block; 
                     color: $font-color;
-                    font-size: 20px;   
+                    font-size: 19px;   
                     text-transform: none;  
-                    padding: invertValues(52px, 20px, 50px, 20px); 
+                    padding: invertValues(52px, 15px, 50px, 15px); 
                     position: relative; 
                     text-transform: uppercase;
                     border-bottom: 5px solid transparent;
@@ -30,13 +44,22 @@
                     }
 
                     @media (max-width: 1320px) {  
-                        padding: 30px 6px; 
+                        padding: 30px 7px; 
+                        font-size: 15px;
+                    }
+                          
+                    @media (max-width: 1199px) {
+                        padding: 10px 6px; 
                         font-size: 16px;
+                        border-bottom: 2px solid transparent;
+                        display: block;
                     }
 
-                    .toTop & {
-                        padding: invertValues(22px, 20px, 20px, 20px);
-                        transition: padding 1000ms;
+                    @media (min-width: 1200px) {
+                        .toTop & {
+                            padding: invertValues(22px, 20px, 20px, 20px);
+                            transition: padding 1000ms;
+                        }
                     }
 
                     &:hover {
@@ -56,6 +79,10 @@
                             border-width: 0 14.5px 8px 14.5px;
                             border-color: transparent transparent  $font-color;
                             margin: invertValues(0, 0, 0, -14.5px); 
+
+                            @media (max-width: 1199px) {
+                                display: none;
+                            }
                         }
                     }
                 }
@@ -65,6 +92,10 @@
                         background: #F8F8F8;
                         color: $primary-color;
                         border-bottom: 5px solid $primary-color;
+
+                        @media (max-width: 1199px) {
+                            border-bottom: 2px solid $primary-color;
+                        }
 
                         &::before {
                             content: "";
@@ -78,8 +109,12 @@
                             border-width: 0 14.5px 8px 14.5px;
                             border-color: transparent transparent  $primary-color;
                             margin: invertValues(0, 0, 0, -14.5px); 
+
+                            @media (max-width: 1199px) {
+                                display: none;
+                            }
                         }
-                    }
+                    }                   
                 }
 
                 &.dropdown {

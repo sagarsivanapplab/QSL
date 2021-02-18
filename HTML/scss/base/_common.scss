@@ -2,7 +2,15 @@
     margin: 135px 0 0;
 
     @media (max-width: 1750px) {         
-        margin: 88px 0 0;
+        margin: 90px 0 0;
+    }
+
+    @media (max-width: 1320px) {   
+        margin: 85px 0 0;      
+    }
+
+    @media (max-width: 1199px) {   
+        margin: 78px 0 0;      
     }
 }
 
@@ -145,6 +153,14 @@ h2, .h2 {
             transition: opacity .4s ease;     
             position: relative;       
             padding: 0;
+
+            .slick-class-04 & {
+                background:rgba($color: $black-color, $alpha: 0.4) ; 
+
+                &:hover {
+                    background:rgba($color: $black-color, $alpha: 0.6); 
+                }
+            }
 
             &:hover {
                 background:rgba($color: $white-color, $alpha: 0.5) ; 

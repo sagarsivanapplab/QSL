@@ -13,6 +13,10 @@
         max-width: 100%; 
         margin: 0 20px;
         transition: all 500ms;   
+
+        @media (max-width: 767px) {
+            margin: 0 10px;
+        }
     }
 
     &.toTop > .container {
@@ -119,6 +123,26 @@
     &__right {
         display: flex;
         align-items: center;
+
+        &__inner {
+            display: flex;
+            align-items: center;
+
+            @media (max-width: 1199px) {
+                position: absolute;
+                #{$end-direction}: 0px;
+                top: 100%;
+                background: $white-color;
+                padding: 10px;
+                box-shadow: 5px 3px 16px rgba(0,0,0,.16);
+                display: none;
+                min-width: 250px;
+
+                .menu-open & {
+                    display: block; 
+                }
+            }
+        }
     }
 
     &__social {
@@ -126,6 +150,10 @@
 
         @media (max-width: 1750px) {         
             display: none;
+        }
+
+        @media (max-width: 1199px) {
+            display: flex;
         }
 
         a {

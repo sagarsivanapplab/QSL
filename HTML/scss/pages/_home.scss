@@ -1,8 +1,9 @@
 .home {
     &__clublist {
         border: 1px solid #ECECEC;
-        display: inline-block;
-        margin: 0 3px 5px;
+        display: block;
+        margin: 0 auto 5px;
+        max-width: 125px;
         border-radius: 12px;
         background-color: #E6E6E6;
         overflow: hidden;
@@ -29,13 +30,14 @@
 
         &__holder {
             text-align: center;
-            margin: 0 -20px;
+            margin: 0 0;
             padding: 40px 0;
         }
 
         & figure {
             width: 123px;
             height: 123px;
+            margin: 0 auto;
             border-radius: 12px;
             background-color: $white-color;
             display: flex;
@@ -117,6 +119,11 @@
                     position: absolute;
                     width: 100%;
                     bottom: 30%;
+
+                    @media (max-width: 575px) {    
+                        bottom: -12px;
+                        position: absolute;
+                    }
                 }
 
                 .slick-slider, .slick-list, .slick-slider .slick-track {
@@ -211,6 +218,15 @@
                     filter: grayscale(30%);
                     transition: all 0.8s ease;
                     width: 100%;
+
+                    @media (max-width: 1199px) {
+                        max-height: 380px;
+                        object-fit: cover;
+                    }
+
+                    @media (max-width: 991px) {  
+                        max-height: none;
+                    }                    
                 }
             }
 
@@ -223,7 +239,7 @@
                         object-fit: cover;
 
                         @media (max-width: 575px) { 
-                            height: 250px;            
+                            min-height: 250px;            
                         }
                     }
                 }
@@ -274,7 +290,11 @@
                 display: flex;
                 justify-content: flex-end;
                 flex-direction: column;
-                z-index: 3;
+                z-index: 3;               
+
+                @media (max-width: 767px) { 
+                    padding: 20px;
+                }
 
                 p {
                     font-size: 24px;
@@ -445,17 +465,27 @@
             background-size: cover;
             position: relative;
             margin: 0 10px 15px;
-            min-height: 675px;
+            min-height: calc(100% - 14px);
+            border: 1px solid red;
 
             &__holder {
                 position: relative; 
-                min-height: 100%;
+                min-height: calc(100% + 14px);
                 margin: 0 8px; 
+                display: flex;
 
                 .slick-dots {
                     position: absolute;
                     width: 100%;
                     bottom: 20px;
+                }
+
+                .slick-slider {
+                    width: 100%;
+                }
+
+                .slick-list, .slick-track {
+                    min-height: 100%;
                 }
             }
 
