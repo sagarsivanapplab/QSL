@@ -942,6 +942,16 @@
         overflow: hidden;
         width: 100%;
 
+        .col.col-md-4{
+            @media (max-width: 767px) { 
+                z-index: 1;
+            }
+        }
+        
+        @media (max-width: 767px) { 
+            padding: 20px 10px 20px;               
+        }
+
         &::after {
             content: "";
             position: absolute;
@@ -983,6 +993,11 @@
                     border-top-#{$start-direction}-radius: 8px;
                     border-top-#{$end-direction}-radius: 8px;
 
+                    @media (max-width: 575px) {
+                        padding: invertValues(10px, 10px, 10px, 12px);
+                        font-size: 18px;
+                    }
+
                     &::after {
                         content: " ";
                         position: absolute;
@@ -994,6 +1009,10 @@
                         width: 28px;
                         transform: skewX(18deg);
                         border-top-#{$end-direction}-radius: 8px;
+
+                        @media (max-width: 575px) {
+                            width: 15px;
+                        }
                     }
 
                     &.active {
@@ -1014,6 +1033,17 @@
                 font-size: 22px;
                 font-family: $font-stack-2;
                 color: #222222;
+
+                @media (max-width: 575px) {
+                    font-size: 19px;
+                }
+
+                img{
+
+                    @media (max-width: 575px) {
+                        width: 20px;
+                    }
+                }
             }
         }
 
@@ -1025,6 +1055,11 @@
                 font-weight: 500;
                 font-size: 17px;
                 padding: 12px 20px;
+
+                @media (max-width: 470px) {
+                    padding: 12px 5px;
+                    font-size: 15px;
+                }
             }
 
             thead {
@@ -1097,6 +1132,10 @@
             overflow: hidden;
             position: relative;
             
+            @media (max-width: 767px) { 
+                margin-bottom: 20px;            
+            }
+
             table {
                 margin: 0;
             }

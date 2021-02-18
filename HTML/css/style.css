@@ -2270,6 +2270,16 @@ h2, .h2 {
   overflow: hidden;
   width: 100%;
 }
+@media (max-width: 767px) {
+  .home__rank .col.col-md-4 {
+    z-index: 1;
+  }
+}
+@media (max-width: 767px) {
+  .home__rank {
+    padding: 20px 10px 20px;
+  }
+}
 .home__rank::after {
   content: "";
   position: absolute;
@@ -2310,6 +2320,12 @@ h2, .h2 {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
+@media (max-width: 575px) {
+  .home__rank nav .nav-fill .nav-item.nav-link {
+    padding: 10px 10px 10px 12px;
+    font-size: 18px;
+  }
+}
 .home__rank nav .nav-fill .nav-item.nav-link::after {
   content: " ";
   position: absolute;
@@ -2321,6 +2337,11 @@ h2, .h2 {
   width: 28px;
   transform: skewX(18deg);
   border-top-right-radius: 8px;
+}
+@media (max-width: 575px) {
+  .home__rank nav .nav-fill .nav-item.nav-link::after {
+    width: 15px;
+  }
 }
 .home__rank nav .nav-fill .nav-item.nav-link.active {
   background-color: #F08800;
@@ -2335,12 +2356,28 @@ h2, .h2 {
   font-family: "Bebas Neue";
   color: #222222;
 }
+@media (max-width: 575px) {
+  .home__rank__view-all a {
+    font-size: 19px;
+  }
+}
+@media (max-width: 575px) {
+  .home__rank__view-all a img {
+    width: 20px;
+  }
+}
 .home__rank .table th, .home__rank .table td {
   border: none;
   vertical-align: middle;
   font-weight: 500;
   font-size: 17px;
   padding: 12px 20px;
+}
+@media (max-width: 470px) {
+  .home__rank .table th, .home__rank .table td {
+    padding: 12px 5px;
+    font-size: 15px;
+  }
 }
 .home__rank .table thead {
   background: #DADFE5;
@@ -2393,6 +2430,11 @@ h2, .h2 {
   border-radius: 10px;
   overflow: hidden;
   position: relative;
+}
+@media (max-width: 767px) {
+  .home__rank__table {
+    margin-bottom: 20px;
+  }
 }
 .home__rank__table table {
   margin: 0;
@@ -2517,6 +2559,7 @@ h2, .h2 {
   align-items: center;
   height: 30px;
   justify-content: center;
+  flex-shrink: 0;
 }
 .match__box__team {
   padding: 0 10px;
