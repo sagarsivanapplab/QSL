@@ -2510,6 +2510,33 @@ h2, .h2 {
   overflow: hidden;
   width: 100%;
 }
+@media (min-width: 992px) and (max-width: 1300px) {
+  .home__rank {
+    padding: 30px 10px 30px;
+  }
+}
+@media (max-width: 991px) {
+  .home__rank .col.col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .home__rank .col.col-md-4 {
+    z-index: 1;
+  }
+}
+@media (max-width: 991px) {
+  .home__rank .col.col-md-8 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+@media (max-width: 991px) {
+  .home__rank {
+    padding: 20px 10px 20px;
+  }
+}
 .home__rank::after {
   content: "";
   position: absolute;
@@ -2550,6 +2577,12 @@ h2, .h2 {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
+@media (max-width: 575px) {
+  .home__rank nav .nav-fill .nav-item.nav-link {
+    padding: 10px 10px 10px 12px;
+    font-size: 18px;
+  }
+}
 .home__rank nav .nav-fill .nav-item.nav-link::after {
   content: " ";
   position: absolute;
@@ -2561,6 +2594,11 @@ h2, .h2 {
   width: 28px;
   transform: skewX(18deg);
   border-top-right-radius: 8px;
+}
+@media (max-width: 575px) {
+  .home__rank nav .nav-fill .nav-item.nav-link::after {
+    width: 15px;
+  }
 }
 .home__rank nav .nav-fill .nav-item.nav-link.active {
   background-color: #F08800;
@@ -2575,12 +2613,34 @@ h2, .h2 {
   font-family: "Bebas Neue";
   color: #222222;
 }
+@media (max-width: 575px) {
+  .home__rank__view-all a {
+    font-size: 17px;
+  }
+}
+@media (max-width: 575px) {
+  .home__rank__view-all a img {
+    width: 20px;
+  }
+}
 .home__rank .table th, .home__rank .table td {
   border: none;
   vertical-align: middle;
   font-weight: 500;
   font-size: 17px;
   padding: 12px 20px;
+}
+@media (min-width: 992px) and (max-width: 1300px) {
+  .home__rank .table th, .home__rank .table td {
+    font-size: 14px;
+    padding: 7px 9px;
+  }
+}
+@media (max-width: 470px) {
+  .home__rank .table th, .home__rank .table td {
+    padding: 9px 5px;
+    font-size: 14px;
+  }
 }
 .home__rank .table thead {
   background: #DADFE5;
@@ -2591,6 +2651,18 @@ h2, .h2 {
   color: #9B0448;
   font-weight: bold;
   text-transform: uppercase;
+}
+@media (min-width: 992px) and (max-width: 1300px) {
+  .home__rank .table thead th {
+    font-size: 13px;
+    padding: 7px 9px;
+  }
+}
+@media (max-width: 470px) {
+  .home__rank .table thead th {
+    padding: 9px 4px;
+    font-size: 11px;
+  }
 }
 .home__rank .table tbody tr td:first-child span {
   border: 1px solid #ECECEC;
@@ -2605,6 +2677,19 @@ h2, .h2 {
   width: 42px;
   height: 42px;
 }
+@media (min-width: 992px) and (max-width: 1300px) {
+  .home__rank .table tbody tr td:first-child span {
+    width: 35px;
+    height: 35px;
+  }
+}
+@media (max-width: 470px) {
+  .home__rank .table tbody tr td:first-child span {
+    width: 33px;
+    height: 33px;
+    font-size: 13px;
+  }
+}
 .home__rank .table tbody tr:nth-child(odd) td {
   background-color: rgba(0, 0, 0, 0.04);
 }
@@ -2618,7 +2703,23 @@ h2, .h2 {
   padding: 2px;
   background: #fff;
   width: 40px;
+  height: 40px;
+  text-align: center;
   margin-right: 10px;
+}
+@media (min-width: 992px) and (max-width: 1300px) {
+  .home__rank .table__club figure {
+    width: 35px;
+    height: 35px;
+    margin-right: 6px;
+  }
+}
+@media (max-width: 470px) {
+  .home__rank .table__club figure {
+    width: 33px;
+    height: 33px;
+    margin-right: 4px;
+  }
 }
 .home__rank .table__club figure img {
   width: 40px;
@@ -2628,11 +2729,26 @@ h2, .h2 {
   font-size: 17px;
   color: #9B0448;
 }
+@media (min-width: 992px) and (max-width: 1300px) {
+  .home__rank .table__club span {
+    font-size: 13px;
+  }
+}
+@media (max-width: 470px) {
+  .home__rank .table__club span {
+    font-size: 14px;
+  }
+}
 .home__rank__table {
   box-shadow: 0 3px 13px rgba(0, 0, 0, 0.11);
   border-radius: 10px;
   overflow: hidden;
   position: relative;
+}
+@media (max-width: 991px) {
+  .home__rank__table {
+    margin-bottom: 20px;
+  }
 }
 .home__rank__table table {
   margin: 0;
@@ -2652,6 +2768,11 @@ h2, .h2 {
   border-radius: 5px;
   font-size: 18px;
   font-weight: 500;
+}
+@media (max-width: 470px) {
+  .home__rank__table__btn .btn {
+    font-size: 14px;
+  }
 }
 
 @keyframes rankAnimation {
@@ -2715,6 +2836,16 @@ h2, .h2 {
   position: relative;
   z-index: 1;
 }
+@media (max-width: 991px) {
+  .match__wrapper .col.col-lg-4 {
+    flex: 0 0 50%;
+  }
+}
+@media (max-width: 575px) {
+  .match__wrapper .col.col-lg-4 {
+    flex: 0 0 100%;
+  }
+}
 .match__box {
   border: 1px solid #E6E6E6;
   border-radius: 2px;
@@ -2731,6 +2862,16 @@ h2, .h2 {
   text-transform: uppercase;
   margin: 0;
 }
+@media (min-width: 992px) and (max-width: 1300px) {
+  .match__box h3 {
+    font-size: 16px;
+  }
+}
+@media (max-width: 991px) {
+  .match__box h3 {
+    font-size: 17px;
+  }
+}
 .match__box h3 span {
   border-left: 2px solid #F08800;
   margin-left: 10px;
@@ -2739,6 +2880,16 @@ h2, .h2 {
 .match__box small {
   font-size: 17px;
   display: block;
+}
+@media (min-width: 992px) and (max-width: 1300px) {
+  .match__box small {
+    font-size: 15px;
+  }
+}
+@media (max-width: 991px) {
+  .match__box small {
+    font-size: 15px;
+  }
 }
 .match__box__middle {
   display: flex;
@@ -2757,6 +2908,7 @@ h2, .h2 {
   align-items: center;
   height: 30px;
   justify-content: center;
+  flex-shrink: 0;
 }
 .match__box__team {
   padding: 0 10px;
@@ -2772,12 +2924,35 @@ h2, .h2 {
   padding: 10px;
   overflow: hidden;
 }
+@media (min-width: 992px) and (max-width: 1300px) {
+  .match__box__team figure {
+    width: 50px;
+    height: 50px;
+  }
+}
+@media (max-width: 991px) {
+  .match__box__team figure {
+    width: 80px;
+    height: 80px;
+  }
+}
 .match__box__team figure img {
   max-width: 95%;
+}
+@media (max-width: 991px) {
+  .match__box__team figure img {
+    max-width: 85%;
+  }
 }
 .match__box__team p {
   margin: 0;
   font-weight: 500;
+  font-size: 16px;
+}
+@media (min-width: 992px) and (max-width: 1300px) {
+  .match__box__team p {
+    font-size: 14px;
+  }
 }
 .match__box:hover .match__box__team figure img {
   animation: rotateYLogo 1s 1 cubic-bezier(0.03, 0.21, 0.67, 0.97);
