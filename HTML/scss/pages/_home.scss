@@ -942,6 +942,10 @@
         overflow: hidden;
         width: 100%;
 
+        @media (min-width: 992px) and (max-width: 1300px) {
+            padding: 30px 10px 30px;
+        }
+
         .col.col-md-4{
             @media (max-width: 991px) {
                 flex: 0 0 100%;
@@ -1066,6 +1070,11 @@
                 font-size: 17px;
                 padding: 12px 20px;
 
+                @media (min-width: 992px) and (max-width: 1300px) {
+                    font-size: 14px;
+                    padding: 7px 9px;
+                }
+
                 @media (max-width: 470px) {
                     padding: 9px 5px;
                     font-size: 14px;
@@ -1081,6 +1090,11 @@
                     color: $primary-color;
                     font-weight: bold;
                     text-transform: uppercase;
+
+                    @media (min-width: 992px) and (max-width: 1300px) {
+                        font-size: 13px;
+                        padding: 7px 9px;
+                    }
 
                     @media (max-width: 470px) {
                         padding: 9px 4px;
@@ -1106,6 +1120,10 @@
                                 width: 42px;
                                 height: 42px;
 
+                                @media (min-width: 992px) and (max-width: 1300px) {
+                                    width: 35px;
+                                    height: 35px;
+                                }
                                 @media (max-width: 470px) {
                                     width: 33px;
                                     height: 33px;
@@ -1136,6 +1154,12 @@
                     text-align: center;
                     margin-#{$end-direction}: 10px;
 
+                    @media (min-width: 992px) and (max-width: 1300px) {
+                        width: 35px;
+                        height: 35px;
+                        margin-#{$end-direction}: 6px;
+                    }
+
                     @media (max-width: 470px) {
                         width: 33px;
                         height: 33px;
@@ -1151,6 +1175,11 @@
                 span {
                     font-size: 17px;
                     color: $primary-color;
+
+                    @media (min-width: 992px) and (max-width: 1300px) {
+                        font-size: 13px;
+                    }
+
 
                     @media (max-width: 470px) {
                         font-size: 14px;

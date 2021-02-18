@@ -2270,6 +2270,11 @@ h2, .h2 {
   overflow: hidden;
   width: 100%;
 }
+@media (min-width: 992px) and (max-width: 1300px) {
+  .home__rank {
+    padding: 30px 10px 30px;
+  }
+}
 @media (max-width: 991px) {
   .home__rank .col.col-md-4 {
     flex: 0 0 100%;
@@ -2385,6 +2390,12 @@ h2, .h2 {
   font-size: 17px;
   padding: 12px 20px;
 }
+@media (min-width: 992px) and (max-width: 1300px) {
+  .home__rank .table th, .home__rank .table td {
+    font-size: 14px;
+    padding: 7px 9px;
+  }
+}
 @media (max-width: 470px) {
   .home__rank .table th, .home__rank .table td {
     padding: 9px 5px;
@@ -2400,6 +2411,12 @@ h2, .h2 {
   color: #9B0448;
   font-weight: bold;
   text-transform: uppercase;
+}
+@media (min-width: 992px) and (max-width: 1300px) {
+  .home__rank .table thead th {
+    font-size: 13px;
+    padding: 7px 9px;
+  }
 }
 @media (max-width: 470px) {
   .home__rank .table thead th {
@@ -2419,6 +2436,12 @@ h2, .h2 {
   justify-content: center;
   width: 42px;
   height: 42px;
+}
+@media (min-width: 992px) and (max-width: 1300px) {
+  .home__rank .table tbody tr td:first-child span {
+    width: 35px;
+    height: 35px;
+  }
 }
 @media (max-width: 470px) {
   .home__rank .table tbody tr td:first-child span {
@@ -2444,6 +2467,13 @@ h2, .h2 {
   text-align: center;
   margin-right: 10px;
 }
+@media (min-width: 992px) and (max-width: 1300px) {
+  .home__rank .table__club figure {
+    width: 35px;
+    height: 35px;
+    margin-right: 6px;
+  }
+}
 @media (max-width: 470px) {
   .home__rank .table__club figure {
     width: 33px;
@@ -2458,6 +2488,11 @@ h2, .h2 {
 .home__rank .table__club span {
   font-size: 17px;
   color: #9B0448;
+}
+@media (min-width: 992px) and (max-width: 1300px) {
+  .home__rank .table__club span {
+    font-size: 13px;
+  }
 }
 @media (max-width: 470px) {
   .home__rank .table__club span {
@@ -2587,7 +2622,7 @@ h2, .h2 {
   text-transform: uppercase;
   margin: 0;
 }
-@media (min-width: 992px) and (max-width: 992px) {
+@media (min-width: 992px) and (max-width: 1300px) {
   .match__box h3 {
     font-size: 16px;
   }
