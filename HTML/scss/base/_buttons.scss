@@ -8,10 +8,18 @@
         cursor: pointer;
         overflow: hidden;
         margin: 0 20px; 
+        background-size: contain;
+
+        @media (max-width: 1750px) {  
+            width: 26px;
+            height: 26px;
+            margin: invertValues(0, 0, 0, 5px);
+        }
 
         .search-open & {
             background: url(../images/icons/btn_search_close.svg) 0 0 no-repeat;
             animation: spin90 200ms 1 linear;
+            background-size: contain;
         }
     }
 
@@ -28,6 +36,14 @@
         margin: 0 10px;
         transition: all 200ms;
         display: inline-block;
+
+        @media (max-width: 1750px) {  
+            .header & {
+                font-size: 19px;
+                padding: 10px 20px;
+                margin: 0 8px;
+            }
+        }
 
         &::before {
             content: "";
@@ -60,6 +76,10 @@
     &__language {
         margin: invertValues(0, 20px, 0, 10px); 
         text-transform: uppercase;
+
+        @media (max-width: 1750px) {         
+            margin: invertValues(0, 5px, 0, 5px);
+        }
 
         > span {
             cursor: pointer;
@@ -231,6 +251,9 @@
         }
     }    
 }
+
+
+
 
 .btn {
     border-radius: 0px;

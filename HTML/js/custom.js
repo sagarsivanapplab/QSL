@@ -89,7 +89,13 @@
     slidesToShow: 1,
     infinite: false,
     arrows: true,
-    dots: true
+    dots: true,
+    responsive: [{
+      breakpoint: 767,
+      settings: {
+        arrows: false,
+      }
+    }]
   });
 
   $(".slick-class-03").slick({

@@ -1,5 +1,9 @@
 .page-content {
     margin: 135px 0 0;
+
+    @media (max-width: 1750px) {         
+        margin: 88px 0 0;
+    }
 }
 
 .container {
@@ -43,6 +47,10 @@ h2, .h2 {
     font-size: 60px;
     font-family: $font-stack-2;
     line-height: 1.2;
+
+    @media (max-width: 767px) {   
+        font-size: 45px;             
+    }
 }
 
 .h3 {
@@ -136,6 +144,7 @@ h2, .h2 {
             opacity: 1;
             transition: opacity .4s ease;     
             position: relative;       
+            padding: 0;
 
             &:hover {
                 background:rgba($color: $white-color, $alpha: 0.5) ; 
@@ -186,6 +195,13 @@ h2, .h2 {
         filter: grayscale(90%);
         opacity: .95;
 
+        @media (max-width: 1199px) {
+            #{$start-direction}: 5px;
+            width: 80px;
+            height: 88px;
+            background-size: contain;
+        }
+
         &:hover {
             filter: grayscale(0%);
             opacity: 1;
@@ -212,6 +228,13 @@ h2, .h2 {
         #{$end-direction}: -70px;
         filter: grayscale(90%);
         opacity: .95;
+
+        @media (max-width: 1199px) {
+            #{$end-direction}: 5px;
+            width: 80px;
+            height: 88px;
+            background-size: contain;
+        }
 
         &:hover {
             filter: grayscale(0%);

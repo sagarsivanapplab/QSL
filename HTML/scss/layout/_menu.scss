@@ -23,6 +23,17 @@
                     border-bottom: 5px solid transparent;
                     transition: padding 400ms;
 
+
+                    @media (max-width: 1750px) {  
+                        padding: 30px 10px; 
+                        font-size: 18px;
+                    }
+
+                    @media (max-width: 1320px) {  
+                        padding: 30px 6px; 
+                        font-size: 16px;
+                    }
+
                     .toTop & {
                         padding: invertValues(22px, 20px, 20px, 20px);
                         transition: padding 1000ms;

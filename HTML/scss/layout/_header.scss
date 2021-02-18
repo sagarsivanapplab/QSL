@@ -19,6 +19,10 @@
         max-width: 1600px;
         margin: 0 auto;
         transition: all 800ms;
+
+        @media (max-width: 1620px) {         
+            margin: 0 10px;
+        }
     }
 
     &__logo {
@@ -27,6 +31,11 @@
             padding-bottom: 15px;
             transition: all 500ms;
 
+            @media (max-width: 1750px) {         
+                padding-top: 8px;
+                padding-bottom: 8px;
+            }
+            
             .toTop & {
                 padding-top: 10px;
                 padding-bottom: 10px;
@@ -41,11 +50,24 @@
         &> img {
             width: 108px;
             opacity: 1;
+
+            @media (max-width: 1750px) {         
+                width: 90px;
+            }
+
+            @media (max-width: 1320px) {         
+                width: 80px;
+            }
+
             .toTop & {
                 margin: 0 0 0 -76px;
                 width: 90px;
                 opacity: 0;
                 transition: width 800ms;
+
+                @media (max-width: 1320px) {         
+                    display: none;
+                }
             }
         }
 
@@ -55,6 +77,15 @@
             width: 98px;
             display: inline-block;
             transition: all 500ms;
+
+            @media (max-width: 1750px) {         
+                width: 75px;
+            }
+
+            @media (max-width: 1320px) {         
+                width: 65px;
+                margin: 0 0 0 5px;
+            }
 
             .toTop & {
                 width: 56px;
@@ -92,6 +123,11 @@
 
     &__social {
         display: flex;
+
+        @media (max-width: 1750px) {         
+            display: none;
+        }
+
         a {
             width: 42px;
             height: 42px;
