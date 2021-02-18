@@ -1193,6 +1193,8 @@
             border-radius: 10px;
             overflow: hidden;
             position: relative;
+            background: #ffff;
+            z-index: 1;
             
             @media (max-width: 991px) { 
                 margin-bottom: 20px;            
