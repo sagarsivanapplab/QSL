@@ -330,7 +330,7 @@
     slidesToShow: 1,
     infinite: false,
     rtl: ($('html').attr('lang') == 'ar') ? true:false,
-    dots: false,
+    dots: true,
     responsive: [{
   
         breakpoint: 1284,
