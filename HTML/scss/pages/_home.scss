@@ -81,6 +81,12 @@
             overflow: hidden;
             width: 100%;
 
+            &__head{
+                padding: 0 50px 0;
+                position: relative;
+                z-index: 2;
+            }
+
             .container {
                 position: relative;
                 z-index: 2;
@@ -772,6 +778,10 @@
                         height: auto;
                         margin: 0 auto 20px;  
                     }
+                    img{
+                        border: 5px solid #D2D2D2;
+                        border-radius: 10px;
+                    }
 
                     & span {
                         background: #ffffff;
@@ -791,6 +801,8 @@
                             max-width: 70%;
                             display: block;
                             animation: rotateYLogo2 5.2s infinite ease-in-out;
+                            border: none;
+                            border-radius: 0;
                         }
                     }
                 }
@@ -1131,11 +1143,15 @@
 
     &__rank {
         background-color: $white-color;
-        padding: 70px 50px 70px;
+        padding: 70px 50px 10px;
         position: relative;
         overflow: hidden;
         width: 100%;
 
+        &__result{
+            position: relative;
+            z-index: 1;
+        }
         @media (min-width: 992px) and (max-width: 1300px) {
             padding: 30px 10px 30px;
         }

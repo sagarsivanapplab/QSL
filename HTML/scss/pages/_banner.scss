@@ -273,16 +273,14 @@
                 }
 
                 &::after {
-                    content: "\f04b";
-                    font-family: "Font Awesome 5 Free";
-                    font-weight: 900;
-                    font-size: 26px; 
+                    content: '';
+                    background: url(../images/icons/play-round.svg) center center no-repeat;
                     text-align: center;
                     line-height: 62px;
                     position: absolute;
                     width: 62px;
                     height: 62px;
-                    background: $primary-color;
+                    background-color: $primary-color;
                     color: $white-color;
                     bottom: 30px;
                     #{$end-direction}: 30px;

@@ -1456,16 +1456,14 @@ h2, .h2 {
   }
 }
 .banner__holder__live__text::after {
-  content: "";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  font-size: 26px;
+  content: "";
+  background: url(../images/icons/play-round.svg) center center no-repeat;
   text-align: center;
   line-height: 62px;
   position: absolute;
   width: 62px;
   height: 62px;
-  background: #9B0448;
+  background-color: #9B0448;
   color: #FFFFFF;
   bottom: 30px;
   left: 30px;

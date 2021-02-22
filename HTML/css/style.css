@@ -1639,16 +1639,14 @@ h2, .h2 {
   }
 }
 .banner__holder__live__text::after {
-  content: "";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  font-size: 26px;
+  content: "";
+  background: url(../images/icons/play-round.svg) center center no-repeat;
   text-align: center;
   line-height: 62px;
   position: absolute;
   width: 62px;
   height: 62px;
-  background: #9B0448;
+  background-color: #9B0448;
   color: #FFFFFF;
   bottom: 30px;
   right: 30px;
@@ -1786,6 +1784,11 @@ h2, .h2 {
   position: relative;
   overflow: hidden;
   width: 100%;
+}
+.home__news__holder__head {
+  padding: 0 50px 0;
+  position: relative;
+  z-index: 2;
 }
 .home__news__holder .container {
   position: relative;
@@ -2426,6 +2429,10 @@ h2, .h2 {
     margin: 0 auto 20px;
   }
 }
+.home__highlights__awards__content figure img {
+  border: 5px solid #D2D2D2;
+  border-radius: 10px;
+}
 .home__highlights__awards__content figure span {
   background: #ffffff;
   position: absolute;
@@ -2444,6 +2451,8 @@ h2, .h2 {
   max-width: 70%;
   display: block;
   animation: rotateYLogo2 5.2s infinite ease-in-out;
+  border: none;
+  border-radius: 0;
 }
 .home__highlights__awards__content aside p {
   font-size: 24px;
@@ -2731,10 +2740,14 @@ h2, .h2 {
 }
 .home__rank {
   background-color: #FFFFFF;
-  padding: 70px 50px 70px;
+  padding: 70px 50px 10px;
   position: relative;
   overflow: hidden;
   width: 100%;
+}
+.home__rank__result {
+  position: relative;
+  z-index: 1;
 }
 @media (min-width: 992px) and (max-width: 1300px) {
   .home__rank {
