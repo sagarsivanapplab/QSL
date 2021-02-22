@@ -9,6 +9,10 @@
         overflow: hidden;
         transition: background-color 0.8s ease;
 
+        @media (max-width: 460px) {   
+            max-width: 120px;
+        }
+
         &:hover {
             background-color: $primary-color;
             border: 1px solid $primary-color;
@@ -44,6 +48,11 @@
             align-items: center;
             border: 1px solid transparent;
             transition: all 0.8s ease;
+
+            @media (max-width: 460px) {   
+                width: 119px;
+                height: 119px;
+            }
             
             img {
                 max-width: 86%;
@@ -340,29 +349,57 @@
             @media (max-width: 991px) {    
                 padding: 20px 20px 30px;        
             }
+
+            h2 {
+                @media (max-width: 991px) {    
+                    text-align: center;        
+                }
+            }
         }
 
         &__legend {          
             border-radius: 10px;
             overflow: hidden;            
             box-shadow: 0 3px 22px rgb(0,0,0,0.16);
-            max-width: 550px;
-            margin: 0 auto 20px;
+            margin: 0 0 0;
+            overflow: hidden;
+            height: 680px;
+            display: flex;
+            flex-direction: column;
+            background: transparent url(../images/bg/legend_bg2.png) center 0 no-repeat;
+            justify-content: space-between;
+            background-size: 100% auto;
+
+            @media (max-width: 991px) {    
+                max-width: 550px;    
+                margin: 0 auto;      
+                height: auto;   
+            }
 
             &__heading {
-                background: url(../images/bg/legend_bg.png) center 0 no-repeat;
-                height: 150px;
+                //background: url(../images/bg/legend_bg.png) center 0 no-repeat;
+                background: none;
+                height: auto;
                 background-size: contain;
-                margin: 0 0 -50px;
+                margin: 0;
                 position: relative;
                 z-index: 1;
                 text-align: center;
+                min-height: 130px;
+
+                    @media (max-width: 991px) {    
+                        min-height: auto;
+                    }
 
                 h3 {
                     font-family: $font-stack-2;
                     font-size: 40px;
                     text-transform: uppercase;
                     padding: 40px 0 0;
+
+                    @media (max-width: 991px) {    
+                        padding: 20px 0 10px;
+                    }
                 }
             }
 
@@ -370,8 +407,8 @@
                 border-radius: 10px;
                 overflow: hidden;
                 position: relative;
-
-
+                flex-grow: 1;
+                display: flex;
 
                 &::after {
                     content: "";
@@ -405,10 +442,19 @@
                     bottom: 40px;
                     #{$start-direction}: 50px;
 
+                    @media (max-width: 991px) {    
+                        bottom: 20px;
+                        #{$start-direction}: 20px;
+                    }
+
                     h4 {
                         font-weight: 600;
                         font-size: 40px;
                         color: $white-color;
+
+                        @media (max-width: 991px) {    
+                            font-size: 30px;
+                        }
                     }
 
                     p {
@@ -417,6 +463,10 @@
                         font-size: 20px;
                         color: $secondary-color;
                         margin: 0 0 25px;
+
+                        @media (max-width: 991px) {    
+                            font-size: 15px;
+                        }
                     }
 
                     .btn {
@@ -442,9 +492,15 @@
 
                 img {
                     display: block;
-                    width: 100%;
-                    max-width: 100%;
+                    width: auto;
+                    max-width: auto;
+                    min-width: 101%;
                     transition: all 0.8s ease;
+                    object-fit: cover;
+
+                    @media (max-width: 991px) {    
+                        min-height: 290px;
+                    }
                 }
             }
 
@@ -471,38 +527,41 @@
             background-size: cover;
             position: relative;
             margin: 0 10px 15px;
-            min-height: 674px;
+            min-height: 680px;
             /*min-height: calc(100% - 14px);*/
 
+            @media (max-width: 1199px) {
+                margin: 0 0 0;
+            }
+
             @media (max-width: 991px) {    
-                max-width: 550px;    
-                margin: 0 auto 25px;         
+                max-width: 550px;
+                margin: 0 auto;
+                min-height: auto;
+                padding: 0 0 40px;        
             }
 
             &__holder {
                 position: relative; 
-                /*min-height: calc(100% + 14px);*/
                 margin: 0 8px; 
+
+                @media (max-width: 1199px) {
+                    margin: 0;
+                }
 
                 .slick-dots {
                     position: absolute;
                     width: 100%;
                     bottom: 20px;
+
+                    @media (max-width: 991px) {   
+                        bottom: 0;       
+                    }
                 }
 
                 .slick-slider {
                     width: 100%;
                 }
-
-                /*.slick-list {
-                    min-height: 100%;
-                    display: flex;
-                    flex-direction: column;
-                }
-
-                .slick-track {
-                    height: 100%;
-                }*/
             }
 
             &::before {
@@ -516,6 +575,10 @@
                 z-index: 0;
                 border-radius: 0 0 10px 10px ;   
                 margin: invertValues(0, 0, 0, -47%);
+
+                @media (max-width: 1199px) {
+                    display: none;
+                }
             }
 
             &__rank { 
@@ -529,6 +592,13 @@
                 color: #ffffff;
                 font-size: 40px;
                 line-height: 79px;
+
+                @media (max-width: 1550px) {    
+                    width: 58px;    
+                    font-size: 26px;
+                    line-height: 49px;
+                    background-size: contain;
+                }
             }
 
             h3 {
@@ -555,7 +625,12 @@
                     border-radius: 12px;
                     margin: 0 0 32px;
                     #{$end-direction}: -10px;
-                    position: relative;     
+                    position: relative;
+                    max-width: 240px;
+
+                    @media (max-width: 1570px) {      
+                        max-width: 200px;
+                    }
 
                     & > img {
                         position: relative;
@@ -591,13 +666,17 @@
                     font-family: $font-stack-2;
                     color: $primary-color;
                     flex-grow: 1;
-                    margin: 60px 0 0;
+                    margin: 60px 2px 0;
                     line-height: 1;
+
+                    @media (max-width: 1320px) {  
+                        font-size: 38px;
+                    }
 
                     small {
                         display: block;
                         font-family: $font-stack-1;
-                        font-size: 16px;
+                        font-size: 32%;
                         font-weight: 500;
                         text-transform: uppercase;
                         color: $black-color;
@@ -626,39 +705,73 @@
             background-size: cover;
             position: relative;
             margin: 0 0 20px;
-            padding: 0 60px 60px;
+            padding: 10px 60px;
+            min-height: 330px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            @media (max-width: 1550px) {  
+                padding: 10px 20px;         
+            }
 
             @media (max-width: 991px) {    
                 max-width: 550px;    
-                margin: 0 auto 20px;         
+                margin: 0 auto 20px; 
+                padding: 20px;  
+                min-height: auto;
+                padding: 20px 10px;       
             }
 
             &::before {
                 content: "";
                 background: url(../images/bg/highlights_awards_trophy.png) center top no-repeat;
                 position: absolute;
-                width: 100px;
+                width: 90px;
                 height: 204px;
                 #{$end-direction}: 15px;
                 top: -7px;
                 z-index: 0;
+
+                @media (max-width: 1550px) {
+                    top: -5px;  
+                    width: 60px;     
+                    background-size: contain; 
+                }
+                
             }
 
             & h3 {
                 font-family: $font-stack-2;
                 font-size: 40px;
                 text-transform: uppercase;
-                padding: 40px 0 15px;
+                padding: 0 0 15px;
                 text-align: center;
             }
 
             &__content {
                 display: flex;
 
+                @media (max-width: 575px) {   
+                    flex-direction: column; 
+                    text-align: center;
+                }
+
                 figure {
-                    margin: 0 35px 0 0;
+                    margin: invertValues(0, 35px, 0, 0);
                     width: 130px;
+                    height: auto;
                     position: relative;
+
+                    @media (max-width: 1550px) {  
+                        margin: invertValues(0, 25px, 0, 0);      
+                    }
+
+                    @media (max-width: 575px) {   
+                        height: auto;
+                        margin: 0 auto 20px;  
+                    }
 
                     & span {
                         background: #ffffff;
@@ -707,6 +820,10 @@
                         font-weight: 600;
                         text-transform: uppercase;
 
+                        @media (max-width: 1550px) {  
+                            font-size: 15px;       
+                        }
+
                         &:hover {
                             background: $secondary-color;
                         } 
@@ -718,19 +835,31 @@
         &__tickets {
             border-radius: 10px;
             background: #EFEFEF url(../images/bg/highlights_tickets.png) center center no-repeat;
+            background-size: cover;
             text-align: center;
-            padding: 0 60px 50px;
+            padding: 10px 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 330px;
+
+            @media (max-width: 1550px) {  
+                padding: 10px 20px;         
+            }
 
             @media (max-width: 991px) {    
                 max-width: 550px;    
-                margin: 0 auto 20px;         
+                margin: 0 auto 20px;   
+                min-height: auto;
+                padding: 20px 10px;     
             }
 
             & h3 {
                 font-family: $font-stack-2;
                 font-size: 40px;
                 text-transform: uppercase;
-                padding: 40px 0 0;
+                padding: 0;
                 text-align: center;
             }
 

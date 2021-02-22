@@ -75,6 +75,18 @@ li {
     margin: 0 8px;
   }
 }
+@media (max-width: 1550px) {
+  .btn__ticket {
+    font-size: 19px;
+  }
+}
+@media (max-width: 991px) {
+  .home__highlights__tickets .btn__ticket {
+    font-size: 17px;
+    padding: 10px 5px 10px 10px;
+    margin: 0 0 10px;
+  }
+}
 @media (max-width: 1199px) {
   .header .btn__ticket {
     font-size: 23px;
@@ -1712,6 +1724,11 @@ h2, .h2 {
   overflow: hidden;
   transition: background-color 0.8s ease;
 }
+@media (max-width: 460px) {
+  .home__clublist {
+    max-width: 120px;
+  }
+}
 .home__clublist:hover {
   background-color: #9B0448;
   border: 1px solid #9B0448;
@@ -1742,6 +1759,12 @@ h2, .h2 {
   align-items: center;
   border: 1px solid transparent;
   transition: all 0.8s ease;
+}
+@media (max-width: 460px) {
+  .home__clublist figure {
+    width: 119px;
+    height: 119px;
+  }
 }
 .home__clublist figure img {
   max-width: 86%;
@@ -2002,21 +2025,45 @@ h2, .h2 {
     padding: 20px 20px 30px;
   }
 }
+@media (max-width: 991px) {
+  .home__highlights__content h2 {
+    text-align: center;
+  }
+}
 .home__highlights__legend {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 3px 22px rgba(0, 0, 0, 0.16);
-  max-width: 550px;
-  margin: 0 auto 20px;
+  margin: 0 0 0;
+  overflow: hidden;
+  height: 680px;
+  display: flex;
+  flex-direction: column;
+  background: transparent url(../images/bg/legend_bg2.png) center 0 no-repeat;
+  justify-content: space-between;
+  background-size: 100% auto;
+}
+@media (max-width: 991px) {
+  .home__highlights__legend {
+    max-width: 550px;
+    margin: 0 auto;
+    height: auto;
+  }
 }
 .home__highlights__legend__heading {
-  background: url(../images/bg/legend_bg.png) center 0 no-repeat;
-  height: 150px;
+  background: none;
+  height: auto;
   background-size: contain;
-  margin: 0 0 -50px;
+  margin: 0;
   position: relative;
   z-index: 1;
   text-align: center;
+  min-height: 130px;
+}
+@media (max-width: 991px) {
+  .home__highlights__legend__heading {
+    min-height: auto;
+  }
 }
 .home__highlights__legend__heading h3 {
   font-family: "Bebas Neue";
@@ -2024,10 +2071,17 @@ h2, .h2 {
   text-transform: uppercase;
   padding: 40px 0 0;
 }
+@media (max-width: 991px) {
+  .home__highlights__legend__heading h3 {
+    padding: 20px 0 10px;
+  }
+}
 .home__highlights__legend figure {
   border-radius: 10px;
   overflow: hidden;
   position: relative;
+  flex-grow: 1;
+  display: flex;
 }
 .home__highlights__legend figure::after {
   content: "";
@@ -2059,10 +2113,21 @@ h2, .h2 {
   bottom: 40px;
   left: 50px;
 }
+@media (max-width: 991px) {
+  .home__highlights__legend figure figcaption {
+    bottom: 20px;
+    left: 20px;
+  }
+}
 .home__highlights__legend figure figcaption h4 {
   font-weight: 600;
   font-size: 40px;
   color: #FFFFFF;
+}
+@media (max-width: 991px) {
+  .home__highlights__legend figure figcaption h4 {
+    font-size: 30px;
+  }
 }
 .home__highlights__legend figure figcaption p {
   text-transform: uppercase;
@@ -2070,6 +2135,11 @@ h2, .h2 {
   font-size: 20px;
   color: #F08800;
   margin: 0 0 25px;
+}
+@media (max-width: 991px) {
+  .home__highlights__legend figure figcaption p {
+    font-size: 15px;
+  }
 }
 .home__highlights__legend figure figcaption .btn {
   background: #9B0448;
@@ -2090,9 +2160,16 @@ h2, .h2 {
 }
 .home__highlights__legend figure img {
   display: block;
-  width: 100%;
-  max-width: 100%;
+  width: auto;
+  max-width: auto;
+  min-width: 101%;
   transition: all 0.8s ease;
+  object-fit: cover;
+}
+@media (max-width: 991px) {
+  .home__highlights__legend figure img {
+    min-height: 290px;
+  }
 }
 .home__highlights__legend:hover figure img {
   filter: grayscale(0%);
@@ -2110,33 +2187,40 @@ h2, .h2 {
   background-size: cover;
   position: relative;
   margin: 0 10px 15px;
-  min-height: 674px;
+  min-height: 680px;
   /*min-height: calc(100% - 14px);*/
+}
+@media (max-width: 1199px) {
+  .home__highlights__best {
+    margin: 0 0 0;
+  }
 }
 @media (max-width: 991px) {
   .home__highlights__best {
     max-width: 550px;
-    margin: 0 auto 25px;
+    margin: 0 auto;
+    min-height: auto;
+    padding: 0 0 40px;
   }
 }
 .home__highlights__best__holder {
   position: relative;
-  /*min-height: calc(100% + 14px);*/
   margin: 0 8px;
-  /*.slick-list {
-      min-height: 100%;
-      display: flex;
-      flex-direction: column;
+}
+@media (max-width: 1199px) {
+  .home__highlights__best__holder {
+    margin: 0;
   }
-
-  .slick-track {
-      height: 100%;
-  }*/
 }
 .home__highlights__best__holder .slick-dots {
   position: absolute;
   width: 100%;
   bottom: 20px;
+}
+@media (max-width: 991px) {
+  .home__highlights__best__holder .slick-dots {
+    bottom: 0;
+  }
 }
 .home__highlights__best__holder .slick-slider {
   width: 100%;
@@ -2153,6 +2237,11 @@ h2, .h2 {
   border-radius: 0 0 10px 10px;
   margin: 0 0 0 -47%;
 }
+@media (max-width: 1199px) {
+  .home__highlights__best::before {
+    display: none;
+  }
+}
 .home__highlights__best__rank {
   position: absolute;
   right: 15px;
@@ -2164,6 +2253,14 @@ h2, .h2 {
   color: #ffffff;
   font-size: 40px;
   line-height: 79px;
+}
+@media (max-width: 1550px) {
+  .home__highlights__best__rank {
+    width: 58px;
+    font-size: 26px;
+    line-height: 49px;
+    background-size: contain;
+  }
 }
 .home__highlights__best h3 {
   font-family: "Bebas Neue";
@@ -2188,6 +2285,12 @@ h2, .h2 {
   margin: 0 0 32px;
   right: -10px;
   position: relative;
+  max-width: 240px;
+}
+@media (max-width: 1570px) {
+  .home__highlights__best__content figure {
+    max-width: 200px;
+  }
 }
 .home__highlights__best__content figure > img {
   position: relative;
@@ -2218,13 +2321,18 @@ h2, .h2 {
   font-family: "Bebas Neue";
   color: #9B0448;
   flex-grow: 1;
-  margin: 60px 0 0;
+  margin: 60px 2px 0;
   line-height: 1;
+}
+@media (max-width: 1320px) {
+  .home__highlights__best__content h5 {
+    font-size: 38px;
+  }
 }
 .home__highlights__best__content h5 small {
   display: block;
   font-family: "Barlow";
-  font-size: 16px;
+  font-size: 32%;
   font-weight: 500;
   text-transform: uppercase;
   color: #000000;
@@ -2247,38 +2355,76 @@ h2, .h2 {
   background-size: cover;
   position: relative;
   margin: 0 0 20px;
-  padding: 0 60px 60px;
+  padding: 10px 60px;
+  min-height: 330px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 1550px) {
+  .home__highlights__awards {
+    padding: 10px 20px;
+  }
 }
 @media (max-width: 991px) {
   .home__highlights__awards {
     max-width: 550px;
     margin: 0 auto 20px;
+    padding: 20px;
+    min-height: auto;
+    padding: 20px 10px;
   }
 }
 .home__highlights__awards::before {
   content: "";
   background: url(../images/bg/highlights_awards_trophy.png) center top no-repeat;
   position: absolute;
-  width: 100px;
+  width: 90px;
   height: 204px;
   right: 15px;
   top: -7px;
   z-index: 0;
 }
+@media (max-width: 1550px) {
+  .home__highlights__awards::before {
+    top: -5px;
+    width: 60px;
+    background-size: contain;
+  }
+}
 .home__highlights__awards h3 {
   font-family: "Bebas Neue";
   font-size: 40px;
   text-transform: uppercase;
-  padding: 40px 0 15px;
+  padding: 0 0 15px;
   text-align: center;
 }
 .home__highlights__awards__content {
   display: flex;
 }
+@media (max-width: 575px) {
+  .home__highlights__awards__content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 .home__highlights__awards__content figure {
   margin: 0 35px 0 0;
   width: 130px;
+  height: auto;
   position: relative;
+}
+@media (max-width: 1550px) {
+  .home__highlights__awards__content figure {
+    margin: 0 25px 0 0;
+  }
+}
+@media (max-width: 575px) {
+  .home__highlights__awards__content figure {
+    height: auto;
+    margin: 0 auto 20px;
+  }
 }
 .home__highlights__awards__content figure span {
   background: #ffffff;
@@ -2321,26 +2467,44 @@ h2, .h2 {
   font-weight: 600;
   text-transform: uppercase;
 }
+@media (max-width: 1550px) {
+  .home__highlights__awards__content aside a.btn {
+    font-size: 15px;
+  }
+}
 .home__highlights__awards__content aside a.btn:hover {
   background: #F08800;
 }
 .home__highlights__tickets {
   border-radius: 10px;
   background: #EFEFEF url(../images/bg/highlights_tickets.png) center center no-repeat;
+  background-size: cover;
   text-align: center;
-  padding: 0 60px 50px;
+  padding: 10px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 330px;
+}
+@media (max-width: 1550px) {
+  .home__highlights__tickets {
+    padding: 10px 20px;
+  }
 }
 @media (max-width: 991px) {
   .home__highlights__tickets {
     max-width: 550px;
     margin: 0 auto 20px;
+    min-height: auto;
+    padding: 20px 10px;
   }
 }
 .home__highlights__tickets h3 {
   font-family: "Bebas Neue";
   font-size: 40px;
   text-transform: uppercase;
-  padding: 40px 0 0;
+  padding: 0;
   text-align: center;
 }
 .home__highlights__tickets p {

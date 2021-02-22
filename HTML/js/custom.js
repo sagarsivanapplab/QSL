@@ -110,13 +110,14 @@
     slidesToScroll: 3,
     infinite: true,
     arrows: false,
-    dots: true,
+    dots: false,
     autoplay: true,
     autoplaySpeed: 4000,
     responsive: [{  
       breakpoint: 1640,
       settings: {
         slidesToShow: 10,
+        dots: true,
       }
     },{  
       breakpoint: 1360,
@@ -143,8 +144,8 @@
     },{
       breakpoint: 460,
       settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
+        slidesToShow: 2,
+        slidesToScroll: 2,
       }
     }]
   });

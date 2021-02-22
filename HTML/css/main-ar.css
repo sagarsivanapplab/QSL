@@ -75,6 +75,18 @@ li {
     margin: 0 8px;
   }
 }
+@media (max-width: 1550px) {
+  .btn__ticket {
+    font-size: 19px;
+  }
+}
+@media (max-width: 991px) {
+  .home__highlights__tickets .btn__ticket {
+    font-size: 17px;
+    padding: 10px 10px 10px 5px;
+    margin: 0 0 10px;
+  }
+}
 @media (max-width: 1199px) {
   .header .btn__ticket {
     font-size: 23px;

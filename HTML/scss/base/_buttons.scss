@@ -45,6 +45,18 @@
             }
         }
 
+        @media (max-width: 1550px) {  
+            font-size: 19px;      
+        }
+
+        @media (max-width: 991px) {  
+            .home__highlights__tickets & {
+                font-size: 17px;
+                padding: invertValues(10px, 5px, 10px, 10px);
+                margin: 0 0 10px;
+            }     
+        }
+
         @media (max-width: 1199px) {
             .header & {
                 font-size: 23px;
