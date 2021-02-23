@@ -96,7 +96,6 @@
                 background: #E6E6E6;
                 padding: 10px;
                 overflow: hidden;
-
                 @media (min-width: 992px) and (max-width: 1300px) {
                     width: 50px;
                     height: 50px;
@@ -126,11 +125,17 @@
                 }
             }
         }
-
         &:hover &__team {    
             figure {
                 img {
-                    animation: rotateYLogo 1s 1 cubic-bezier(.03,.21,.67,.97);
+                    animation: rotateYLogo 0.8s 1 cubic-bezier(.03,.21,.67,.97);
+                } 
+            }
+            & + span + .match__box__team{
+                figure {
+                    img{
+                        animation-delay: 0.25s;
+                    }
                 }
             }
         }

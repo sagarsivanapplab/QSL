@@ -1361,13 +1361,26 @@ h2, .h2 {
 }
 .footer__menu__holder li {
   margin: 8px 0;
+  position: relative;
+}
+.footer__menu__holder li:hover::after {
+  width: 100%;
+}
+.footer__menu__holder li::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: inline-block;
+  content: "";
+  width: 0;
+  height: 1px;
+  background-color: #F08800;
+  transition: width 0.3s;
 }
 .footer__menu__holder a {
   color: #FFFFFF;
   font-size: 20px;
-}
-.footer__menu__holder a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 .footer__menu__holder .container {
   position: relative;
@@ -1403,15 +1416,26 @@ h2, .h2 {
   margin: 0 15px 0 0;
   font-weight: 400;
   padding: 0 1px 4px;
+  position: relative;
 }
 @media (max-width: 768px) {
   .footer__copytext nav a {
     font-size: 16px;
   }
 }
-.footer__copytext nav a:hover {
-  color: #9B0448;
-  border-bottom: 2px solid #9B0448;
+.footer__copytext nav a:hover::after {
+  width: 100%;
+}
+.footer__copytext nav a::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: inline-block;
+  content: "";
+  width: 0;
+  height: 1px;
+  background-color: #F08800;
+  transition: width 0.3s;
 }
 
 .banner__holder {
@@ -1610,7 +1634,7 @@ h2, .h2 {
 }
 .banner__holder__controls a:hover {
   color: #9B0448;
-  background-color: #C9C9C9;
+  background-color: #F08800;
 }
 .banner__holder__live {
   display: block;
@@ -1808,7 +1832,7 @@ h2, .h2 {
   border-radius: 12px;
   background-color: #E6E6E6;
   overflow: hidden;
-  transition: background-color 0.8s ease;
+  transition: all 0.6s ease;
 }
 @media (max-width: 460px) {
   .home__clublist {
@@ -1818,13 +1842,14 @@ h2, .h2 {
 .home__clublist:hover {
   background-color: #9B0448;
   border: 1px solid #9B0448;
+  transform: scale(1.1);
+  box-shadow: 0 1px 5px #00000078;
 }
 .home__clublist:hover figure {
   border: 1px solid #9B0448;
 }
 .home__clublist:hover figure img {
-  animation: rotateYLogo 1s 1 cubic-bezier(0.03, 0.21, 0.67, 0.97);
-  transition: transform 1.5s;
+  animation: rotateYLogo 0.8s 1 cubic-bezier(0.03, 0.21, 0.67, 0.97);
 }
 .home__clublist:hover span {
   font-weight: 500;
@@ -1855,6 +1880,7 @@ h2, .h2 {
 .home__clublist figure img {
   max-width: 86%;
   margin: 0 auto;
+  transition: all;
 }
 .home__clublist span {
   font-weight: 400;
@@ -1952,7 +1978,7 @@ h2, .h2 {
   opacity: 1;
 }
 .home__news__item:hover figure img {
-  transform: rotate(-1deg) scale(1.02);
+  transform: rotate(-1deg) scale(1.15);
   filter: grayscale(0%);
 }
 .home__news__item:hover .home__news__item__type {
@@ -1982,7 +2008,7 @@ h2, .h2 {
   top: 0;
   overflow: hidden;
   text-indent: -9999px;
-  transition: all 0.8s ease;
+  transition: all 0.4s ease;
 }
 .home__news__item figure::before {
   content: "";
@@ -2000,7 +2026,7 @@ h2, .h2 {
 }
 .home__news__item figure img {
   filter: grayscale(30%);
-  transition: all 0.8s ease;
+  transition: all 0.4s ease;
   width: 100%;
 }
 @media (max-width: 1199px) {
@@ -2524,9 +2550,9 @@ h2, .h2 {
 .home__highlights__awards__content figure span {
   background: #ffffff;
   position: absolute;
-  bottom: -15px;
+  bottom: -2px;
   z-index: 2;
-  right: -15px;
+  right: -8px;
   border-radius: 80px;
   width: 50px;
   height: 50px;
@@ -3128,7 +3154,7 @@ h2, .h2 {
     transform: translateZ(0) rotateY(0) scale(1);
   }
   50% {
-    transform: translateZ(150px) rotateY(190deg) scale(0.75);
+    transform: translateZ(150px) rotateY(190deg) scale(0.7);
   }
   80% {
     transform: translateZ(0) rotateY(360deg) scale(1);
@@ -3283,7 +3309,10 @@ h2, .h2 {
   }
 }
 .match__box:hover .match__box__team figure img {
-  animation: rotateYLogo 1s 1 cubic-bezier(0.03, 0.21, 0.67, 0.97);
+  animation: rotateYLogo 0.8s 1 cubic-bezier(0.03, 0.21, 0.67, 0.97);
+}
+.match__box:hover .match__box__team + span + .match__box__team figure img {
+  animation-delay: 0.25s;
 }
 
 .news__holder {
