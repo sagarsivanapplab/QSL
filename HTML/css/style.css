@@ -634,6 +634,11 @@ h2, .h2 {
 .pagination {
   margin: 50px 0;
 }
+@media (max-width: 767px) {
+  .pagination {
+    margin: 30px 0;
+  }
+}
 .pagination .page-link {
   position: relative;
   display: block;
@@ -3504,7 +3509,7 @@ h2, .h2 {
 }
 .news__filter__item {
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 .news__filter__item.media-item {
