@@ -359,6 +359,11 @@
             color: #fff;
             position: relative;
             background: linear-gradient(90deg, rgba(131,14,65,1) 0%, rgba(100,0,46,1) 35%, rgba(84,3,42,1) 80%, rgba(68,8,39,1) 100%);
+
+            @media (max-width: 767px) {
+                padding: 20px 0;
+            }
+
             h2{
                font-size: 50px;
                font-family: $font-stack-2;
@@ -366,11 +371,21 @@
                line-height: 1.4;
                margin: 0;
                text-transform: uppercase;
+
+                @media (max-width: 767px) {
+                    font-size: 26px;
+                }
+
                 small{
                     font-size: 25px;
                     display: block;
                 }
+
+                @media (max-width: 767px) {
+                    font-size: 21px;
+                }
             }
+
             &::after{
                 content: '';
                 position: absolute;
