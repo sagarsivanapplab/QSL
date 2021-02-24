@@ -8,6 +8,8 @@
         background-color: #E6E6E6;
         overflow: hidden;
         transition: all 0.6s ease;
+        border: 1px solid red;
+
         @media (max-width: 460px) {   
             max-width: 120px;
         }
@@ -34,6 +36,9 @@
             text-align: center;
             margin: 0 0;
             padding: 40px 0;
+            border: 1px solid red;
+
+            
         }
 
         & figure {
