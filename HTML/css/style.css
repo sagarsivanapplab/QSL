@@ -1792,6 +1792,10 @@ h2, .h2 {
     padding: 20px 0;
   }
 }
+.banner__holder__inner .container {
+  position: relative;
+  z-index: 2;
+}
 .banner__holder__inner h2 {
   font-size: 50px;
   font-family: "Bebas Neue";
@@ -3442,6 +3446,18 @@ h2, .h2 {
   overflow: hidden;
   text-indent: -9999px;
 }
+.news__items__image::after {
+  content: "";
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, black 100%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  text-indent: -9999px;
+  transition: all 0.4s ease;
+}
 .news__items__details {
   background: #FFFFFF;
   padding: 40px;
@@ -3496,7 +3512,7 @@ h2, .h2 {
 
 .news__filter {
   padding: 50px 0 20px;
-  background-color: #F0F0F0;
+  background-color: #F6F6F6;
 }
 @media (max-width: 767px) {
   .news__filter {
@@ -3542,7 +3558,7 @@ h2, .h2 {
 }
 .news__filter__item {
   position: relative;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 .news__filter__item.media-item {

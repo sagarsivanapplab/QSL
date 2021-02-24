@@ -9,8 +9,6 @@
     duration: 1000
   });
 
-  window.addEventListener('load', AOS.refresh)
-
   $(function () {
       $('[data-toggle="tooltipa"] a').tooltip();
   })
