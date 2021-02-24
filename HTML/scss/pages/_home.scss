@@ -79,6 +79,11 @@
             overflow: hidden;
             width: 100%;
 
+            .row{
+                position: relative;
+                z-index: 1;
+            }
+
             &__head{
                 padding: 0 50px 0;
                 position: relative;
