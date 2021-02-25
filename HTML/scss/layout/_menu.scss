@@ -158,6 +158,11 @@
                         max-height: 0;
                         transition: all 0.1s linear;
 
+                        @media (max-width: 1199px) {
+                            position: relative;
+                            background: none;
+                        }
+
                         &::before {
                             content: "";
                             position: absolute;
@@ -168,6 +173,10 @@
                             #{$end-direction}: 0;
                             bottom: 0;
                             z-index: 0;
+
+                            @media (max-width: 1199px) {
+                                display: none;
+                            }
                         }
 
                         &::after {
@@ -185,6 +194,10 @@
                             transform-origin: center center;
                             animation: spin360 100s infinite linear;
                             filter: brightness(0);
+
+                            @media (max-width: 1199px) {
+                                display: none;
+                            }
                         }
 
                         figure {
@@ -196,12 +209,20 @@
                             align-items: center;
                             justify-content: center;
                             overflow: hidden;
+
+                            @media (max-width: 1199px) {
+                                display: none;
+                            }
                         }
 
                         aside {
                             position: relative;
                             z-index: 2;
                             padding: 70px 0;
+
+                            @media (max-width: 1199px) {
+                                padding: 10px 0 0;
+                            }
                         }
 
                         h3 {
@@ -210,16 +231,29 @@
                             line-height: 1.2;
                             font-weight: normal;
                             margin: 0 0 48px;
+
+                            @media (max-width: 1199px) {
+                                display: none;
+                            }
                         }
 
                         ul {
                             display: flex;
                             flex-wrap: wrap;
 
+                            @media (max-width: 1199px) {
+                                display: block;
+                            }
+
                             li {
                                 min-width: 35%;
                                 margin: 0 0 17px;
                                 position: relative;
+
+                                @media (max-width: 1199px) {
+                                    min-width: auto;
+                                    margin: 0 0 10px;
+                                }
 
                                 &:hover {
                                     &::after {
@@ -248,6 +282,15 @@
                                     padding: invertValues(0, 0, 0, 23px);
                                     display: block;
 
+                                    @media (max-width: 1199px) {
+                                        font-family: $font-stack-1;
+                                        color: $black-color;
+                                        font-size: 15px;
+                                        font-weight: 500;
+                                        padding: invertValues(0, 0, 0, 18px);
+                                        margin: invertValues(0, 0, 0, 5px);
+                                    }
+
                                     &::before {
                                         content: "";
                                         position: absolute;
@@ -260,6 +303,14 @@
                                         top: 8px;
                                         #{$start-direction}: 0;
                                         transition: all 200ms;
+
+                                        @media (max-width: 1199px) {
+                                            filter: brightness(0);
+                                            background-size: 5px;
+                                            width: 15px;
+                                            top: 4px;
+                                            opacity: 0.5;
+                                        }
                                     }
                                 }
                             }
