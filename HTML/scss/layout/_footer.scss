@@ -135,12 +135,12 @@
                 margin: 8px 0;
                 position: relative;
 
-                &:hover{
-                    &::after{
+                &:hover {
+                    &::after {
                         width: 100%;
                     }
                 }
-                &::after{
+                &::after {
                     position: absolute;
                     left: 0;
                     bottom: 0;
@@ -151,7 +151,6 @@
                     background-color: $secondary-color;
                     transition: width 0.3s;
                 }
-
             }
 
             a {
