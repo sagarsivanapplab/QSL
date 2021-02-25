@@ -6,7 +6,7 @@
     anchorPlacement: 'top-bottom',
     disable: window.innerWidth < 1200,
     once: true,
-    duration: 1000
+    duration: 800
   });
 
   $(function () {
@@ -106,7 +106,7 @@
   });
 
   $(".slick-class-04").slick({
-    slidesToShow: 12,
+    slidesToShow: 12.3,
     slidesToScroll: 3,
     infinite: true,
     arrows: false,

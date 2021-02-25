@@ -137,9 +137,10 @@
 
                 &:hover {
                     &::after {
-                        width: 100%;
+                        width: 98%;
                     }
                 }
+
                 &::after {
                     position: absolute;
                     left: 0;
