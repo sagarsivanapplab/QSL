@@ -2138,6 +2138,9 @@ h2, .h2 {
   z-index: 4;
   height: 100%;
 }
+.home__news__item__holder__wrapper {
+  z-index: 5;
+}
 .home__news__item__holder .slick-dots {
   position: absolute;
   width: 100%;

@@ -9,6 +9,18 @@
     duration: 800
   });
 
+
+  $(document).ready(function() {
+    var $gridItem = $('.home__clublist');
+    
+    $($gridItem).each(function(index) {
+      $(this).css({'transition-delay': .1*(0 + index) + 's'});
+    });
+    
+    AOS.init();      
+  });
+  
+
   $(function () {
       $('[data-toggle="tooltipa"] a').tooltip();
   })

@@ -139,6 +139,10 @@
                 position: relative;
                 z-index: 4;
                 height: 100%;
+
+                &__wrapper {
+                    z-index: 5;
+                }
                 
                 .slick-dots {
                     position: absolute;
