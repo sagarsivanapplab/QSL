@@ -9,18 +9,28 @@
     duration: 800
   });
 
-
   $(document).ready(function() {
-    var $gridItem = $('.home__clublist');
+    var $gridItem = $('.home__clublist__list');
     
     $($gridItem).each(function(index) {
       $(this).css({'transition-delay': .1*(0 + index) + 's'});
+    });
+
+    var $gridItem1 = $('.home__gallery__item');
+    
+    $($gridItem1).each(function(index) {
+      $(this).css({'transition-delay': .1*(0 + index) + 's'});
+    });
+
+    var $gridItem2 = $('.home__sponsor ul li');
+    
+    $($gridItem2).each(function(index) {
+      $(this).css({'transition-delay': .06*(0 + index) + 's'});
     });
     
     AOS.init();      
   });
   
-
   $(function () {
       $('[data-toggle="tooltipa"] a').tooltip();
   })

@@ -37,7 +37,6 @@
                     border-bottom: 5px solid transparent;
                     transition: padding 400ms;
 
-
                     @media (max-width: 1750px) {  
                         padding: 30px 10px; 
                         font-size: 18px;
@@ -192,7 +191,7 @@
                             z-index: -0;
                             opacity: 0.1;
                             transform-origin: center center;
-                            animation: spin360 100s infinite linear;
+                            animation: spin360 300s infinite linear;
                             filter: brightness(0);
 
                             @media (max-width: 1199px) {
