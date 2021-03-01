@@ -35,6 +35,12 @@
       $('[data-toggle="tooltipa"] a').tooltip();
   })
 
+  
+
+  $(".nav__btn").click(function(){
+    $("body").toggleClass("nav-open");
+  });
+
   //menu click
   $(".hamburger").click(function(){
     $("body").toggleClass("menu-open");
