@@ -142,7 +142,7 @@
                 color: #9B0448;
                 border: 1px solid #9B0448;
                 border-radius: 20px;
-                padding: 3px 15px;
+                padding: 3px 17px;
                 text-align: center;
                 font-size: 16px;
                 margin-#{$end-direction}: 10px;
@@ -159,6 +159,7 @@
                 border-radius: 6px;
                 .fas {
                     color: $primary-color;
+                    font-size: 20px;
                 }
 
             } 

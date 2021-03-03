@@ -2233,7 +2233,6 @@ h2, .h2 {
 }
 .banner__holder__inner--no-bg h2 {
   line-height: 1.2;
-  margin: 0;
   max-width: 70%;
 }
 @media (max-width: 991px) {
@@ -4234,7 +4233,7 @@ h2, .h2 {
   color: #9B0448;
   border: 1px solid #9B0448;
   border-radius: 20px;
-  padding: 3px 15px;
+  padding: 3px 17px;
   text-align: center;
   font-size: 16px;
   margin-right: 10px;
@@ -4247,4 +4246,5 @@ h2, .h2 {
 }
 .news__detail__share-dropdown span .fas {
   color: #9B0448;
+  font-size: 20px;
 }
