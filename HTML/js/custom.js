@@ -6,12 +6,40 @@
     anchorPlacement: 'top-bottom',
     disable: window.innerWidth < 1200,
     once: true,
-    duration: 1000
+    duration: 800
   });
 
+  $(document).ready(function() {
+    var $gridItem = $('.home__clublist__list');
+    
+    $($gridItem).each(function(index) {
+      $(this).css({'transition-delay': .1*(0 + index) + 's'});
+    });
+
+    var $gridItem1 = $('.home__gallery__item');
+    
+    $($gridItem1).each(function(index) {
+      $(this).css({'transition-delay': .1*(0 + index) + 's'});
+    });
+
+    var $gridItem2 = $('.home__sponsor ul li');
+    
+    $($gridItem2).each(function(index) {
+      $(this).css({'transition-delay': .06*(0 + index) + 's'});
+    });
+    
+    AOS.init();      
+  });
+  
   $(function () {
       $('[data-toggle="tooltipa"] a').tooltip();
   })
+
+  
+
+  $(".nav__btn").click(function(){
+    $("body").toggleClass("nav-open");
+  });
 
   //menu click
   $(".hamburger").click(function(){
@@ -106,7 +134,7 @@
   });
 
   $(".slick-class-04").slick({
-    slidesToShow: 12,
+    slidesToShow: 12.3,
     slidesToScroll: 3,
     infinite: true,
     arrows: false,
