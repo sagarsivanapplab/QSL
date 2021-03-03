@@ -121,9 +121,20 @@ li {
 .btn__ticket--arrow {
   background: linear-gradient(140deg, #9B0448 70%, #F08800 100%);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  margin: 0;
 }
 .btn__ticket--arrow::before {
   background: url(../images/icons/return_arrow.svg) 0 0 no-repeat;
+}
+.btn__dropdown {
+  background: #FFFFFF;
+  border: 1px solid #ECECEC;
+  font-size: 18px;
+  color: #222222;
+  font-weight: 400;
+  font-family: "Barlow";
+  border-radius: 6px;
+  padding: 13px 25px 13px;
 }
 .btn__language {
   margin: 0 20px 0 10px;
@@ -2198,48 +2209,21 @@ h2, .h2 {
   background: url(../images/bg/banner_inner_bg.png) right no-repeat;
   background-size: cover;
 }
-.banner__holder__wrapper {
-  padding: 30px 0;
-  color: #fff;
-  position: relative;
-  background: #9B0448;
-}
-@media (max-width: 767px) {
-  .banner__holder__wrapper {
-    padding: 20px 0;
-  }
-}
-.banner__holder__wrapper .container {
-  position: relative;
-  z-index: 2;
-}
-.banner__holder__wrapper h2 {
-  font-size: 50px;
-  font-family: "Bebas Neue";
-  font-weight: 300;
-  line-height: 1.2;
-  margin: 0;
-  text-transform: uppercase;
-  max-width: 70%;
-}
-@media (max-width: 767px) {
-  .banner__holder__wrapper h2 {
-    font-size: 26px;
-  }
-}
-.banner__holder__wrapper h2 small {
-  font-size: 25px;
-  display: block;
-}
-@media (max-width: 767px) {
-  .banner__holder__wrapper h2 {
-    font-size: 21px;
-  }
-}
-.banner__holder__heading {
+.banner__holder__inner__heading {
   align-items: center;
   justify-content: space-between;
   display: flex;
+}
+.banner__holder__inner--no-bg {
+  background: #9B0448;
+}
+.banner__holder__inner--no-bg::after {
+  display: none;
+}
+.banner__holder__inner--no-bg h2 {
+  line-height: 1.2;
+  margin: 0;
+  max-width: 70%;
 }
 
 .home__clublist {
@@ -4114,9 +4098,99 @@ h2, .h2 {
 .news__detail {
   padding: 70px 0;
 }
-.news__detail figure img {
+.news__detail__image {
+  margin-bottom: 25px;
+}
+.news__detail__image img {
   width: 100%;
 }
 .news__detail p {
   font-size: 20px;
+}
+.news__detail__box {
+  border: 1px solid #D3D3D3;
+  border-radius: 6px;
+  padding: 30px 20px;
+  margin-bottom: 40px;
+  background-color: #F7F7F7;
+}
+.news__detail__box h3 {
+  text-transform: uppercase;
+  font-size: 35px;
+  color: #9B0448;
+  font-family: "Bebas Neue";
+  margin-bottom: 20px;
+}
+.news__detail__box ul li:first-child {
+  border-bottom: 1px solid #D3D3D3;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.news__detail__box .d-flex {
+  align-items: center;
+}
+.news__detail__box .d-flex figure img {
+  width: 220px;
+  border-radius: 12px;
+}
+.news__detail__box .d-flex h4 {
+  color: #222222;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.news__detail__box .d-flex p {
+  font-size: 20px;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+.news__detail__box h5 {
+  font-size: 18px;
+  color: #7A7A7A;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+.news__detail__read-more {
+  font-size: 18px;
+  text-decoration: underline;
+  color: #222222;
+}
+.news__detail__read-more:hover {
+  text-decoration: underline;
+  color: #222222;
+}
+.news__detail__read-more::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-top: 1px solid #222222;
+  border-right: 1px solid #222222;
+  transform: rotate(45deg);
+}
+.news__detail__filter-result {
+  display: flex;
+  align-items: center;
+}
+.news__detail__filter-result p {
+  font-size: 18px;
+  color: #222222;
+  margin: 0 12px 0 0px;
+}
+.news__detail__filter-result span {
+  display: block;
+  color: #9B0448;
+  border: 1px solid #9B0448;
+  border-radius: 20px;
+  padding: 3px 15px;
+  text-align: center;
+  margin-right: 10px;
+}
+.news__detail__share-dropdown span {
+  padding: 13px;
+  border: 1px solid #ECECEC;
+  border-radius: 6px;
+}
+.news__detail__share-dropdown span .fas {
+  color: #9B0448;
 }
