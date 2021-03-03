@@ -91,6 +91,13 @@
                 background: linear-gradient(140deg, #9b0448 30%, #222222 90%);
             }
         }
+        &--arrow{
+            background: linear-gradient(140deg, #9B0448 70%, #F08800 100%);
+            box-shadow: 0 3px 6px rgb(0 0 0 / 15%);
+            &::before {
+                background: url(../images/icons/return_arrow.svg) 0 0 no-repeat;
+            }
+        }
     }
 
     &__language {

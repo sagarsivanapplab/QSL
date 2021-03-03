@@ -117,6 +117,13 @@ li {
 .btn__ticket--primary-color:hover {
   background: linear-gradient(140deg, #9b0448 30%, #222222 90%);
 }
+.btn__ticket--arrow {
+  background: linear-gradient(140deg, #9B0448 70%, #F08800 100%);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+.btn__ticket--arrow::before {
+  background: url(../images/icons/return_arrow.svg) 0 0 no-repeat;
+}
 .btn__language {
   margin: 0 20px 0 10px;
   text-transform: uppercase;
@@ -1826,6 +1833,49 @@ h2, .h2 {
   height: 100%;
   background: url(../images/bg/banner_inner_bg.png) right no-repeat;
   background-size: cover;
+}
+.banner__holder__wrapper {
+  padding: 30px 0;
+  color: #fff;
+  position: relative;
+  background: #9B0448;
+}
+@media (max-width: 767px) {
+  .banner__holder__wrapper {
+    padding: 20px 0;
+  }
+}
+.banner__holder__wrapper .container {
+  position: relative;
+  z-index: 2;
+}
+.banner__holder__wrapper h2 {
+  font-size: 50px;
+  font-family: "Bebas Neue";
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 0;
+  text-transform: uppercase;
+  max-width: 70%;
+}
+@media (max-width: 767px) {
+  .banner__holder__wrapper h2 {
+    font-size: 26px;
+  }
+}
+.banner__holder__wrapper h2 small {
+  font-size: 25px;
+  display: block;
+}
+@media (max-width: 767px) {
+  .banner__holder__wrapper h2 {
+    font-size: 21px;
+  }
+}
+.banner__holder__heading {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
 }
 
 .home__clublist {
@@ -3700,4 +3750,14 @@ h2, .h2 {
 .news__filter__item:hover .news__filter__discription h5, .news__filter__item:hover .news__filter__discription p, .news__filter__item:hover .news__filter__discription h4 {
   color: #ffffff;
   text-decoration: none;
+}
+
+.news__detail {
+  padding: 70px 0;
+}
+.news__detail figure img {
+  width: 100%;
+}
+.news__detail p {
+  font-size: 20px;
 }
