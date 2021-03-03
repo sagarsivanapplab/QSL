@@ -377,7 +377,7 @@
                margin: 0;
                text-transform: uppercase;
 
-                @media (max-width: 767px) {
+                @media (max-width: 991px) {
                     font-size: 26px;
                 }
 
@@ -405,6 +405,11 @@
                 align-items: center;
                 justify-content: space-between;
                 display: flex;
+
+                @media (max-width: 991px) {
+                    flex-direction: column;
+                    align-items: baseline;
+                }
             } 
 
             &--no-bg {
@@ -414,10 +419,22 @@
                     display: none;
                 }
 
+                .container{
+
+                    @media (max-width: 767px) {
+                        margin: 0;
+                    }
+
+                }
                 h2 {
                     line-height: 1.2;
                     margin: 0;
                     max-width: 70%;
+
+                    @media (max-width: 991px) {
+                        max-width: 100%;
+                        margin-bottom: 10px;
+                    }
                 }
             }
         }
