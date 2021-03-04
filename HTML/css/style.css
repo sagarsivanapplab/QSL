@@ -3557,7 +3557,9 @@ h2, .h2 {
   text-align: center;
   margin-right: 10px;
   flex-shrink: 0;
-  line-height: 1.8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media (min-width: 992px) and (max-width: 1300px) {
   .home__rank__table .table__club figure {
@@ -4297,10 +4299,27 @@ h2, .h2 {
 .stadia__map img {
   width: 100%;
 }
+@media (max-width: 767px) {
+  .stadia .container {
+    margin: 0;
+  }
+}
 .stadia .home__rank__table--stadia {
   margin-top: 20px;
   overflow: auto;
   height: 443px;
+}
+@media (min-width: 992px) and (max-width: 1300px) {
+  .stadia .home__rank__table--stadia .table thead th, .stadia .home__rank__table--stadia .table thead td {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .stadia .home__rank__table--stadia .table thead th, .stadia .home__rank__table--stadia .table thead td {
+    font-size: 13px;
+    padding: 10px 7px;
+  }
 }
 .stadia .home__rank__table--stadia tbody tr:hover {
   background: #9B0448;
@@ -4313,7 +4332,7 @@ h2, .h2 {
   color: #FFFFFF;
 }
 .stadia .home__rank__table--stadia tbody tr:hover .read__more {
-  color: #fff;
+  color: #FFFFFF;
 }
 .stadia .home__rank__table--stadia tbody tr:hover .read__more::after {
   border-top: 1px solid #FFFFFF;
@@ -4322,17 +4341,47 @@ h2, .h2 {
 .stadia .home__rank__table--stadia .width-01 {
   width: 90px;
 }
+@media (max-width: 991px) {
+  .stadia .home__rank__table--stadia .width-01 {
+    width: 50px;
+  }
+}
 .stadia .home__rank__table--stadia .width-02 {
   width: 170px;
+}
+@media (max-width: 991px) {
+  .stadia .home__rank__table--stadia .width-02 {
+    width: 140px;
+  }
 }
 .stadia .home__rank__table--stadia .width-03 {
   width: 200px;
 }
+@media (max-width: 991px) {
+  .stadia .home__rank__table--stadia .width-03 {
+    width: 150px;
+  }
+}
 .stadia .home__rank__table--stadia .read__more {
   font-weight: 100;
 }
+@media (max-width: 991px) {
+  .stadia .home__rank__table--stadia .read__more {
+    font-size: 14px;
+  }
+}
 .stadia .home__rank__table--stadia .table__club span {
   font-weight: 100;
+}
+@media (min-width: 992px) and (max-width: 1300px) {
+  .stadia .home__rank__table--stadia .table__club span {
+    font-size: 17px;
+  }
+}
+@media (max-width: 991px) {
+  .stadia .home__rank__table--stadia .table__club span {
+    font-size: 14px;
+  }
 }
 
 .home__rank__table--stadia::-webkit-scrollbar-track {

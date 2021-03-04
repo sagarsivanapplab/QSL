@@ -1392,7 +1392,9 @@
                         text-align: center;
                         margin-#{$end-direction}: 10px;
                         flex-shrink: 0;
-                        line-height: 1.8;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
     
                         @media (min-width: 992px) and (max-width: 1300px) {
                             width: 35px;
