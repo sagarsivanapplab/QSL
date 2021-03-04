@@ -712,6 +712,58 @@ h2, .h2 {
   background-color: #F5F5F5;
 }
 
+.read__more {
+  font-size: 18px;
+  text-decoration: underline;
+  color: #222222;
+}
+.read__more:hover {
+  text-decoration: underline;
+  color: #222222;
+}
+
+.gradient__bg {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  background-color: #FFFFFF;
+  padding: 50px 0;
+  z-index: 1;
+}
+.gradient__bg::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background: linear-gradient(180deg, #F7F7F7 20%, rgba(0, 0, 0, 0) 80%);
+  width: 100%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  opacity: 0.5;
+  transition: opacity 0.7s ease;
+}
+.gradient__bg::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background: url(../images/placeholder/sponsor_pattern.svg) center center no-repeat;
+  width: 1000px;
+  height: 1000px;
+  right: -400px;
+  background-size: contain;
+  top: -500px;
+  z-index: 0;
+  opacity: 0.6;
+  transform-origin: center center;
+  animation: spin360 100s infinite linear;
+  transition: opacity 0.7s ease;
+}
+.gradient__bg .container {
+  position: relative;
+  z-index: 1;
+}
+
 .animatable {
   visibility: hidden;
   animation-play-state: paused;
@@ -3405,122 +3457,6 @@ h2, .h2 {
     width: 20px;
   }
 }
-.home__rank .table th, .home__rank .table td {
-  border: none;
-  vertical-align: middle;
-  font-weight: 500;
-  font-size: 17px;
-  padding: 12px 20px;
-}
-@media (min-width: 992px) and (max-width: 1300px) {
-  .home__rank .table th, .home__rank .table td {
-    font-size: 14px;
-    padding: 7px 9px;
-  }
-}
-@media (max-width: 470px) {
-  .home__rank .table th, .home__rank .table td {
-    padding: 9px 5px;
-    font-size: 14px;
-  }
-}
-.home__rank .table thead {
-  background: #DADFE5;
-}
-.home__rank .table thead th {
-  font-family: "Barlow";
-  font-size: 16px;
-  color: #9B0448;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-@media (min-width: 992px) and (max-width: 1300px) {
-  .home__rank .table thead th {
-    font-size: 13px;
-    padding: 7px 9px;
-  }
-}
-@media (max-width: 470px) {
-  .home__rank .table thead th {
-    padding: 9px 4px;
-    font-size: 11px;
-  }
-}
-.home__rank .table tbody tr td:first-child span {
-  border: 1px solid #ECECEC;
-  border-radius: 6px;
-  color: #9B0448;
-  font-size: 16px;
-  padding: 0;
-  background: #FFFFFF;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
-}
-@media (min-width: 992px) and (max-width: 1300px) {
-  .home__rank .table tbody tr td:first-child span {
-    width: 35px;
-    height: 35px;
-  }
-}
-@media (max-width: 470px) {
-  .home__rank .table tbody tr td:first-child span {
-    width: 33px;
-    height: 33px;
-    font-size: 13px;
-  }
-}
-.home__rank .table tbody tr:nth-child(odd) td {
-  background-color: rgba(0, 0, 0, 0.04);
-}
-.home__rank .table__club {
-  display: flex;
-  align-items: center;
-}
-.home__rank .table__club figure {
-  border: 1px solid #ECECEC;
-  border-radius: 6px;
-  padding: 2px;
-  background: #fff;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  margin-right: 10px;
-}
-@media (min-width: 992px) and (max-width: 1300px) {
-  .home__rank .table__club figure {
-    width: 35px;
-    height: 35px;
-    margin-right: 6px;
-  }
-}
-@media (max-width: 470px) {
-  .home__rank .table__club figure {
-    width: 33px;
-    height: 33px;
-    margin-right: 4px;
-  }
-}
-.home__rank .table__club figure img {
-  width: 40px;
-  padding: 3px;
-}
-.home__rank .table__club span {
-  font-size: 17px;
-  color: #9B0448;
-}
-@media (min-width: 992px) and (max-width: 1300px) {
-  .home__rank .table__club span {
-    font-size: 13px;
-  }
-}
-@media (max-width: 470px) {
-  .home__rank .table__club span {
-    font-size: 14px;
-  }
-}
 .home__rank__table {
   box-shadow: 0 3px 13px rgba(0, 0, 0, 0.11);
   border-radius: 10px;
@@ -3534,8 +3470,125 @@ h2, .h2 {
     margin-bottom: 20px;
   }
 }
-.home__rank__table table {
+.home__rank__table .table {
   margin: 0;
+}
+.home__rank__table .table th, .home__rank__table .table td {
+  border: none;
+  vertical-align: middle;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 12px 20px;
+}
+@media (min-width: 992px) and (max-width: 1300px) {
+  .home__rank__table .table th, .home__rank__table .table td {
+    font-size: 14px;
+    padding: 7px 9px;
+  }
+}
+@media (max-width: 470px) {
+  .home__rank__table .table th, .home__rank__table .table td {
+    padding: 9px 5px;
+    font-size: 14px;
+  }
+}
+.home__rank__table .table thead {
+  background: #DADFE5;
+}
+.home__rank__table .table thead th {
+  font-family: "Barlow";
+  font-size: 16px;
+  color: #9B0448;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+@media (min-width: 992px) and (max-width: 1300px) {
+  .home__rank__table .table thead th {
+    font-size: 13px;
+    padding: 7px 9px;
+  }
+}
+@media (max-width: 470px) {
+  .home__rank__table .table thead th {
+    padding: 9px 4px;
+    font-size: 11px;
+  }
+}
+.home__rank__table .table tbody tr td:first-child span {
+  border: 1px solid #ECECEC;
+  border-radius: 6px;
+  color: #9B0448;
+  font-size: 16px;
+  padding: 0;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+}
+@media (min-width: 992px) and (max-width: 1300px) {
+  .home__rank__table .table tbody tr td:first-child span {
+    width: 35px;
+    height: 35px;
+  }
+}
+@media (max-width: 470px) {
+  .home__rank__table .table tbody tr td:first-child span {
+    width: 33px;
+    height: 33px;
+    font-size: 13px;
+  }
+}
+.home__rank__table .table tbody tr:nth-child(odd) td {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+.home__rank__table .table__club {
+  display: flex;
+  align-items: center;
+}
+.home__rank__table .table__club figure {
+  border: 1px solid #ECECEC;
+  border-radius: 6px;
+  padding: 2px;
+  background: #fff;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  margin-right: 10px;
+  flex-shrink: 0;
+  line-height: 1.8;
+}
+@media (min-width: 992px) and (max-width: 1300px) {
+  .home__rank__table .table__club figure {
+    width: 35px;
+    height: 35px;
+    margin-right: 6px;
+  }
+}
+@media (max-width: 470px) {
+  .home__rank__table .table__club figure {
+    width: 33px;
+    height: 33px;
+    margin-right: 4px;
+  }
+}
+.home__rank__table .table__club figure img {
+  padding: 3px;
+}
+.home__rank__table .table__club span {
+  font-size: 17px;
+  color: #9B0448;
+}
+@media (min-width: 992px) and (max-width: 1300px) {
+  .home__rank__table .table__club span {
+    font-size: 13px;
+  }
+}
+@media (max-width: 470px) {
+  .home__rank__table .table__club span {
+    font-size: 14px;
+  }
 }
 .home__rank__table__btn {
   text-align: center;
@@ -4196,24 +4249,6 @@ h2, .h2 {
   font-weight: 400;
   margin-bottom: 30px;
 }
-.news__detail__read-more {
-  font-size: 18px;
-  text-decoration: underline;
-  color: #222222;
-}
-.news__detail__read-more:hover {
-  text-decoration: underline;
-  color: #222222;
-}
-.news__detail__read-more::after {
-  content: "";
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-top: 1px solid #222222;
-  border-right: 1px solid #222222;
-  transform: rotate(45deg);
-}
 .news__detail__filter-result {
   display: flex;
   align-items: center;
@@ -4257,4 +4292,62 @@ h2, .h2 {
 .news__detail__share-dropdown p .fas {
   color: #9B0448;
   font-size: 20px;
+}
+
+.stadia__map img {
+  width: 100%;
+}
+.stadia .home__rank__table--stadia {
+  margin-top: 20px;
+  overflow: auto;
+  height: 443px;
+}
+.stadia .home__rank__table--stadia tbody tr:hover {
+  background: #9B0448;
+  cursor: pointer;
+}
+.stadia .home__rank__table--stadia tbody tr:hover .table__club svg path {
+  fill: #9B0448;
+}
+.stadia .home__rank__table--stadia tbody tr:hover .table__club span {
+  color: #FFFFFF;
+}
+.stadia .home__rank__table--stadia tbody tr:hover .read__more {
+  color: #fff;
+}
+.stadia .home__rank__table--stadia tbody tr:hover .read__more::after {
+  border-top: 1px solid #FFFFFF;
+  border-right: 1px solid #FFFFFF;
+}
+.stadia .home__rank__table--stadia .width-01 {
+  width: 90px;
+}
+.stadia .home__rank__table--stadia .width-02 {
+  width: 170px;
+}
+.stadia .home__rank__table--stadia .width-03 {
+  width: 200px;
+}
+.stadia .home__rank__table--stadia .read__more {
+  font-weight: 100;
+}
+.stadia .home__rank__table--stadia .table__club span {
+  font-weight: 100;
+}
+
+.home__rank__table--stadia::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+.home__rank__table--stadia::-webkit-scrollbar {
+  width: 8px;
+  background-color: #F5F5F5;
+}
+
+.home__rank__table--stadia::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #CECECE;
 }

@@ -101,28 +101,6 @@
 
         }
 
-        &__read-more {
-            font-size: 18px;
-            text-decoration: underline;
-            color: #222222;
-
-            &:hover {
-                text-decoration: underline;
-                color: #222222;
-            }
-
-            &::after {
-                content: '';
-                display: inline-block;
-                width: 10px;
-                height: 10px;
-                border-top: 1px solid #222222;
-                border-#{$end-direction}: 1px solid #222222;
-                transform: rotate(45deg);
-            }
-           
-        }
-
         &__filter-result {
             display: flex;
             align-items: center;
