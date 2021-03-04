@@ -331,6 +331,10 @@ h2, .h2 {
     padding: 50px 0;
     z-index: 1;
 
+    @media (max-width: 767px) {
+        padding: 20px 0;
+    }
+
     &::before {
         content: "";
         position: absolute;

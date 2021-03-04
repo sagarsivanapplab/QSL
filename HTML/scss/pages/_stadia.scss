@@ -49,6 +49,7 @@
                         .table__club {
     
                             svg {
+                                
                                 path {
                                     fill:$primary-color
                                 }
@@ -82,18 +83,23 @@
             }
 
             .width-02 {
-                width: 170px;
 
-                @media (max-width: 991px) {
-                    width: 140px;
+                @media (max-width: 475px) {
+                    width: 280px;
                 }
+
             }
             
             .width-03 {
+                width: 170px;
+
+            }
+
+            .width-04 {
                 width: 200px;
 
                 @media (max-width: 991px) {
-                    width: 150px;
+                    width: 120px;
                 }
 
             }
