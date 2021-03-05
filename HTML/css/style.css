@@ -787,14 +787,14 @@ h2, .h2 {
   content: "";
   position: absolute;
   display: block;
-  background: linear-gradient(180deg, #F7F7F7 20%, rgba(0, 0, 0, 0) 80%);
+  background: linear-gradient(0deg, white 77%, gray 100%);
   width: 100%;
   height: 100%;
   right: 0;
   top: 0;
   z-index: 1;
-  opacity: 0.5;
-  transition: opacity 0.7s ease;
+  opacity: 0.4;
+  transition: opacity 0.4s ease;
 }
 .gradient__bg::after {
   content: "";
@@ -4398,13 +4398,15 @@ h2, .h2 {
 }
 .stadia .home__rank__table--stadia tbody tr:hover {
   background: #9B0448;
-  cursor: pointer;
 }
 .stadia .home__rank__table--stadia tbody tr:hover .table__club svg path {
   fill: #9B0448;
 }
 .stadia .home__rank__table--stadia tbody tr:hover .table__club span {
   color: #FFFFFF;
+}
+.stadia .home__rank__table--stadia tbody tr:hover .table__club--location-image figure {
+  cursor: pointer;
 }
 .stadia .home__rank__table--stadia tbody tr:hover .read__more {
   color: #FFFFFF;

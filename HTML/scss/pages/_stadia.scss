@@ -52,7 +52,6 @@
                 tr {
                     &:hover {
                         background: $primary-color;
-                        cursor: pointer;
         
                         .table__club {
     
@@ -66,7 +65,13 @@
                             span {
                                 color: $white-color;
                             }
-    
+
+                            &--location-image {
+
+                                figure {
+                                    cursor: pointer;
+                                }
+                            }
                         }
     
                         .read__more {
