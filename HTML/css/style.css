@@ -4404,9 +4404,6 @@ h2, .h2 {
 .stadia .home__rank__table--stadia tbody tr:hover .table__club span {
   color: #FFFFFF;
 }
-.stadia .home__rank__table--stadia tbody tr:hover .table__club--location-image figure {
-  cursor: pointer;
-}
 .stadia .home__rank__table--stadia tbody tr:hover .read__more {
   color: #FFFFFF;
 }
@@ -4462,6 +4459,11 @@ h2, .h2 {
 .stadia__profile {
   display: flex;
   margin: 20px 0;
+}
+@media (max-width: 767px) {
+  .stadia__profile {
+    margin: 10px 0;
+  }
 }
 @media (max-width: 475px) {
   .stadia__profile {
@@ -4522,8 +4524,6 @@ h2, .h2 {
   background: #9B0448;
 }
 .stadia__slider__item figure img {
-  height: 100%;
-  object-fit: cover;
   width: 100%;
   border-radius: 3px;
 }
