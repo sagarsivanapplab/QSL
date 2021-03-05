@@ -760,6 +760,11 @@ h2, .h2 {
   text-decoration: underline;
   color: #222222;
 }
+@media (max-width: 991px) {
+  .read__more {
+    font-size: 16px;
+  }
+}
 .read__more:hover {
   text-decoration: underline;
   color: #222222;
@@ -4239,8 +4244,13 @@ h2, .h2 {
   border: 1px solid #D3D3D3;
   border-radius: 6px;
   padding: 30px 20px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   background-color: #F7F7F7;
+}
+@media (max-width: 991px) {
+  .news__detail__box {
+    padding: 20px 15px;
+  }
 }
 @media (max-width: 767px) {
   .news__detail__box {
@@ -4264,43 +4274,49 @@ h2, .h2 {
   padding-bottom: 20px;
   margin-bottom: 20px;
 }
-.news__detail__box .d-flex {
-  align-items: center;
-}
-.news__detail__box .d-flex figure img {
-  width: 220px;
-  border-radius: 12px;
-}
-.news__detail__box .d-flex h4 {
-  color: #222222;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 1.4;
-}
-@media (max-width: 991px) {
-  .news__detail__box .d-flex h4 {
-    font-size: 18px;
-  }
-}
-.news__detail__box .d-flex p {
-  font-size: 20px;
-  margin-bottom: 10px;
-  line-height: 1.3;
-}
-@media (max-width: 991px) {
-  .news__detail__box .d-flex p {
-    font-size: 18px;
-  }
-}
 .news__detail__box h5 {
   font-size: 18px;
   color: #7A7A7A;
   font-weight: 400;
   margin-bottom: 30px;
 }
+.news__detail__related-news {
+  display: flex;
+}
+.news__detail__related-news figure img {
+  width: 220px;
+  border-radius: 12px;
+}
+.news__detail__related-news h4 {
+  color: #222222;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+@media (max-width: 991px) {
+  .news__detail__related-news h4 {
+    font-size: 16px;
+  }
+}
+.news__detail__related-news p {
+  font-size: 20px;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+@media (max-width: 991px) {
+  .news__detail__related-news p {
+    font-size: 16px;
+  }
+}
 .news__detail__filter-result {
   display: flex;
   align-items: center;
+}
+@media (max-width: 1080px) and (min-width: 767px) {
+  .news__detail__filter-result {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 .news__detail__filter-result p {
   font-size: 18px;
@@ -4312,7 +4328,11 @@ h2, .h2 {
     font-size: 16px;
   }
 }
-.news__detail__filter-result span {
+.news__detail__filter-tag {
+  display: flex;
+  flex-wrap: wrap;
+}
+.news__detail__filter-tag span {
   display: block;
   color: #9B0448;
   border: 1px solid #9B0448;
