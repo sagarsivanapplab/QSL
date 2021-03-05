@@ -39,7 +39,7 @@
                 font-size: 35px;
                 color: $primary-color;
                 font-family: $font-stack-2;
-                margin-bottom: 20px;
+                margin-bottom: 15px;
 
                 @media (max-width: 767px) {
                     margin-bottom: 10px;
@@ -69,7 +69,7 @@
                 } 
 
                 h4 {
-                    color: #222222;
+                    color: $font-color;
                     font-size: 20px;
                     font-weight: 700;
                     line-height: 1.4;
@@ -107,8 +107,8 @@
 
             p {
                 font-size: 18px;
-                color: #222222;
-                margin: 0 12px 0 0px;
+                color: $font-color;
+                margin: invertValues(0, 12px, 0, 0);
 
                 @media (max-width: 767px) {
                     font-size: 16px;
@@ -136,7 +136,7 @@
             p {
                 border: 1px solid #ECECEC;
                 border-radius: 6px;
-                margin: 0 3px 0 0;
+                margin: invertValues(0, 3px, 0, 0);
                 width: 50px;
                 height: 50px;
                 display: flex;

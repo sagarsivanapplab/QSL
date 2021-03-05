@@ -806,7 +806,7 @@
                         border-radius: 80px;
                         width: 50px;
                         height: 50px;
-                        border: 2px solid #222222;
+                        border: 2px solid $font-color;
                         display: flex;
                         align-items: center;
                         justify-content: center;
@@ -893,7 +893,7 @@
                 font-size: 22px;
                 line-height: 1.2;
                 margin: 0 0 30px; 
-                color: #222222;
+                color: $font-color;
             }
         }
     }
@@ -1269,7 +1269,7 @@
             a {
                 font-size: 22px;
                 font-family: $font-stack-2;
-                color: #222222;
+                color: $font-color;
 
                 @media (max-width: 575px) {
                     font-size: 17px;

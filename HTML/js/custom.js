@@ -178,6 +178,20 @@
     }]
   });
 
+  $(".slick-class-05").slick({
+    slidesToShow: 1,
+    infinite: false,
+    arrows: true,
+    dots: true,
+    responsive: [{
+      breakpoint: 767,
+      settings: {
+        arrows: false,
+      }
+    }]
+  });
+
+
   $(".slick-class-2").slick({ 
 		dots: true,
 		arrows: true,
