@@ -214,15 +214,19 @@
          <!--Banner ends here -->
          <!--stadiums list starts here -->
          <div class="stadia" data-aos="fade-up" data-aos-delay="150">
-           <figure class="stadia__map">
+            <div id="map" style="width: 100%; height: 800px;"></div>
+            <!-- <div class="col-md-12 col-sm-12" id="map">
+               <div style="width:100%; height:345px; margin: 40px 0 0 0;" id="map-canvas"></div>
+             </div> -->
+           <!-- <figure class="stadia__map">
               <img src="images/placeholder/stadia-location.png" />
-           </figure>
+           </figure> -->
            <div class="gradient__bg">
                <div class="container">
                   <h2>Stadiums list</h2>
                   <div class="home__rank__table home__rank__table--stadia">
-                     <table class="table">
-                        <thead data-aos="fade-up" data-aos-delay="0">
+                     <table class="table" data-aos="fade-up" data-aos-delay="0">
+                        <thead>
                            <tr>
                               <th class="width-01">#</th>
                               <th class="width-02">Stadium</th>
@@ -245,7 +249,7 @@
                               </td>
                               <td>
                                  <div class="table__club">
-                                    <a href="#">
+                                    <a href="#" id="location-1">
                                        <figure>
                                           <svg xmlns="http://www.w3.org/2000/svg" width="15.749" height="20.999" viewBox="0 0 15.749 20.999">
                                              <path id="iconfinder_pin-locate-map-location-drop_2205197" d="M9.875,21s7.875-7.326,7.875-13.124S14.224,0,9.875,0,2,2.076,2,7.875,9.875,21,9.875,21ZM5.937,6.562A3.937,3.937,0,1,1,9.875,10.5,3.937,3.937,0,0,1,5.937,6.562Z" transform="translate(-2)" fill="#6c88a4"/>
@@ -270,7 +274,7 @@
                               </td>
                               <td>
                                  <div class="table__club">
-                                    <a href="#">
+                                    <a href="#" id="location-2">
                                        <figure>
                                           <svg xmlns="http://www.w3.org/2000/svg" width="15.749" height="20.999" viewBox="0 0 15.749 20.999">
                                              <path id="iconfinder_pin-locate-map-location-drop_2205197" d="M9.875,21s7.875-7.326,7.875-13.124S14.224,0,9.875,0,2,2.076,2,7.875,9.875,21,9.875,21ZM5.937,6.562A3.937,3.937,0,1,1,9.875,10.5,3.937,3.937,0,0,1,5.937,6.562Z" transform="translate(-2)" fill="#6c88a4"/>
@@ -295,7 +299,7 @@
                               </td>
                               <td>
                                  <div class="table__club">
-                                    <a href="#">
+                                    <a href="#" id="location-3">
                                        <figure>
                                           <svg xmlns="http://www.w3.org/2000/svg" width="15.749" height="20.999" viewBox="0 0 15.749 20.999">
                                              <path id="iconfinder_pin-locate-map-location-drop_2205197" d="M9.875,21s7.875-7.326,7.875-13.124S14.224,0,9.875,0,2,2.076,2,7.875,9.875,21,9.875,21ZM5.937,6.562A3.937,3.937,0,1,1,9.875,10.5,3.937,3.937,0,0,1,5.937,6.562Z" transform="translate(-2)" fill="#6c88a4"/>
@@ -320,7 +324,7 @@
                               </td>
                               <td>
                                  <div class="table__club">
-                                    <a href="#">
+                                    <a href="#" id="location-4">
                                        <figure>
                                           <svg xmlns="http://www.w3.org/2000/svg" width="15.749" height="20.999" viewBox="0 0 15.749 20.999">
                                              <path id="iconfinder_pin-locate-map-location-drop_2205197" d="M9.875,21s7.875-7.326,7.875-13.124S14.224,0,9.875,0,2,2.076,2,7.875,9.875,21,9.875,21ZM5.937,6.562A3.937,3.937,0,1,1,9.875,10.5,3.937,3.937,0,0,1,5.937,6.562Z" transform="translate(-2)" fill="#6c88a4"/>
@@ -637,5 +641,7 @@
       <script src="js/jquery.fancybox.min.js" type="text/javascript"></script>
       <!-- Custom JavaScript -->
       <script src="js/custom.js" type="text/javascript"></script>
+      <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+      <script src="js/map.js" type="text/javascript"></script>
    </body>
 </html>

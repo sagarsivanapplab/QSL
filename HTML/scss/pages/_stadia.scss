@@ -1,5 +1,11 @@
 .stadia {
 
+    h2 {
+        @media (min-width: 992px) and (max-width: 1300px) {
+            font-size: 40px;
+        }
+    }
+
     p {
         font-size: 20px;
 
@@ -142,6 +148,10 @@
         display: flex;
         margin: 20px 0;
 
+        @media (max-width: 1028px) and (min-width: 768px) {
+            flex-direction: column;
+        }
+
         @media (max-width: 767px) {
             margin: 10px 0;
         }
@@ -154,6 +164,14 @@
             display: flex;
             align-items: center;
             min-width: 290px;
+
+            @media (max-width: 1028px) and (min-width: 768px) {
+                min-width: 270px;
+
+                &:first-child {
+                    margin-bottom: 10px;
+                }
+            }
 
             @media (max-width: 475px) {
 
@@ -192,6 +210,11 @@
         position: relative;
         z-index: 4;
         height: 100%;
+        margin-top: -50px;
+
+        @media (max-width: 767px) {
+            margin-top: 0;
+        }
 
         &__item { 
             position: relative;
