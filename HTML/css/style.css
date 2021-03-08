@@ -4568,6 +4568,18 @@ h2, .h2 {
 .stadia__slider .slick-dots li.slick-active button {
   background-color: #9B0448;
 }
+.stadia__map__heading {
+  color: #0c0c0c;
+  font-size: 17px;
+  font-weight: 600;
+  font-family: "Barlow";
+  margin-bottom: 8px;
+}
+.stadia__map__loation {
+  font-size: 16px !important;
+  font-family: "Barlow";
+  margin: 0;
+}
 
 .home__rank__table--stadia::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);

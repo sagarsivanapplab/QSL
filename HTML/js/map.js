@@ -24,8 +24,8 @@ function newLocation(location) {
   });
 
   var contentString =           
-        '<h3 >'+ location.info1 +'</h3>'+   
-        '<p >'+ location.info2 +'</p>'+         
+        '<h3 class="stadia__map__heading" >'+ location.info1 +'</h3>'+   
+        '<p class="stadia__map__loation">'+ location.info2 +'</p>'+         
         '</div>';
 
   infowindow = new google.maps.InfoWindow({
@@ -42,33 +42,37 @@ var Location = {
   albayt: {
     lat: 25.6522101,
     lng: 51.4856588,
-    info1: 'al-bayt-1'
+    info1: 'Hamad bin Khalifa Stadium',
+    info2: 'Doha'
   },
 
   lusail : {
     lat: 25.1148601,
     lng: 55.1949989,
-    info1: 'lusail-1'
+    info1: 'lusail-1',
+    info2: 'Doha'
   },
 
   khalifa : {
     lat: 25.2652442,
     lng: 51.4467829,
-    info1: 'khalifa-1'
+    info1: 'khalifa-1',
+    info2: 'Doha'
   },
 
   asian : {
     lat: 25.189425,
     lng: 51.4579764,
-    info1: 'asian-1'
+    info1: 'asian-1',
+    info2: 'Doha'
   },
 
 }
 
 //Setting Location with jQuery
 $(document).ready(function() {
+
   $("#location-1").on('click', function() {
-    // alert('hiii');
     newLocation(Location.albayt);
   });
 

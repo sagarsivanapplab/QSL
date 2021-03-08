@@ -267,6 +267,22 @@
             }
         }
     }
+
+    &__map{
+
+        &__heading{
+           color: #0c0c0c;
+           font-size: 17px;
+           font-weight: 600;
+           font-family: $font-stack-1;
+           margin-bottom: 8px;
+        }
+        &__loation{
+            font-size: 16px !important;
+            font-family: $font-stack-1;
+            margin: 0;
+        }
+    }
 }
 
 .home__rank__table--stadia::-webkit-scrollbar-track {
